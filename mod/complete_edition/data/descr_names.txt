@@ -5394,6 +5394,7 @@ faction: ragusa
 		Zamanja
 
 	women
+		Mara
 		Anita
 		Nikoleta
 		Marija
@@ -5429,6 +5430,7 @@ faction: serbia
 		Mrnjavcevic
 
 	women
+		Mileva
 		Milica
 		Jelena
 		Simonida
@@ -5462,6 +5464,7 @@ faction: bulgaria
 		Komitopul
 
 	women
+		Radoslava
 		Maria
 		Tamara
 		Irina
@@ -5493,6 +5496,7 @@ faction: wallachia
 		Musat
 
 	women
+		Dorina
 		Ana
 		Ilinca
 		Ruxandra

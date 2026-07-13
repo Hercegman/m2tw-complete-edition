@@ -147,6 +147,59 @@ def write_tga(path, b):
     open(path, "wb").write(hdr + bytes(body))
 
 
+def shield_alpha(w, h):
+    """Heater-shield alpha mask: straight top, sides tapering to a bottom
+    point — the shape all vanilla faction icons use (32-bit TGA, alpha 0
+    outside). Returns per-pixel 0/255 alpha rows."""
+    alpha = []
+    for y in range(h):
+        fy = y / (h - 1)
+        if fy < 0.02 or fy > 0.97:
+            hw = 0.0
+        elif fy <= 0.5:
+            hw = 0.46
+        else:
+            t = (fy - 0.5) / 0.47
+            hw = 0.46 * max(0.0, 1.0 - t ** 1.7)
+        row = []
+        for x in range(w):
+            fx = x / (w - 1)
+            row.append(255 if abs(fx - 0.5) <= hw else 0)
+        alpha.append(row)
+    return alpha
+
+
+def write_shield_tga(path, b):
+    """32-bit TGA with the design clipped to a shield shape (dark outline,
+    transparent outside) — matches the vanilla icon format (bpp=32, desc 0x28)."""
+    h = len(b)
+    w = len(b[0])
+    alpha = shield_alpha(w, h)
+    outline = (35, 30, 30)
+    t = max(1, min(w, h) // 24)
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    hdr = struct.pack("<BBBHHBHHHHBB", 0, 0, 2, 0, 0, 0, 0, 0, w, h, 32, 0x28)
+    body = bytearray()
+    for y in range(h):
+        for x in range(w):
+            a = alpha[y][x]
+            if a == 0:
+                body += b"\x00\x00\x00\x00"
+                continue
+            edge = False
+            for dy in range(-t, t + 1):
+                for dx in range(-t, t + 1):
+                    yy, xx = y + dy, x + dx
+                    if not (0 <= yy < h and 0 <= xx < w) or alpha[yy][xx] == 0:
+                        edge = True
+                        break
+                if edge:
+                    break
+            r, g, bl = outline if edge else b[y][x]
+            body += bytes((bl, g, r, 255))
+    open(path, "wb").write(hdr + bytes(body))
+
+
 def dds_bytes(b):
     h = len(b)
     w = len(b[0])
@@ -208,17 +261,19 @@ def main():
     dimsfu = tga_dims(os.path.join(menu, "fe_faction_units", "wales.tga"))
 
     for fac in CAS_DONOR:
-        # --- ui icons ---
-        write_tga(os.path.join(DATA, "ui", "symbols", f"symbol_{fac}.tga"),
-                  draw_design(fac, 32, 32))
-        write_tga(os.path.join(DATA, "ui", "rebel_symbols", f"rebel_{fac}.tga"),
-                  desaturate(draw_design(fac, 32, 32)))
-        write_tga(os.path.join(DATA, "ui", "loading_screen", "symbols", f"symbol128_{fac}.tga"),
-                  draw_design(fac, 128, 128))
+        # --- ui icons (shield-shaped, 32-bit alpha like vanilla) ---
+        write_shield_tga(os.path.join(DATA, "ui", "symbols", f"symbol_{fac}.tga"),
+                         draw_design(fac, 32, 32))
+        write_shield_tga(os.path.join(DATA, "ui", "rebel_symbols", f"rebel_{fac}.tga"),
+                         desaturate(draw_design(fac, 32, 32)))
+        write_shield_tga(os.path.join(DATA, "ui", "faction_symbols", f"{fac}.tga"),
+                         draw_design(fac, 54, 54))
+        write_shield_tga(os.path.join(DATA, "ui", "loading_screen", "symbols", f"symbol128_{fac}.tga"),
+                         draw_design(fac, 128, 128))
 
-        # --- menu selector art ---
-        write_tga(os.path.join(menu, "fe_symbols_80", f"{fac}.tga"),
-                  draw_design(fac, *dims80))
+        # --- menu selector art (shield-shaped buttons) ---
+        write_shield_tga(os.path.join(menu, "fe_symbols_80", f"{fac}.tga"),
+                         draw_design(fac, *dims80))
         write_tga(os.path.join(menu, "fe_faction_units", f"{fac}.tga"),
                   draw_design(fac, *dimsfu))
         for size, dname, prefix in ((dims48, "fe_buttons_48", "symbol48"),
@@ -228,7 +283,7 @@ def main():
             border(sel, 0.07, GOLD)
             for suffix, img in (("", base), ("_roll", brighten(base, 35)),
                                 ("_select", sel), ("_grey", greyscale(base))):
-                write_tga(os.path.join(menu, dname, f"{prefix}_{fac}{suffix}.tga"), img)
+                write_shield_tga(os.path.join(menu, dname, f"{prefix}_{fac}{suffix}.tga"), img)
 
         # --- battle banner textures (.texture wrapper + DDS) ---
         tex_dir = os.path.join(DATA, "banners", "textures")

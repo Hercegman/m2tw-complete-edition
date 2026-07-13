@@ -126,17 +126,33 @@ def main():
             if f != "slave" and f not in name_factions:
                 err(f"descr_names.txt: no name-pool block for campaign faction '{f}'")
         pool_words = set(re.findall(r"^\t\t(.+?)\s*$", names_txt, re.M))
-        for m in re.finditer(r"^character\s+([^,]+),\s*named character", read(STRAT), re.M):
-            full = m.group(1).strip()
-            parts = full.split(" ", 1)
-            for p in parts:
+        strat_text = read(STRAT)
+        char_refs = [m.group(1).strip() for m in re.finditer(
+            r"^character\s+([^,]+),\s*named character", strat_text, re.M)]
+        char_refs += [m.group(1).strip() for m in re.finditer(
+            r"^character_record\s+([A-Za-z' ]+?),\s*(?:male|female)",
+            strat_text.replace("\t", " "), re.M)]
+        for full in char_refs:
+            for p in full.split(" ", 1):
                 # strat writes multi-word pool names with underscores (al_Alai
                 # in strat = "al Alai" in the pool)
                 norm = p.replace("_", " ")
                 if norm not in pool_words and full not in pool_words:
-                    err(f"descr_strat named character '{full}': '{norm}' not in any descr_names pool")
+                    err(f"descr_strat character '{full}': '{norm}' not in any descr_names pool")
     else:
         err("descr_names.txt missing")
+
+    # --- EDB recruitment/building availability ---
+    edb_path = os.path.join(DATA, "export_descr_buildings.txt")
+    if os.path.exists(edb_path):
+        edb = read(edb_path).lower()
+        for f in new_factions:
+            if f == "slave":
+                continue
+            if f in strat_factions and not re.search(rf"\b{f}\b", edb):
+                err(f"export_descr_buildings: faction '{f}' has no entries (cannot recruit/build)")
+    else:
+        err("export_descr_buildings.txt missing (new factions cannot recruit)")
 
     # --- UI assets for new factions (vanilla ones live in packs) ---
     for f in new_factions:

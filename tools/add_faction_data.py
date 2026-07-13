@@ -119,6 +119,11 @@ STRAT_FIXES = [
      "character\tJunije Sorkocevic, named character, male, heir, age 22"),
     ("character\tMilica, diplomat, female, age 25",
      "character\tTihomir, diplomat, male, age 25"),
+    # invalid tiles reported by the engine; relocate onto the leaders' tiles
+    ("character\tPetar, diplomat, male, age 28, x 156, y 116",
+     "character\tPetar, diplomat, male, age 28, x 157, y 115"),
+    ("character\tDurad Buncic, diplomat, male, age 35, x 155, y 120",
+     "character\tDurad Buncic, diplomat, male, age 35, x 157, y 121"),
 ]
 
 MENU_SYMBOL_DIRS = ["fe_symbols_80", "fe_faction_units", "fe_buttons_48", "fe_buttons_24"]
@@ -189,16 +194,53 @@ def gen_names_block(faction):
     return "\n".join(b) + "\n"
 
 
+def strat_record_names():
+    """Names used by character_record lines in each new faction's strat block —
+    they must exist in that faction's pool or the record is dropped
+    ('Couldn't find name Mara in the names database')."""
+    strat = read(STRAT)
+    facs = "|".join(FACTIONS)
+    out = {f: ([], []) for f in FACTIONS}  # (male, female)
+    current = None
+    for line in strat.split("\n"):
+        m = re.match(rf"^faction\s+({facs})\b", line)
+        if m:
+            current = m.group(1)
+            continue
+        if re.match(r"^faction\s", line):
+            current = None
+            continue
+        m = re.match(r"^character_record\s+([A-Za-z' ]+?),\s*(male|female)", line.replace("\t", " ").strip())
+        if m and current:
+            name, gender = m.group(1).strip(), m.group(2)
+            out[current][0 if gender == "male" else 1].append(name)
+    return out
+
+
 def step2_descr_names():
+    record_names = strat_record_names()
     blocks = [read(os.path.join(VAN, "descr_names.txt")).rstrip() + "\n"]
     for fac in FACTIONS:
         if fac in DLC_NAME_BLOCKS:
-            blocks.append(dlc_names_block(fac, DLC_NAME_BLOCKS[fac]))
+            block = dlc_names_block(fac, DLC_NAME_BLOCKS[fac])
         else:
-            blocks.append(gen_names_block(fac))
+            block = gen_names_block(fac)
+        # auto-append any strat character_record name missing from the pool
+        males, females = record_names[fac]
+        for name in males:
+            first = name.split(" ")[0]
+            if not re.search(rf"^\t\t{re.escape(first)}\s*$", block, re.M):
+                block = block.replace("\tcharacters\n", f"\tcharacters\n\t\t{first}\n", 1)
+        for name in females:
+            first = name.split(" ")[0]
+            if not re.search(rf"^\t\t{re.escape(first)}\s*$", block, re.M):
+                if "\twomen\n" not in block:
+                    block += "\n\twomen\n"
+                block = block.replace("\twomen\n", f"\twomen\n\t\t{first}\n", 1)
+        blocks.append(block)
     out = os.path.join(DATA, "descr_names.txt")
     write(out, "\n".join(blocks))
-    print(f"descr_names.txt: vanilla + {len(FACTIONS)} new blocks -> {out}")
+    print(f"descr_names.txt: vanilla + {len(FACTIONS)} new blocks (+ strat record names) -> {out}")
 
 
 def step3_names_bin():
@@ -217,6 +259,9 @@ def step3_names_bin():
                 token_set.add(t)
                 tokens.append(t)
     extra_flat = [n for c, s in EXTRA_NAMES.values() for n in c + s]
+    for males, females in strat_record_names().values():
+        extra_flat += [p for full in males + females for p in ([full.split(" ")[0]] +
+                       ([" ".join(full.split(" ")[1:])] if " " in full else []))]
     for chars, surnames, women in list(NAMES.values()) + [(extra_flat, [], [])]:
         for n in chars + surnames + women:
             # stringtable keys and tokens use underscores for multi-word
@@ -420,6 +465,44 @@ def step8_banners_xml():
     print(f"banners xml: {added} texture entries added, {tex_copied} DLC textures copied")
 
 
+def step10_edb():
+    """export_descr_buildings: without recruit_pool/building entries the new
+    factions cannot recruit or build ANYTHING. Append each new faction next to
+    its roster mate in every `factions { ... }` list (names are capitalized
+    in the EDB)."""
+    src = read(os.path.join(VAN, "export_descr_buildings.txt"))
+    added = {f: 0 for f in FACTIONS}
+
+    def extend(m):
+        inner = m.group(1)
+        names = [n.strip() for n in inner.split(",") if n.strip()]
+        lower = {n.lower() for n in names}
+        for fac, mate in ROSTER_MATE.items():
+            if mate in lower and fac not in lower:
+                names.append(fac.capitalize())
+                added[fac] += 1
+        return "factions { " + ", ".join(names) + ", }"
+
+    out = re.sub(r"factions\s*\{([^}]*)\}", extend, src)
+    write(os.path.join(DATA, "export_descr_buildings.txt"), out)
+    print("EDB faction-list additions:", added)
+    assert all(v > 0 for v in added.values()), "some faction got no EDB entries"
+
+
+def step11_faction_symbols():
+    """ui/faction_symbols/<f>.tga (54x54 crest used by campaign UI): real DLC
+    art for the Kingdoms four; the Balkan five get theirs from gen_heraldry."""
+    dst_dir = os.path.join(DATA, "ui", "faction_symbols")
+    os.makedirs(dst_dir, exist_ok=True)
+    n = 0
+    for fac, dlc in DLC_NAME_BLOCKS.items():
+        src = os.path.join(DLC[dlc], "ui", "faction_symbols", f"{fac}.tga")
+        if os.path.exists(src):
+            shutil.copyfile(src, os.path.join(dst_dir, f"{fac}.tga"))
+            n += 1
+    print(f"ui/faction_symbols: {n} DLC crests copied")
+
+
 def step9_strat_symbols():
     """models_strat symbol .cas per faction: real DLC art for the DLC four,
     a clone of the mate's symbol for the Balkan five (distinct file so M5 can
@@ -467,6 +550,8 @@ def main():
     step7_descr_character()
     step8_banners_xml()
     step9_strat_symbols()
+    step10_edb()
+    step11_faction_symbols()
     # the loose expanded.txt is superseded by the compiled bin
     loose = os.path.join(DATA, "text", "expanded.txt")
     if os.path.exists(loose):

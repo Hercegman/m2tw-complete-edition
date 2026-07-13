@@ -2986,7 +2986,7 @@ unit		EE Spear Militia				exp 0 armour 0 weapon_lvl 0
 unit		EE Spear Militia				exp 0 armour 0 weapon_lvl 0
 unit		Bosnian Archers				exp 0 armour 0 weapon_lvl 0
 
-character	Petar, diplomat, male, age 28, x 156, y 116
+character	Petar, diplomat, male, age 28, x 157, y 115
 traits GoodDiplomat 2
 
 character	Miroslav, spy, male, age 24, x 160, y 113
@@ -3037,7 +3037,7 @@ unit		Italian Spear Militia				exp 1 armour 0 weapon_lvl 0
 unit		Italian Spear Militia				exp 1 armour 0 weapon_lvl 0
 unit		Peasant Archers				exp 0 armour 0 weapon_lvl 0
 
-character	Durad Buncic, diplomat, male, age 35, x 155, y 120
+character	Durad Buncic, diplomat, male, age 35, x 157, y 121
 traits GoodDiplomat 3
 
 character	Marin Caboga, spy, male, age 28, x 160, y 122
