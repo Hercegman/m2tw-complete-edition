@@ -14526,7 +14526,7 @@ ownership        egypt
  
  
 type             Hernan Cortes
-dictionary       Hernan_Cortes      ; Hernï¿½n Cortï¿½s
+dictionary       Hernan_Cortes      ; Hernán Cortés
 category         cavalry
 class            heavy
 voice_type       General

@@ -124,9 +124,20 @@ STRAT_FIXES = [
 MENU_SYMBOL_DIRS = ["fe_symbols_80", "fe_faction_units", "fe_buttons_48", "fe_buttons_24"]
 
 
+# M2TW data text files are windows-1252/latin-1, NOT utf-8. Reading them as
+# utf-8 with errors="replace" destroys non-ASCII names (of_Boðsa -> of_Bo�sa)
+# and the engine then can't match them against the names stringtable.
+ENC = "latin-1"
+
+
 def read(path):
-    with open(path, encoding="utf-8", errors="replace") as f:
+    with open(path, encoding=ENC) as f:
         return f.read()
+
+
+def write(path, text):
+    with open(path, "w", encoding=ENC, newline="\n") as f:
+        f.write(text)
 
 
 def step1_edu():
@@ -145,8 +156,7 @@ def step1_edu():
                     added[fac] += 1
             line = m.group(1) + ", ".join(owners)
         out.append(line)
-    with open(path, "w", encoding="utf-8", newline="\n") as f:
-        f.write("\n".join(out))
+    write(path, "\n".join(out))
     print("EDU ownership additions:", added)
     assert all(v > 0 for v in added.values()), "some faction got no units"
 
@@ -187,8 +197,7 @@ def step2_descr_names():
         else:
             blocks.append(gen_names_block(fac))
     out = os.path.join(DATA, "descr_names.txt")
-    with open(out, "w", encoding="utf-8", newline="\n") as f:
-        f.write("\n".join(blocks))
+    write(out, "\n".join(blocks))
     print(f"descr_names.txt: vanilla + {len(FACTIONS)} new blocks -> {out}")
 
 
@@ -210,12 +219,15 @@ def step3_names_bin():
     extra_flat = [n for c, s in EXTRA_NAMES.values() for n in c + s]
     for chars, surnames, women in list(NAMES.values()) + [(extra_flat, [], [])]:
         for n in chars + surnames + women:
-            if n not in merged:
-                merged[n] = n
-                order.append(n)
-            if n not in token_set:
-                token_set.add(n)
-                tokens.append(n)
+            # stringtable keys and tokens use underscores for multi-word
+            # names ("ap Cynan" in the pool -> key/token "ap_Cynan")
+            key = n.replace(" ", "_")
+            if key not in merged:
+                merged[key] = n
+                order.append(key)
+            if key not in token_set:
+                token_set.add(key)
+                tokens.append(key)
     outdir = os.path.join(DATA, "text")
     os.makedirs(outdir, exist_ok=True)
     strings_bin.write_names_bin(os.path.join(outdir, "names.txt.strings.bin"),
@@ -275,31 +287,175 @@ def step5_strat_fixes():
         if old in text:
             text = text.replace(old, new)
             n += 1
-    with open(STRAT, "w", encoding="utf-8", newline="\n") as f:
-        f.write(text)
+    write(STRAT, text)
     print(f"descr_strat: {n}/{len(STRAT_FIXES)} gender fixes applied")
 
 
 def step6_menu_symbols():
+    """Faction-select screen art. File names per dir (verified in the DLC):
+    fe_symbols_80/<f>.tga, fe_faction_units/<f>.tga,
+    fe_buttons_48/symbol48_<f>[_roll|_select|_grey].tga,
+    fe_buttons_24/symbol24_<f>[...].tga — the _grey/_select button states are
+    what makes a faction clickable in the selector."""
+    patterns = {
+        "fe_symbols_80": ["{f}.tga"],
+        "fe_faction_units": ["{f}.tga"],
+        "fe_buttons_48": ["symbol48_{f}.tga", "symbol48_{f}_roll.tga",
+                          "symbol48_{f}_select.tga", "symbol48_{f}_grey.tga"],
+        "fe_buttons_24": ["symbol24_{f}.tga", "symbol24_{f}_roll.tga",
+                          "symbol24_{f}_select.tga", "symbol24_{f}_grey.tga"],
+    }
     dst_base = os.path.join(DATA, "menu", "symbols")
-    copied, placeholder = 0, 0
+    copied, placeholder, missing = 0, 0, []
     for fac in FACTIONS:
         src_dlc = DLC_NAME_BLOCKS.get(fac)
-        for d in MENU_SYMBOL_DIRS:
+        for d, pats in patterns.items():
             dst_dir = os.path.join(dst_base, d)
             os.makedirs(dst_dir, exist_ok=True)
-            dst = os.path.join(dst_dir, f"{fac}.tga")
-            if src_dlc:
-                src = os.path.join(DLC[src_dlc], "menu", "symbols", d, f"{fac}.tga")
-                if os.path.exists(src):
-                    shutil.copyfile(src, dst)
-                    copied += 1
-                    continue
-            tpl = os.path.join(DLC["british_isles"], "menu", "symbols", d, "wales.tga")
-            if os.path.exists(tpl) and not os.path.exists(dst):
-                shutil.copyfile(tpl, dst)
-                placeholder += 1
-    print(f"menu symbols: {copied} copied from DLC, {placeholder} wales-placeholders")
+            for pat in pats:
+                dst = os.path.join(dst_dir, pat.format(f=fac))
+                if src_dlc:
+                    src = os.path.join(DLC[src_dlc], "menu", "symbols", d, pat.format(f=fac))
+                    if os.path.exists(src):
+                        shutil.copyfile(src, dst)
+                        copied += 1
+                        continue
+                tpl = os.path.join(DLC["british_isles"], "menu", "symbols", d, pat.format(f="wales"))
+                if os.path.exists(tpl):
+                    shutil.copyfile(tpl, dst)
+                    placeholder += 1
+                else:
+                    missing.append(f"{d}/{pat.format(f=fac)}")
+    print(f"menu symbols: {copied} from DLC, {placeholder} wales-placeholders, "
+          f"{len(missing)} missing templates {missing[:3]}")
+
+
+ROSTER_MATE = {fac: spec[0] for fac, spec in FACTIONS.items()}
+
+
+def step7_descr_character():
+    """Clone each roster-mate's per-type entry in descr_character.txt for the
+    new faction. Without this the engine cannot create ANY character of the
+    faction -> every named character fails -> faction is instantly destroyed."""
+    src = read(os.path.join(VAN, "descr_character.txt"))
+    lines = src.split("\n")
+    out = []
+    i = 0
+    added = {f: 0 for f in FACTIONS}
+    while i < len(lines):
+        line = lines[i]
+        out.append(line)
+        m = re.match(r"^faction\s+(\w+)\s*$", line)
+        if m:
+            mate = m.group(1)
+            block = []
+            j = i + 1
+            while j < len(lines) and not re.match(r"^(faction|type)\b", lines[j]):
+                block.append(lines[j])
+                j += 1
+            out.extend(block)
+            for fac, fmate in ROSTER_MATE.items():
+                if fmate == mate:
+                    out.append(f"faction\t\t\t{fac}")
+                    out.extend(block)
+                    added[fac] += 1
+            i = j
+            continue
+        i += 1
+    assert all(v > 0 for v in added.values()), f"descr_character: uncloned factions {added}"
+    write(os.path.join(DATA, "descr_character.txt"), "\n".join(out))
+    print("descr_character type-entries cloned:", added)
+
+
+def step8_banners_xml():
+    """descr_banners_new.xml: give every new faction its own <Texture> entry in
+    each <Banner> block. DLC factions point at their real DLC banner textures
+    (copied into the mod); the Balkan five reuse their mate's texture for now
+    (unique entry, placeholder art until M5)."""
+    xml = read(os.path.join(VAN, "descr_banners_new.xml"))
+    tex_dst = os.path.join(DATA, "banners", "textures")
+    os.makedirs(tex_dst, exist_ok=True)
+    tex_copied = 0
+    for fac, dlc in DLC_NAME_BLOCKS.items():
+        src_dir = os.path.join(DLC[dlc], "banners", "textures")
+        if not os.path.isdir(src_dir):
+            continue
+        for fn in os.listdir(src_dir):
+            if f"_{fac}" in fn.lower():
+                shutil.copyfile(os.path.join(src_dir, fn), os.path.join(tex_dst, fn))
+                tex_copied += 1
+
+    def cap(f):
+        return f.capitalize()
+
+    added = 0
+
+    def extend_textures(m):
+        nonlocal added
+        block = m.group(0)
+        new_lines = []
+        for fac, mate in ROSTER_MATE.items():
+            if re.search(rf'Faction="{cap(fac)}"', block):
+                continue
+            mate_line = re.search(rf'^([ \t]*)(<Texture Faction="{cap(mate)}"[^>]*/>)\s*$',
+                                  block, re.M)
+            if not mate_line:
+                continue
+            indent, line = mate_line.group(1), mate_line.group(2)
+            new = line.replace(f'Faction="{cap(mate)}"', f'Faction="{cap(fac)}"')
+            if fac in DLC_NAME_BLOCKS:
+                # point at the copied DLC texture if the same banner-mesh slot
+                # names one (Faction_banner_<fac>.texture convention)
+                new = re.sub(r'DiffuseMap="banners\\textures\\[Ff]action_banner_\w+\.texture"',
+                             f'DiffuseMap="banners\\\\textures\\\\faction_banner_{fac}.texture"', new)
+                new = re.sub(r'TranslucencyMap="banners\\textures\\[Ff]action_banner_\w+_trans\.texture"',
+                             f'TranslucencyMap="banners\\\\textures\\\\faction_banner_{fac}_trans.texture"', new)
+            new_lines.append(indent + new)
+            added += 1
+        if not new_lines:
+            return block
+        return block.replace("</Textures>", "\n".join(new_lines) + "\n         </Textures>")
+
+    xml = re.sub(r"<Textures>.*?</Textures>", extend_textures, xml, flags=re.S)
+    write(os.path.join(DATA, "descr_banners_new.xml"), xml)
+    print(f"banners xml: {added} texture entries added, {tex_copied} DLC textures copied")
+
+
+def step9_strat_symbols():
+    """models_strat symbol .cas per faction: real DLC art for the DLC four,
+    a clone of the mate's symbol for the Balkan five (distinct file so M5 can
+    swap in real heraldry), and descr_sm_factions updated to point at them."""
+    dst = os.path.join(DATA, "models_strat")
+    os.makedirs(dst, exist_ok=True)
+    base_ms = os.path.join(ROOT, "research", "base-extract", "data", "models_strat")
+    copied = []
+    for fac, mate in ROSTER_MATE.items():
+        out = os.path.join(dst, f"symbol_{fac}.cas")
+        if fac in DLC_NAME_BLOCKS:
+            src = os.path.join(DLC[DLC_NAME_BLOCKS[fac]], "models_strat", f"symbol_{fac}.cas")
+        else:
+            src = os.path.join(base_ms, f"symbol_{mate}.cas")
+        assert os.path.exists(src), f"missing symbol source {src}"
+        shutil.copyfile(src, out)
+        copied.append(fac)
+        # DLC symbol textures (referenced inside the .cas)
+        if fac in DLC_NAME_BLOCKS:
+            tex_src = os.path.join(DLC[DLC_NAME_BLOCKS[fac]], "models_strat", "textures")
+            if os.path.isdir(tex_src):
+                tex_dst = os.path.join(dst, "textures")
+                os.makedirs(tex_dst, exist_ok=True)
+                for fn in os.listdir(tex_src):
+                    if f"_{fac}" in fn.lower() and "symbol" in fn.lower():
+                        shutil.copyfile(os.path.join(tex_src, fn), os.path.join(tex_dst, fn))
+    smf_path = os.path.join(DATA, "descr_sm_factions.txt")
+    smf = read(smf_path)
+    for fac in FACTIONS:
+        smf = re.sub(
+            rf"(^faction\s+{fac}\b.*?^symbol\s+)models_strat/\S+",
+            rf"\g<1>models_strat/symbol_{fac}.cas",
+            smf, count=1, flags=re.M | re.S)
+    write(smf_path, smf)
+    print(f"strat symbols: {copied} -> own .cas, sm_factions updated")
 
 
 def main():
@@ -309,6 +465,9 @@ def main():
     step4_expanded_bin()
     step5_strat_fixes()
     step6_menu_symbols()
+    step7_descr_character()
+    step8_banners_xml()
+    step9_strat_symbols()
     # the loose expanded.txt is superseded by the compiled bin
     loose = os.path.join(DATA, "text", "expanded.txt")
     if os.path.exists(loose):

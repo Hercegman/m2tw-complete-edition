@@ -499,7 +499,7 @@ has_family_tree				yes
 faction						croatia
 culture						eastern_european
 religion					catholic
-symbol						models_strat/symbol_hungary.CAS
+symbol						models_strat/symbol_croatia.cas
 rebel_symbol				models_strat/symbol_rebels.CAS
 primary_colour				red 220, green 30, blue 30
 secondary_colour			red 240, green 240, blue 240
@@ -519,7 +519,7 @@ has_family_tree					yes
 faction						ragusa
 culture						southern_european
 religion					catholic
-symbol						models_strat/symbol_venice.CAS
+symbol						models_strat/symbol_ragusa.cas
 rebel_symbol				models_strat/symbol_rebels.CAS
 primary_colour				red 30, green 70, blue 190
 secondary_colour			red 240, green 200, blue 40
@@ -539,7 +539,7 @@ has_family_tree					yes
 faction						serbia
 culture						eastern_european
 religion					orthodox
-symbol						models_strat/symbol_byzantium.CAS
+symbol						models_strat/symbol_serbia.cas
 rebel_symbol				models_strat/symbol_rebels.CAS
 primary_colour				red 150, green 20, blue 20
 secondary_colour			red 240, green 230, blue 200
@@ -559,7 +559,7 @@ has_family_tree					yes
 faction						bulgaria
 culture						eastern_european
 religion					orthodox
-symbol						models_strat/symbol_byzantium.CAS
+symbol						models_strat/symbol_bulgaria.cas
 rebel_symbol				models_strat/symbol_rebels.CAS
 primary_colour				red 70, green 120, blue 60
 secondary_colour			red 230, green 230, blue 230
@@ -579,7 +579,7 @@ has_family_tree					yes
 faction						wallachia
 culture						eastern_european
 religion					orthodox
-symbol						models_strat/symbol_byzantium.CAS
+symbol						models_strat/symbol_wallachia.cas
 rebel_symbol				models_strat/symbol_rebels.CAS
 primary_colour				red 230, green 180, blue 40
 secondary_colour			red 90, green 30, blue 30
@@ -599,7 +599,7 @@ has_family_tree					yes
 faction						wales
 culture						northern_european
 religion					catholic
-symbol						models_strat/symbol_scotland.CAS
+symbol						models_strat/symbol_wales.cas
 rebel_symbol				models_strat/symbol_rebels.CAS
 primary_colour				red 0, green 140, blue 70
 secondary_colour			red 240, green 240, blue 240
@@ -619,7 +619,7 @@ has_family_tree					yes
 faction						ireland
 culture						northern_european
 religion					catholic
-symbol						models_strat/symbol_scotland.CAS
+symbol						models_strat/symbol_ireland.cas
 rebel_symbol				models_strat/symbol_rebels.CAS
 primary_colour				red 240, green 140, blue 0
 secondary_colour			red 0, green 120, blue 60
@@ -639,7 +639,7 @@ has_family_tree					yes
 faction						norway
 culture						northern_european
 religion					catholic
-symbol						models_strat/symbol_denmark.CAS
+symbol						models_strat/symbol_norway.cas
 rebel_symbol				models_strat/symbol_rebels.CAS
 primary_colour				red 120, green 30, blue 160
 secondary_colour			red 240, green 240, blue 240
@@ -659,7 +659,7 @@ has_family_tree					yes
 faction						jerusalem
 culture						southern_european
 religion					catholic
-symbol						models_strat/symbol_papacy.CAS
+symbol						models_strat/symbol_jerusalem.cas
 rebel_symbol				models_strat/symbol_rebels.CAS
 primary_colour				red 245, green 245, blue 245
 secondary_colour			red 200, green 40, blue 40
