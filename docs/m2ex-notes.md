@@ -15,7 +15,19 @@
 - Loose data overrides in `data/` (fonts, menu, shaders, terrain, text, ui, vegetation,
   `descr_ex.txt`, `descr_caps_ex.txt`, `descr_model_battle.txt`, …) and per-DLC files
   under `mods/{americas,british_isles,crusades,teutonic}/`.
-- `packs/voices.pack`, `tools/pack.exe` (its own pack tool), DLC launcher .bat files.
+- `packs/voices.pack`, DLC launcher .bat files.
+- **`tools/pack.exe` — full CLI archive tool** (verified by running it):
+  ```
+  pack l <archive>              list entries
+  pack x <archive> [outdir]     extract all
+  pack c <folder> [out] [--v3]  create from folder; out .pack = v4/zstd
+                                (--v3 = retail-compatible lzo), .pak = RTW
+  ```
+  Handles .pack v3 (retail) and v4 (M2EX zstd). This SUPERSEDES our Python
+  `unpack_pack.py`/`repack_multi.py` for pack work — our unpacker's layout assumptions
+  only hold for the base-game `data_0.pack` and corrupt DLC extracts. `tools/pack7z.dll`
+  + `install_7zip_plugin.ps1` additionally let 7-Zip open .pack files (needs 7-Zip).
+  After M2EX install, the tool lives at `<game>/tools/pack.exe`.
 
 **Install = extract M2EX.7z into the game root, allowing overwrite.** Rollback: delete
 files listed in the archive manifest + Steam Verify Integrity (see
