@@ -403,13 +403,12 @@ def step8_banners_xml():
                 continue
             indent, line = mate_line.group(1), mate_line.group(2)
             new = line.replace(f'Faction="{cap(mate)}"', f'Faction="{cap(fac)}"')
-            if fac in DLC_NAME_BLOCKS:
-                # point at the copied DLC texture if the same banner-mesh slot
-                # names one (Faction_banner_<fac>.texture convention)
-                new = re.sub(r'DiffuseMap="banners\\textures\\[Ff]action_banner_\w+\.texture"',
-                             f'DiffuseMap="banners\\\\textures\\\\faction_banner_{fac}.texture"', new)
-                new = re.sub(r'TranslucencyMap="banners\\textures\\[Ff]action_banner_\w+_trans\.texture"',
-                             f'TranslucencyMap="banners\\\\textures\\\\faction_banner_{fac}_trans.texture"', new)
+            # every new faction ships its own texture files (DLC copies for
+            # the Kingdoms four, generated heraldry for the Balkan five)
+            new = re.sub(r'DiffuseMap="banners\\textures\\[Ff]action_banner_\w+\.texture"',
+                         f'DiffuseMap="banners\\\\textures\\\\faction_banner_{fac}.texture"', new)
+            new = re.sub(r'TranslucencyMap="banners\\textures\\[Ff]action_banner_\w+_trans\.texture"',
+                         f'TranslucencyMap="banners\\\\textures\\\\faction_banner_{fac}_trans.texture"', new)
             new_lines.append(indent + new)
             added += 1
         if not new_lines:

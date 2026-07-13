@@ -73,11 +73,11 @@
             <Texture Faction="Saxons" DiffuseMap="banners\textures\Faction_banner_saxons.texture" TranslucencyMap="banners\textures\Faction_banner_saxons_trans.texture"/>
             <Texture Faction="Normans" DiffuseMap="banners\textures\Faction_banner_england.texture" TranslucencyMap="banners\textures\Faction_banner_england_trans.texture"/>
             <Texture Faction="Slave" DiffuseMap="banners\textures\Faction_banner_rebels.texture" TranslucencyMap="banners\textures\Faction_banner_rebels_trans.texture"/>
-                     <Texture Faction="Croatia" DiffuseMap="banners\textures\Faction_banner_hungary.texture" TranslucencyMap="banners\textures\Faction_banner_hungary_trans.texture"/>
-            <Texture Faction="Ragusa" DiffuseMap="banners\textures\Faction_banner_venice.texture" TranslucencyMap="banners\textures\Faction_banner_venice_trans.texture"/>
-            <Texture Faction="Serbia" DiffuseMap="banners\textures\Faction_banner_byzantium.texture" TranslucencyMap="banners\textures\Faction_banner_byzantium_trans.texture"/>
-            <Texture Faction="Bulgaria" DiffuseMap="banners\textures\Faction_banner_byzantium.texture" TranslucencyMap="banners\textures\Faction_banner_byzantium_trans.texture"/>
-            <Texture Faction="Wallachia" DiffuseMap="banners\textures\Faction_banner_hungary.texture" TranslucencyMap="banners\textures\Faction_banner_hungary_trans.texture"/>
+                     <Texture Faction="Croatia" DiffuseMap="banners\textures\faction_banner_croatia.texture" TranslucencyMap="banners\textures\faction_banner_croatia_trans.texture"/>
+            <Texture Faction="Ragusa" DiffuseMap="banners\textures\faction_banner_ragusa.texture" TranslucencyMap="banners\textures\faction_banner_ragusa_trans.texture"/>
+            <Texture Faction="Serbia" DiffuseMap="banners\textures\faction_banner_serbia.texture" TranslucencyMap="banners\textures\faction_banner_serbia_trans.texture"/>
+            <Texture Faction="Bulgaria" DiffuseMap="banners\textures\faction_banner_bulgaria.texture" TranslucencyMap="banners\textures\faction_banner_bulgaria_trans.texture"/>
+            <Texture Faction="Wallachia" DiffuseMap="banners\textures\faction_banner_wallachia.texture" TranslucencyMap="banners\textures\faction_banner_wallachia_trans.texture"/>
             <Texture Faction="Wales" DiffuseMap="banners\textures\faction_banner_wales.texture" TranslucencyMap="banners\textures\faction_banner_wales_trans.texture"/>
             <Texture Faction="Ireland" DiffuseMap="banners\textures\faction_banner_ireland.texture" TranslucencyMap="banners\textures\faction_banner_ireland_trans.texture"/>
             <Texture Faction="Norway" DiffuseMap="banners\textures\faction_banner_norway.texture" TranslucencyMap="banners\textures\faction_banner_norway_trans.texture"/>
@@ -124,11 +124,11 @@
             <Texture Faction="Saxons" DiffuseMap="banners\textures\Faction_banner_saxons.texture" TranslucencyMap="banners\textures\Faction_banner_saxons_trans.texture"/>
             <Texture Faction="Normans" DiffuseMap="banners\textures\Faction_banner_england.texture" TranslucencyMap="banners\textures\Faction_banner_england_trans.texture"/>
             <Texture Faction="Slave" DiffuseMap="banners\textures\Faction_banner_rebels.texture" TranslucencyMap="banners\textures\Faction_banner_rebels_trans.texture"/>
-                     <Texture Faction="Croatia" DiffuseMap="banners\textures\Faction_banner_hungary.texture" TranslucencyMap="banners\textures\Faction_banner_hungary_trans.texture"/>
-            <Texture Faction="Ragusa" DiffuseMap="banners\textures\Faction_banner_venice.texture" TranslucencyMap="banners\textures\Faction_banner_venice_trans.texture"/>
-            <Texture Faction="Serbia" DiffuseMap="banners\textures\Faction_banner_byzantium.texture" TranslucencyMap="banners\textures\Faction_banner_byzantium_trans.texture"/>
-            <Texture Faction="Bulgaria" DiffuseMap="banners\textures\Faction_banner_byzantium.texture" TranslucencyMap="banners\textures\Faction_banner_byzantium_trans.texture"/>
-            <Texture Faction="Wallachia" DiffuseMap="banners\textures\Faction_banner_hungary.texture" TranslucencyMap="banners\textures\Faction_banner_hungary_trans.texture"/>
+                     <Texture Faction="Croatia" DiffuseMap="banners\textures\faction_banner_croatia.texture" TranslucencyMap="banners\textures\faction_banner_croatia_trans.texture"/>
+            <Texture Faction="Ragusa" DiffuseMap="banners\textures\faction_banner_ragusa.texture" TranslucencyMap="banners\textures\faction_banner_ragusa_trans.texture"/>
+            <Texture Faction="Serbia" DiffuseMap="banners\textures\faction_banner_serbia.texture" TranslucencyMap="banners\textures\faction_banner_serbia_trans.texture"/>
+            <Texture Faction="Bulgaria" DiffuseMap="banners\textures\faction_banner_bulgaria.texture" TranslucencyMap="banners\textures\faction_banner_bulgaria_trans.texture"/>
+            <Texture Faction="Wallachia" DiffuseMap="banners\textures\faction_banner_wallachia.texture" TranslucencyMap="banners\textures\faction_banner_wallachia_trans.texture"/>
             <Texture Faction="Wales" DiffuseMap="banners\textures\faction_banner_wales.texture" TranslucencyMap="banners\textures\faction_banner_wales_trans.texture"/>
             <Texture Faction="Ireland" DiffuseMap="banners\textures\faction_banner_ireland.texture" TranslucencyMap="banners\textures\faction_banner_ireland_trans.texture"/>
             <Texture Faction="Norway" DiffuseMap="banners\textures\faction_banner_norway.texture" TranslucencyMap="banners\textures\faction_banner_norway_trans.texture"/>
@@ -175,11 +175,11 @@
             <Texture Faction="Saxons" DiffuseMap="banners\textures\Faction_banner_saxons.texture" TranslucencyMap="banners\textures\Faction_banner_saxons_trans.texture"/>
             <Texture Faction="Normans" DiffuseMap="banners\textures\Faction_banner_england.texture" TranslucencyMap="banners\textures\Faction_banner_england_trans.texture"/>
             <Texture Faction="Slave" DiffuseMap="banners\textures\Faction_banner_rebels.texture" TranslucencyMap="banners\textures\Faction_banner_rebels_trans.texture"/>
-                     <Texture Faction="Croatia" DiffuseMap="banners\textures\Faction_banner_hungary.texture" TranslucencyMap="banners\textures\Faction_banner_hungary_trans.texture"/>
-            <Texture Faction="Ragusa" DiffuseMap="banners\textures\Faction_banner_venice.texture" TranslucencyMap="banners\textures\Faction_banner_venice_trans.texture"/>
-            <Texture Faction="Serbia" DiffuseMap="banners\textures\Faction_banner_byzantium.texture" TranslucencyMap="banners\textures\Faction_banner_byzantium_trans.texture"/>
-            <Texture Faction="Bulgaria" DiffuseMap="banners\textures\Faction_banner_byzantium.texture" TranslucencyMap="banners\textures\Faction_banner_byzantium_trans.texture"/>
-            <Texture Faction="Wallachia" DiffuseMap="banners\textures\Faction_banner_hungary.texture" TranslucencyMap="banners\textures\Faction_banner_hungary_trans.texture"/>
+                     <Texture Faction="Croatia" DiffuseMap="banners\textures\faction_banner_croatia.texture" TranslucencyMap="banners\textures\faction_banner_croatia_trans.texture"/>
+            <Texture Faction="Ragusa" DiffuseMap="banners\textures\faction_banner_ragusa.texture" TranslucencyMap="banners\textures\faction_banner_ragusa_trans.texture"/>
+            <Texture Faction="Serbia" DiffuseMap="banners\textures\faction_banner_serbia.texture" TranslucencyMap="banners\textures\faction_banner_serbia_trans.texture"/>
+            <Texture Faction="Bulgaria" DiffuseMap="banners\textures\faction_banner_bulgaria.texture" TranslucencyMap="banners\textures\faction_banner_bulgaria_trans.texture"/>
+            <Texture Faction="Wallachia" DiffuseMap="banners\textures\faction_banner_wallachia.texture" TranslucencyMap="banners\textures\faction_banner_wallachia_trans.texture"/>
             <Texture Faction="Wales" DiffuseMap="banners\textures\faction_banner_wales.texture" TranslucencyMap="banners\textures\faction_banner_wales_trans.texture"/>
             <Texture Faction="Ireland" DiffuseMap="banners\textures\faction_banner_ireland.texture" TranslucencyMap="banners\textures\faction_banner_ireland_trans.texture"/>
             <Texture Faction="Norway" DiffuseMap="banners\textures\faction_banner_norway.texture" TranslucencyMap="banners\textures\faction_banner_norway_trans.texture"/>
@@ -226,11 +226,11 @@
             <Texture Faction="Saxons" DiffuseMap="banners\textures\Faction_banner_saxons.texture" TranslucencyMap="banners\textures\Faction_banner_saxons_trans.texture"/>
             <Texture Faction="Normans" DiffuseMap="banners\textures\Faction_banner_england.texture" TranslucencyMap="banners\textures\Faction_banner_england_trans.texture"/>
             <Texture Faction="Slave" DiffuseMap="banners\textures\Faction_banner_rebels.texture" TranslucencyMap="banners\textures\Faction_banner_rebels_trans.texture"/>
-                     <Texture Faction="Croatia" DiffuseMap="banners\textures\Faction_banner_hungary.texture" TranslucencyMap="banners\textures\Faction_banner_hungary_trans.texture"/>
-            <Texture Faction="Ragusa" DiffuseMap="banners\textures\Faction_banner_venice.texture" TranslucencyMap="banners\textures\Faction_banner_venice_trans.texture"/>
-            <Texture Faction="Serbia" DiffuseMap="banners\textures\Faction_banner_byzantium.texture" TranslucencyMap="banners\textures\Faction_banner_byzantium_trans.texture"/>
-            <Texture Faction="Bulgaria" DiffuseMap="banners\textures\Faction_banner_byzantium.texture" TranslucencyMap="banners\textures\Faction_banner_byzantium_trans.texture"/>
-            <Texture Faction="Wallachia" DiffuseMap="banners\textures\Faction_banner_hungary.texture" TranslucencyMap="banners\textures\Faction_banner_hungary_trans.texture"/>
+                     <Texture Faction="Croatia" DiffuseMap="banners\textures\faction_banner_croatia.texture" TranslucencyMap="banners\textures\faction_banner_croatia_trans.texture"/>
+            <Texture Faction="Ragusa" DiffuseMap="banners\textures\faction_banner_ragusa.texture" TranslucencyMap="banners\textures\faction_banner_ragusa_trans.texture"/>
+            <Texture Faction="Serbia" DiffuseMap="banners\textures\faction_banner_serbia.texture" TranslucencyMap="banners\textures\faction_banner_serbia_trans.texture"/>
+            <Texture Faction="Bulgaria" DiffuseMap="banners\textures\faction_banner_bulgaria.texture" TranslucencyMap="banners\textures\faction_banner_bulgaria_trans.texture"/>
+            <Texture Faction="Wallachia" DiffuseMap="banners\textures\faction_banner_wallachia.texture" TranslucencyMap="banners\textures\faction_banner_wallachia_trans.texture"/>
             <Texture Faction="Wales" DiffuseMap="banners\textures\faction_banner_wales.texture" TranslucencyMap="banners\textures\faction_banner_wales_trans.texture"/>
             <Texture Faction="Ireland" DiffuseMap="banners\textures\faction_banner_ireland.texture" TranslucencyMap="banners\textures\faction_banner_ireland_trans.texture"/>
             <Texture Faction="Norway" DiffuseMap="banners\textures\faction_banner_norway.texture" TranslucencyMap="banners\textures\faction_banner_norway_trans.texture"/>
