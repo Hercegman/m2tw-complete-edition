@@ -1,0 +1,1153 @@
+﻿# Game root manifest BEFORE M2EX install - 2026-07-13T19:48:11
+binkw32.dll	196096	2025-10-11T18:52:56
+cine.dll	167936	2025-10-11T18:52:56
+croatia_overhaul.bat	741	2026-06-20T17:22:43
+croatia_overhaul.cfg	199	2026-06-19T23:58:51
+empty.txt	0	2025-10-11T18:52:56
+granny2.dll	450103	2025-10-11T18:52:56
+IDV.dll	69632	2025-10-11T18:53:53
+installscript.vdf	806	2025-10-11T18:54:25
+medieval2.exe	19673088	2025-10-11T18:52:56
+medieval2.preference.cfg	2205	2026-06-20T19:31:41
+mfc71.dll	1060864	2025-10-11T18:52:56
+mfc71d.dll	2179072	2025-10-11T18:52:56
+mss32.dll	393216	2025-10-11T18:52:56
+msvcp71.dll	499712	2025-10-11T18:52:56
+msvcp71d.dll	765952	2025-10-11T18:52:56
+msvcr71.dll	348160	2025-10-11T18:52:56
+msvcr71d.dll	544768	2025-10-11T18:52:56
+steam_api.dll	115960	2025-10-11T18:55:22
+system.log.txt	16205	2026-06-20T17:48:44
+data\Animations\pack.dat	51814673	2025-10-11T18:52:56
+data\Animations\pack.idx	202500	2025-10-11T18:52:59
+data\Animations\skeletons.dat	2002938	2025-10-11T18:52:56
+data\Animations\skeletons.idx	3339	2025-10-11T18:53:01
+data\cursors\arrow.ani	59076	2025-10-11T18:52:57
+data\cursors\arrow.cur	7358	2025-10-11T18:53:01
+data\cursors\arrow2.ani	29580	2025-10-11T18:52:59
+data\cursors\assassinate.ani	29580	2025-10-11T18:53:01
+data\cursors\assassinate.cur	7358	2025-10-11T18:52:57
+data\cursors\attack.ani	36954	2025-10-11T18:52:57
+data\cursors\diplomacy.ani	29580	2025-10-11T18:52:57
+data\cursors\diplomacy.cur	7358	2025-10-11T18:52:59
+data\cursors\disembark.ani	29580	2025-10-11T18:53:01
+data\cursors\disembark.cur	7358	2025-10-11T18:52:59
+data\cursors\dispatch.ani	29580	2025-10-11T18:52:59
+data\cursors\dispatch.cur	7358	2025-10-11T18:53:01
+data\cursors\embark.ani	29580	2025-10-11T18:52:57
+data\cursors\embark.cur	7358	2025-10-11T18:52:57
+data\cursors\enabled.ani	29580	2025-10-11T18:53:01
+data\cursors\enabled.cur	7358	2025-10-11T18:52:57
+data\cursors\enter.ani	29580	2025-10-11T18:53:01
+data\cursors\enter.cur	7358	2025-10-11T18:53:01
+data\cursors\exchange.ani	29580	2025-10-11T18:52:57
+data\cursors\exchange.cur	7358	2025-10-11T18:52:57
+data\cursors\fire.cur	7358	2025-10-11T18:53:01
+data\cursors\fire_out_of_range.cur	7358	2025-10-11T18:53:01
+data\cursors\heretic.ani	29580	2025-10-11T18:53:01
+data\cursors\invalid.cur	7358	2025-10-11T18:52:59
+data\cursors\lineup.ani	29580	2025-10-11T18:52:57
+data\cursors\lineup.cur	7358	2025-10-11T18:53:01
+data\cursors\marry.ani	29580	2025-10-11T18:52:59
+data\cursors\merchant.ani	29580	2025-10-11T18:52:59
+data\cursors\mouse_look.cur	7358	2025-10-11T18:53:01
+data\cursors\move.ani	51702	2025-10-11T18:52:57
+data\cursors\move_in_range.ani	51702	2025-10-11T18:52:57
+data\cursors\move_out_of_range.ani	51702	2025-10-11T18:52:57
+data\cursors\nomove.cur	7358	2025-10-11T18:52:59
+data\cursors\pickup.cur	7358	2025-10-11T18:52:59
+data\cursors\pressed.cur	7358	2025-10-11T18:53:01
+data\cursors\rotate_left.cur	7358	2025-10-11T18:52:59
+data\cursors\rotate_right.cur	7358	2025-10-11T18:52:57
+data\cursors\sandwatch.ani	88572	2025-10-11T18:52:59
+data\cursors\siege.ani	44328	2025-10-11T18:52:57
+data\cursors\spy.ani	29580	2025-10-11T18:52:59
+data\cursors\spy.cur	7358	2025-10-11T18:53:01
+data\cursors\step_bkwd.cur	7358	2025-10-11T18:53:01
+data\cursors\step_fwd.cur	7358	2025-10-11T18:52:59
+data\cursors\step_left.cur	7358	2025-10-11T18:53:01
+data\cursors\step_right.cur	7358	2025-10-11T18:53:01
+data\cursors\thrown.cur	7358	2025-10-11T18:52:59
+data\cursors\thrown_out_of_range.cur	7358	2025-10-11T18:53:01
+data\cursors\walk.ani	51702	2025-10-11T18:52:57
+data\cursors\walk.cur	7358	2025-10-11T18:53:01
+data\cursors\waypoint.ani	29580	2025-10-11T18:52:57
+data\cursors\waypoint.cur	7358	2025-10-11T18:53:01
+data\fmv\demo_mtw2_campaign.bik	86773256	2025-10-11T18:52:56
+data\fmv\logos.bik	5078756	2025-10-11T18:52:56
+data\fmv\assassinate\asp eur d.bik	2930156	2025-10-11T18:52:56
+data\fmv\assassinate\asp eur e.bik	3510172	2025-10-11T18:52:56
+data\fmv\assassinate\asp eur m.bik	4807140	2025-10-11T18:52:56
+data\fmv\assassinate\asp eur s.bik	3781156	2025-10-11T18:52:56
+data\fmv\assassinate\asp mde d.bik	2930220	2025-10-11T18:52:56
+data\fmv\assassinate\asp mde e.bik	3510164	2025-10-11T18:52:56
+data\fmv\assassinate\asp mde m.bik	4807216	2025-10-11T18:52:56
+data\fmv\assassinate\asp mde s.bik	3787952	2025-10-11T18:52:56
+data\fmv\assassinate\asp prc d.bik	2928884	2025-10-11T18:52:56
+data\fmv\assassinate\asp prc e.bik	3509972	2025-10-11T18:52:56
+data\fmv\assassinate\asp prc m.bik	4809760	2025-10-11T18:52:56
+data\fmv\assassinate\asp prc s.bik	3804520	2025-10-11T18:52:56
+data\fmv\assassinate\blw oae f.bik	2769584	2025-10-11T18:52:56
+data\fmv\assassinate\blw oae m.bik	3180216	2025-10-11T18:52:56
+data\fmv\assassinate\blw oae s.bik	2691248	2025-10-11T18:52:56
+data\fmv\assassinate\blw oam f.bik	2769624	2025-10-11T18:52:56
+data\fmv\assassinate\blw oam m.bik	3195600	2025-10-11T18:52:56
+data\fmv\assassinate\blw oam s.bik	2691660	2025-10-11T18:52:56
+data\fmv\assassinate\blw ole f.bik	2753148	2025-10-11T18:52:56
+data\fmv\assassinate\blw ole m.bik	3180016	2025-10-11T18:52:56
+data\fmv\assassinate\blw ole s.bik	2691100	2025-10-11T18:52:56
+data\fmv\assassinate\blw olm f.bik	2753132	2025-10-11T18:52:56
+data\fmv\assassinate\blw olm m.bik	3179952	2025-10-11T18:52:56
+data\fmv\assassinate\blw olm s.bik	2691152	2025-10-11T18:52:56
+data\fmv\assassinate\blw tee f.bik	2753688	2025-10-11T18:52:56
+data\fmv\assassinate\blw tee m.bik	3183160	2025-10-11T18:52:56
+data\fmv\assassinate\blw tee s.bik	2691228	2025-10-11T18:52:56
+data\fmv\assassinate\blw tem f.bik	2753656	2025-10-11T18:52:56
+data\fmv\assassinate\blw tem m.bik	3183088	2025-10-11T18:52:56
+data\fmv\assassinate\blw tem s.bik	2691204	2025-10-11T18:52:56
+data\fmv\assassinate\blw tme f.bik	2770044	2025-10-11T18:52:56
+data\fmv\assassinate\blw tme m.bik	3180148	2025-10-11T18:52:56
+data\fmv\assassinate\blw tme s.bik	2691248	2025-10-11T18:52:56
+data\fmv\assassinate\blw tmm f.bik	2770028	2025-10-11T18:52:56
+data\fmv\assassinate\blw tmm m.bik	3192736	2025-10-11T18:52:56
+data\fmv\assassinate\blw tmm s.bik	2691264	2025-10-11T18:52:56
+data\fmv\assassinate\bon oam f.bik	3410436	2025-10-11T18:52:56
+data\fmv\assassinate\bon oam m.bik	4082000	2025-10-11T18:52:56
+data\fmv\assassinate\bon oam s.bik	4838356	2025-10-11T18:52:56
+data\fmv\assassinate\bon oaw s.bik	4831208	2025-10-11T18:52:56
+data\fmv\assassinate\bon tem f.bik	3397036	2025-10-11T18:52:56
+data\fmv\assassinate\bon tem m.bik	4081912	2025-10-11T18:52:56
+data\fmv\assassinate\bon tem s.bik	4838376	2025-10-11T18:52:56
+data\fmv\assassinate\bon tew s.bik	4831228	2025-10-11T18:52:56
+data\fmv\assassinate\bon tmm f.bik	3410448	2025-10-11T18:52:56
+data\fmv\assassinate\bon tmm m.bik	4081936	2025-10-11T18:52:56
+data\fmv\assassinate\bon tmm s.bik	4837592	2025-10-11T18:52:56
+data\fmv\assassinate\bon tmw s.bik	4830444	2025-10-11T18:52:56
+data\fmv\assassinate\bsb oam f.bik	1903524	2025-10-11T18:52:56
+data\fmv\assassinate\bsb oam m.bik	2880744	2025-10-11T18:52:56
+data\fmv\assassinate\bsb oam s.bik	4122256	2025-10-11T18:52:56
+data\fmv\assassinate\bsb ole f.bik	1917248	2025-10-11T18:52:56
+data\fmv\assassinate\bsb ole m.bik	2827064	2025-10-11T18:52:56
+data\fmv\assassinate\bsb ole s.bik	4150372	2025-10-11T18:52:56
+data\fmv\assassinate\bsb tee f.bik	1903428	2025-10-11T18:52:56
+data\fmv\assassinate\bsb tee m.bik	2880752	2025-10-11T18:52:56
+data\fmv\assassinate\bsb tee s.bik	4122072	2025-10-11T18:52:56
+data\fmv\assassinate\bsb tmm f.bik	1903452	2025-10-11T18:52:56
+data\fmv\assassinate\bsb tmm m.bik	2880804	2025-10-11T18:52:56
+data\fmv\assassinate\bsb tmm s.bik	4121880	2025-10-11T18:52:56
+data\fmv\assassinate\btd eur d.bik	2724692	2025-10-11T18:52:56
+data\fmv\assassinate\btd eur e.bik	2529248	2025-10-11T18:52:56
+data\fmv\assassinate\btd eur m.bik	1690576	2025-10-11T18:52:56
+data\fmv\assassinate\btd eur s.bik	8906428	2025-10-11T18:52:56
+data\fmv\assassinate\btd mid d.bik	2724836	2025-10-11T18:52:56
+data\fmv\assassinate\btd mid e.bik	2529260	2025-10-11T18:52:56
+data\fmv\assassinate\btd mid m.bik	1690580	2025-10-11T18:52:56
+data\fmv\assassinate\btd mid s.bik	8906112	2025-10-11T18:52:56
+data\fmv\assassinate\con eur f.bik	4251332	2025-10-11T18:52:56
+data\fmv\assassinate\con eur m.bik	3492628	2025-10-11T18:52:56
+data\fmv\assassinate\con eur s.bik	6444136	2025-10-11T18:52:56
+data\fmv\assassinate\key eur f.bik	3187124	2025-10-11T18:52:56
+data\fmv\assassinate\key eur m.bik	4800700	2025-10-11T18:52:56
+data\fmv\assassinate\key eur s.bik	6153956	2025-10-11T18:52:56
+data\fmv\assassinate\kni oai f.bik	3186312	2025-10-11T18:52:56
+data\fmv\assassinate\kni oai m.bik	1449720	2025-10-11T18:52:56
+data\fmv\assassinate\kni oai s.bik	3932088	2025-10-11T18:52:56
+data\fmv\assassinate\kni oam f.bik	3186328	2025-10-11T18:52:56
+data\fmv\assassinate\kni oam m.bik	1432344	2025-10-11T18:52:56
+data\fmv\assassinate\kni oam s.bik	3932076	2025-10-11T18:52:56
+data\fmv\assassinate\kni oan f.bik	3186312	2025-10-11T18:52:56
+data\fmv\assassinate\kni oan m.bik	1449964	2025-10-11T18:52:56
+data\fmv\assassinate\kni oan s.bik	3932180	2025-10-11T18:52:56
+data\fmv\assassinate\kni oap f.bik	3186368	2025-10-11T18:52:56
+data\fmv\assassinate\kni oap m.bik	1449892	2025-10-11T18:52:56
+data\fmv\assassinate\kni oap s.bik	3932132	2025-10-11T18:52:56
+data\fmv\assassinate\kni oli f.bik	3192068	2025-10-11T18:52:56
+data\fmv\assassinate\kni oli m.bik	1449400	2025-10-11T18:52:56
+data\fmv\assassinate\kni oli s.bik	3932444	2025-10-11T18:52:56
+data\fmv\assassinate\kni olm f.bik	3192040	2025-10-11T18:52:56
+data\fmv\assassinate\kni olm m.bik	1449408	2025-10-11T18:52:56
+data\fmv\assassinate\kni olm s.bik	3931960	2025-10-11T18:52:56
+data\fmv\assassinate\kni oln f.bik	3192096	2025-10-11T18:52:56
+data\fmv\assassinate\kni oln m.bik	1449496	2025-10-11T18:52:56
+data\fmv\assassinate\kni oln s.bik	3932012	2025-10-11T18:52:56
+data\fmv\assassinate\kni olp f.bik	3192040	2025-10-11T18:52:56
+data\fmv\assassinate\kni olp m.bik	1449420	2025-10-11T18:52:56
+data\fmv\assassinate\kni olp s.bik	3931992	2025-10-11T18:52:56
+data\fmv\assassinate\kni tei f.bik	3192084	2025-10-11T18:52:56
+data\fmv\assassinate\kni tei m.bik	1449872	2025-10-11T18:52:56
+data\fmv\assassinate\kni tei s.bik	3935656	2025-10-11T18:52:56
+data\fmv\assassinate\kni tem f.bik	3192060	2025-10-11T18:52:56
+data\fmv\assassinate\kni tem m.bik	1449808	2025-10-11T18:52:56
+data\fmv\assassinate\kni tem s.bik	3935688	2025-10-11T18:52:56
+data\fmv\assassinate\kni ten f.bik	3192060	2025-10-11T18:52:56
+data\fmv\assassinate\kni ten m.bik	1449312	2025-10-11T18:52:56
+data\fmv\assassinate\kni ten s.bik	3935684	2025-10-11T18:52:56
+data\fmv\assassinate\kni tep f.bik	3192036	2025-10-11T18:52:56
+data\fmv\assassinate\kni tep m.bik	1449852	2025-10-11T18:52:56
+data\fmv\assassinate\kni tep s.bik	3935716	2025-10-11T18:52:56
+data\fmv\assassinate\kni tmi f.bik	3199980	2025-10-11T18:52:56
+data\fmv\assassinate\kni tmi m.bik	1427904	2025-10-11T18:52:56
+data\fmv\assassinate\kni tmi s.bik	3932072	2025-10-11T18:52:56
+data\fmv\assassinate\kni tmm f.bik	3186252	2025-10-11T18:52:56
+data\fmv\assassinate\kni tmm m.bik	1449648	2025-10-11T18:52:56
+data\fmv\assassinate\kni tmm s.bik	3932344	2025-10-11T18:52:56
+data\fmv\assassinate\kni tmn f.bik	3186264	2025-10-11T18:52:56
+data\fmv\assassinate\kni tmn m.bik	1449156	2025-10-11T18:52:56
+data\fmv\assassinate\kni tmn s.bik	3932296	2025-10-11T18:52:56
+data\fmv\assassinate\kni tmp f.bik	3186352	2025-10-11T18:52:56
+data\fmv\assassinate\kni tmp m.bik	1449152	2025-10-11T18:52:56
+data\fmv\assassinate\kni tmp s.bik	3932200	2025-10-11T18:52:56
+data\fmv\assassinate\kpr tep f.bik	4002468	2025-10-11T18:52:56
+data\fmv\assassinate\kpr tep s.bik	4946948	2025-10-11T18:52:56
+data\fmv\assassinate\kpr tmp f.bik	4002556	2025-10-11T18:52:56
+data\fmv\assassinate\kpr tmp s.bik	4933544	2025-10-11T18:52:56
+data\fmv\assassinate\mrk tee f.bik	3292380	2025-10-11T18:52:56
+data\fmv\assassinate\mrk tee m.bik	3369540	2025-10-11T18:52:56
+data\fmv\assassinate\mrk tee s.bik	4465672	2025-10-11T18:52:56
+data\fmv\assassinate\mrk tei f.bik	3292424	2025-10-11T18:52:56
+data\fmv\assassinate\mrk tei m.bik	3369500	2025-10-11T18:52:56
+data\fmv\assassinate\mrk tei s.bik	4465532	2025-10-11T18:52:56
+data\fmv\assassinate\mrk tem f.bik	3292420	2025-10-11T18:52:56
+data\fmv\assassinate\mrk tem m.bik	3369500	2025-10-11T18:52:56
+data\fmv\assassinate\mrk tem s.bik	4465660	2025-10-11T18:52:56
+data\fmv\assassinate\mrk tme f.bik	3295636	2025-10-11T18:52:56
+data\fmv\assassinate\mrk tme m.bik	3369360	2025-10-11T18:52:56
+data\fmv\assassinate\mrk tme s.bik	4465772	2025-10-11T18:52:56
+data\fmv\assassinate\mrk tmi f.bik	3295640	2025-10-11T18:52:56
+data\fmv\assassinate\mrk tmi m.bik	3369420	2025-10-11T18:52:56
+data\fmv\assassinate\mrk tmi s.bik	4465756	2025-10-11T18:52:56
+data\fmv\assassinate\mrk tmm f.bik	3295644	2025-10-11T18:52:56
+data\fmv\assassinate\mrk tmm m.bik	3369412	2025-10-11T18:52:56
+data\fmv\assassinate\mrk tmm s.bik	4465780	2025-10-11T18:52:56
+data\fmv\assassinate\mrk tmp f.bik	3295680	2025-10-11T18:52:56
+data\fmv\assassinate\mrk tmp m.bik	3369336	2025-10-11T18:52:56
+data\fmv\assassinate\mrk tmp s.bik	4465824	2025-10-11T18:52:56
+data\fmv\assassinate\snp tep f.bik	4072336	2025-10-11T18:52:56
+data\fmv\assassinate\snp tep m.bik	8504208	2025-10-11T18:52:56
+data\fmv\assassinate\snp tep s.bik	2489572	2025-10-11T18:52:56
+data\fmv\assassinate\stc tep f.bik	8272924	2025-10-11T18:52:56
+data\fmv\assassinate\stc tep m.bik	3181008	2025-10-11T18:52:56
+data\fmv\assassinate\stc tep s.bik	5717052	2025-10-11T18:52:56
+data\fmv\event\america_discovered.bik	14990884	2025-10-11T18:52:56
+data\fmv\event\aztecs_contacted.bik	21136344	2025-10-11T18:52:56
+data\fmv\event\black_death.bik	7554628	2025-10-11T18:52:56
+data\fmv\event\cathedral_built.bik	2746200	2025-10-11T18:52:56
+data\fmv\event\church_built.bik	1288700	2025-10-11T18:52:56
+data\fmv\event\first_crusade.bik	24491844	2025-10-11T18:52:56
+data\fmv\event\gunpowder_invented.bik	19457740	2025-10-11T18:52:56
+data\fmv\event\huge_cathedral_built.bik	12376200	2025-10-11T18:52:56
+data\fmv\event\inquisition.bik	18067408	2025-10-11T18:52:56
+data\fmv\event\mongols_invade.bik	23070980	2025-10-11T18:52:56
+data\fmv\event\papal_coronation.bik	11325912	2025-10-11T18:52:56
+data\fmv\event\princess_marriage.bik	24057928	2025-10-11T18:52:56
+data\fmv\event\timurids_invade.bik	29731456	2025-10-11T18:52:56
+data\fmv\faction\england_lose.bik	19450096	2025-10-11T18:52:56
+data\fmv\faction\england_win.bik	37775940	2025-10-11T18:52:56
+data\fmv\faction\france_lose.bik	19538816	2025-10-11T18:52:56
+data\fmv\faction\france_win.bik	37759972	2025-10-11T18:52:56
+data\fmv\faction\game_intro.bik	54083380	2025-10-11T18:52:56
+data\fmv\faction\hre_lose.bik	19427748	2025-10-11T18:52:56
+data\fmv\faction\hre_win.bik	37768076	2025-10-11T18:52:56
+data\fmv\faction\major_intro.bik	71007156	2025-10-11T18:52:56
+data\fmv\faction\minor_intro.bik	72001828	2025-10-11T18:52:56
+data\fmv\faction\minor_lose.bik	24159956	2025-10-11T18:52:56
+data\fmv\faction\minor_win.bik	36284972	2025-10-11T18:52:56
+data\fmv\faction\prologue_intro.bik	88675668	2025-10-11T18:52:56
+data\fmv\faction\prologue_win.bik	9291152	2025-10-11T18:52:56
+data\fmv\faction\spain_lose.bik	19586368	2025-10-11T18:52:56
+data\fmv\faction\spain_win.bik	37775524	2025-10-11T18:52:56
+data\fmv\faction\venice_lose.bik	19469828	2025-10-11T18:52:56
+data\fmv\faction\venice_win.bik	37779384	2025-10-11T18:52:56
+data\fmv\fmv_timings\america_discovered_subtitle_timing.txt	150	2025-10-11T18:54:17
+data\fmv\fmv_timings\aztecs_contacted_subtitle_timing.txt	147	2025-10-11T18:53:42
+data\fmv\fmv_timings\black_death_subtitle_timing.txt	68	2025-10-11T18:53:19
+data\fmv\fmv_timings\byzantium_intro_subtitle_timing.txt	149	2025-10-11T18:54:17
+data\fmv\fmv_timings\byzantium_outro_lose_subtitle_timing.txt	79	2025-10-11T18:54:17
+data\fmv\fmv_timings\byzantium_outro_win_subtitle_timing.txt	78	2025-10-11T18:54:17
+data\fmv\fmv_timings\denmark_intro_subtitle_timing.txt	145	2025-10-11T18:55:04
+data\fmv\fmv_timings\denmark_outro_lose_subtitle_timing.txt	77	2025-10-11T18:54:40
+data\fmv\fmv_timings\denmark_outro_win_subtitle_timing.txt	76	2025-10-11T18:54:40
+data\fmv\fmv_timings\egyptian_intro_subtitle_timing.txt	147	2025-10-11T18:54:17
+data\fmv\fmv_timings\egypt_outro_lose_subtitle_timing.txt	75	2025-10-11T18:54:40
+data\fmv\fmv_timings\egypt_outro_win_subtitle_timing.txt	74	2025-10-11T18:54:17
+data\fmv\fmv_timings\england_fe_subtitle_timing.txt	0	2025-10-11T18:56:00
+data\fmv\fmv_timings\england_outro_lose_subtitle_timing.txt	77	2025-10-11T18:55:04
+data\fmv\fmv_timings\england_outro_win_subtitle_timing.txt	152	2025-10-11T18:54:33
+data\fmv\fmv_timings\english_intro_subtitle_timing.txt	287	2025-10-11T18:55:04
+data\fmv\fmv_timings\first_crusade_subtitle_timing.txt	214	2025-10-11T18:53:14
+data\fmv\fmv_timings\first_great_mosque_subtitle_timing.txt	73	2025-10-11T18:53:14
+data\fmv\fmv_timings\first_huge_cathedral_subtitle_timing.txt	78	2025-10-11T18:54:17
+data\fmv\fmv_timings\first_inquisition_subtitle_timing.txt	76	2025-10-11T18:53:14
+data\fmv\fmv_timings\first_jihad_subtitle_timing.txt	132	2025-10-11T18:54:40
+data\fmv\fmv_timings\france_fe_subtitle_timing.txt	0	2025-10-11T18:56:00
+data\fmv\fmv_timings\france_outro_lose_subtitle_timing.txt	76	2025-10-11T18:54:40
+data\fmv\fmv_timings\france_outro_win_subtitle_timing.txt	150	2025-10-11T18:54:17
+data\fmv\fmv_timings\french_intro_subtitle_timing.txt	213	2025-10-11T18:54:33
+data\fmv\fmv_timings\game_intro_subtitle_timing.txt	69	2025-10-11T18:54:33
+data\fmv\fmv_timings\gunpowder_discovered_subtitle_timing.txt	157	2025-10-11T18:53:42
+data\fmv\fmv_timings\hre_fe_subtitle_timing.txt	0	2025-10-11T18:56:00
+data\fmv\fmv_timings\hre_intro_subtitle_timing.txt	204	2025-10-11T18:54:17
+data\fmv\fmv_timings\hre_outro_lose_subtitle_timing.txt	73	2025-10-11T18:53:14
+data\fmv\fmv_timings\hre_outro_win_subtitle_timing.txt	211	2025-10-11T18:53:14
+data\fmv\fmv_timings\hungary_intro_subtitle_timing.txt	146	2025-10-11T18:54:40
+data\fmv\fmv_timings\hungary_outro_lose_subtitle_timing.txt	77	2025-10-11T18:54:33
+data\fmv\fmv_timings\hungary_outro_win_subtitle_timing.txt	76	2025-10-11T18:54:33
+data\fmv\fmv_timings\milan_intro_subtitle_timing.txt	141	2025-10-11T18:53:42
+data\fmv\fmv_timings\milan_outro_lose_subtitle_timing.txt	75	2025-10-11T18:53:42
+data\fmv\fmv_timings\milan_outro_win_subtitle_timing.txt	74	2025-10-11T18:53:14
+data\fmv\fmv_timings\mongols_invade_subtitle_timing.txt	216	2025-10-11T18:53:42
+data\fmv\fmv_timings\moors_intro_subtitle_timing.txt	141	2025-10-11T18:54:17
+data\fmv\fmv_timings\moors_outro_lose_subtitle_timing.txt	75	2025-10-11T18:53:14
+data\fmv\fmv_timings\moors_outro_win_subtitle_timing.txt	74	2025-10-11T18:53:14
+data\fmv\fmv_timings\poland_intro_subtitle_timing.txt	143	2025-10-11T18:53:14
+data\fmv\fmv_timings\poland_outro_lose_subtitle_timing.txt	76	2025-10-11T18:54:17
+data\fmv\fmv_timings\poland_outro_win_subtitle_timing.txt	75	2025-10-11T18:54:17
+data\fmv\fmv_timings\portugal_intro_subtitle_timing.txt	148	2025-10-11T18:53:42
+data\fmv\fmv_timings\portugal_outro_lose_subtitle_timing.txt	78	2025-10-11T18:53:42
+data\fmv\fmv_timings\portugal_outro_win_subtitle_timing.txt	77	2025-10-11T18:53:42
+data\fmv\fmv_timings\prologue_intro_subtitle_timing.txt	811	2025-10-11T18:53:14
+data\fmv\fmv_timings\russia_intro_subtitle_timing.txt	144	2025-10-11T18:53:42
+data\fmv\fmv_timings\russia_outro_lose_subtitle_timing.txt	76	2025-10-11T18:53:42
+data\fmv\fmv_timings\russia_outro_win_subtitle_timing.txt	75	2025-10-11T18:54:34
+data\fmv\fmv_timings\scotland_outro_lose_subtitle_timing.txt	78	2025-10-11T18:54:17
+data\fmv\fmv_timings\scotland_outro_win_subtitle_timing.txt	77	2025-10-11T18:54:33
+data\fmv\fmv_timings\scottish_intro_subtitle_timing.txt	147	2025-10-11T18:54:40
+data\fmv\fmv_timings\sicily_intro_subtitle_timing.txt	143	2025-10-11T18:53:42
+data\fmv\fmv_timings\sicily_outro_lose_subtitle_timing.txt	76	2025-10-11T18:54:34
+data\fmv\fmv_timings\sicily_outro_win_subtitle_timing.txt	75	2025-10-11T18:54:40
+data\fmv\fmv_timings\spain_fe_subtitle_timing.txt	0	2025-10-11T18:56:00
+data\fmv\fmv_timings\spain_outro_lose_subtitle_timing.txt	74	2025-10-11T18:54:17
+data\fmv\fmv_timings\spain_outro_win_subtitle_timing.txt	147	2025-10-11T18:55:04
+data\fmv\fmv_timings\spanish_intro_subtitle_timing.txt	362	2025-10-11T18:53:42
+data\fmv\fmv_timings\timurids_invade_subtitle_timing.txt	146	2025-10-11T18:54:40
+data\fmv\fmv_timings\turkey_intro_subtitle_timing.txt	144	2025-10-11T18:54:17
+data\fmv\fmv_timings\turkey_outro_lose_subtitle_timing.txt	76	2025-10-11T18:53:14
+data\fmv\fmv_timings\turks_outro_win_subtitle_timing.txt	74	2025-10-11T18:54:40
+data\fmv\fmv_timings\venice_fe_subtitle_timing.txt	0	2025-10-11T18:56:00
+data\fmv\fmv_timings\venice_intro_subtitle_timing.txt	213	2025-10-11T18:54:34
+data\fmv\fmv_timings\venice_outro_lose_subtitle_timing.txt	76	2025-10-11T18:54:40
+data\fmv\fmv_timings\venice_outro_win_subtitle_timing.txt	150	2025-10-11T18:54:17
+data\fmv\generic\end oan d.bik	4842372	2025-10-11T18:52:56
+data\fmv\generic\end oan e.bik	4278576	2025-10-11T18:52:56
+data\fmv\generic\end oas d.bik	4828780	2025-10-11T18:52:56
+data\fmv\generic\end oas e.bik	4273412	2025-10-11T18:52:56
+data\fmv\generic\end oln d.bik	4878724	2025-10-11T18:52:56
+data\fmv\generic\end oln e.bik	4265372	2025-10-11T18:52:56
+data\fmv\generic\end ols d.bik	4805792	2025-10-11T18:52:56
+data\fmv\generic\end ols e.bik	4270620	2025-10-11T18:52:56
+data\fmv\generic\end ted d.bik	4725952	2025-10-11T18:52:56
+data\fmv\generic\end ted e.bik	4295928	2025-10-11T18:52:56
+data\fmv\generic\end ten d.bik	4849968	2025-10-11T18:52:56
+data\fmv\generic\end ten e.bik	4267544	2025-10-11T18:52:56
+data\fmv\generic\end tes d.bik	4851960	2025-10-11T18:52:56
+data\fmv\generic\end tes e.bik	4261152	2025-10-11T18:52:56
+data\fmv\generic\end tex d.bik	4866556	2025-10-11T18:52:56
+data\fmv\generic\end tey e.bik	4262860	2025-10-11T18:52:56
+data\fmv\generic\end tmn d.bik	4835248	2025-10-11T18:52:56
+data\fmv\generic\end tmn e.bik	4271652	2025-10-11T18:52:56
+data\fmv\generic\end tms d.bik	4837768	2025-10-11T18:52:56
+data\fmv\generic\end tms e.bik	4275388	2025-10-11T18:52:56
+data\fmv\generic\end tmx d.bik	4850888	2025-10-11T18:52:56
+data\fmv\generic\est eur x.bik	1241468	2025-10-11T18:52:56
+data\fmv\generic\est mde x.bik	1224732	2025-10-11T18:52:56
+data\fmv\infiltrate\bsh tex d.bik	8320368	2025-10-11T18:52:56
+data\fmv\infiltrate\bsh tex m.bik	5730396	2025-10-11T18:52:56
+data\fmv\infiltrate\bsh tex s.bik	4444928	2025-10-11T18:52:56
+data\fmv\infiltrate\bsh tmx d.bik	8261604	2025-10-11T18:52:56
+data\fmv\infiltrate\bsh tmx m.bik	5660152	2025-10-11T18:52:56
+data\fmv\infiltrate\bsh tmx s.bik	4389892	2025-10-11T18:52:56
+data\fmv\infiltrate\cnv oax d.bik	5559476	2025-10-11T18:52:56
+data\fmv\infiltrate\cnv oax m.bik	5032740	2025-10-11T18:52:56
+data\fmv\infiltrate\cnv oax s.bik	6631528	2025-10-11T18:52:56
+data\fmv\infiltrate\cnv olx d.bik	5576896	2025-10-11T18:52:56
+data\fmv\infiltrate\cnv olx m.bik	5032536	2025-10-11T18:52:56
+data\fmv\infiltrate\cnv olx s.bik	6631500	2025-10-11T18:52:56
+data\fmv\infiltrate\cnv tex d.bik	5613696	2025-10-11T18:52:56
+data\fmv\infiltrate\cnv tex m.bik	5032808	2025-10-11T18:52:56
+data\fmv\infiltrate\cnv tex s.bik	6631488	2025-10-11T18:52:56
+data\fmv\infiltrate\cnv tmx d.bik	5596120	2025-10-11T18:52:56
+data\fmv\infiltrate\cnv tmx m.bik	5033020	2025-10-11T18:52:56
+data\fmv\infiltrate\cnv tmx s.bik	6553640	2025-10-11T18:52:56
+data\fmv\infiltrate\ded tex d.bik	5183812	2025-10-11T18:52:56
+data\fmv\infiltrate\ded tex m.bik	10651380	2025-10-11T18:52:56
+data\fmv\infiltrate\ded tex s.bik	13179364	2025-10-11T18:52:56
+data\fmv\infiltrate\ded tmx d.bik	5183812	2025-10-11T18:52:56
+data\fmv\infiltrate\ded tmx m.bik	10651384	2025-10-11T18:52:56
+data\fmv\infiltrate\ded tmx s.bik	13179328	2025-10-11T18:52:56
+data\fmv\infiltrate\tnt oxe d.bik	5205932	2025-10-11T18:52:56
+data\fmv\infiltrate\tnt oxe m.bik	3897676	2025-10-11T18:52:56
+data\fmv\infiltrate\tnt oxe s.bik	4394220	2025-10-11T18:52:56
+data\fmv\infiltrate\tnt oxm d.bik	5205844	2025-10-11T18:52:56
+data\fmv\infiltrate\tnt oxm m.bik	3878084	2025-10-11T18:52:56
+data\fmv\infiltrate\tnt oxm s.bik	4394252	2025-10-11T18:52:56
+data\fmv\menu\dump0000.bik	11993432	2025-10-11T18:52:56
+data\fmv\sabotage\bom tex d.bik	4381872	2025-10-11T18:52:56
+data\fmv\sabotage\bom tex m.bik	9108128	2025-10-11T18:52:56
+data\fmv\sabotage\bom tex s.bik	5486656	2025-10-11T18:52:56
+data\fmv\sabotage\bom tmx d.bik	4381896	2025-10-11T18:52:56
+data\fmv\sabotage\bom tmx m.bik	9108524	2025-10-11T18:52:56
+data\fmv\sabotage\bom tmx s.bik	5452072	2025-10-11T18:52:56
+data\fmv\sabotage\bur tex f.bik	3038224	2025-10-11T18:52:56
+data\fmv\sabotage\bur tex m.bik	3348212	2025-10-11T18:52:56
+data\fmv\sabotage\bur tex s.bik	7108004	2025-10-11T18:52:56
+data\fmv\sabotage\bur tmx f.bik	3038200	2025-10-11T18:52:56
+data\fmv\sabotage\bur tmx m.bik	3348248	2025-10-11T18:52:56
+data\fmv\sabotage\bur tmx s.bik	7107984	2025-10-11T18:52:56
+data\sounds\events.dat	6751583	2025-10-11T18:52:56
+data\sounds\events.idx	16436	2025-10-11T18:56:01
+data\sounds\Music.dat	294139364	2025-10-11T18:52:56
+data\sounds\Music.idx	6223	2025-10-11T18:56:14
+data\sounds\SFX.dat	264087503	2025-10-11T18:52:56
+data\sounds\SFX.idx	188067	2025-10-11T18:56:21
+data\sounds\Voice1.dat	708145494	2025-10-11T18:52:56
+data\sounds\Voice1.idx	998148	2025-10-11T18:52:56
+data\sounds\Voice2.dat	77993152	2025-10-11T18:52:56
+data\sounds\Voice2.idx	92606	2025-10-11T18:56:49
+data\sounds\Voice3.dat	370767812	2025-10-11T18:52:56
+data\sounds\Voice3.idx	957964	2025-10-11T18:52:56
+data\world\battle.txt	35578	2025-10-11T18:55:00
+data\world\template.txt	35596	2025-10-11T18:54:37
+data\world\template_backup.txt	9984	2025-10-11T18:53:53
+data\world\town_layout.txt	5808	2025-10-11T18:53:53
+data\world\town_layout_old.txt	5322	2025-10-11T18:53:20
+data\world\maps\base\descr_disasters.txt	1567	2025-10-11T18:55:23
+data\world\maps\base\descr_regions.txt	18735	2025-10-11T18:55:00
+data\world\maps\base\descr_regions.txt.vanilla_backup	18735	2025-10-11T18:55:00
+data\world\maps\base\descr_sounds_music_types.txt	3043	2025-10-11T18:53:28
+data\world\maps\base\descr_terrain.txt	242	2025-10-11T18:54:27
+data\world\maps\base\map.rwm	4453528	2025-10-11T18:52:56
+data\world\maps\base\map_climates.tga	671985	2025-10-11T18:52:56
+data\world\maps\base\map_fe.tga	422444	2025-10-11T18:52:56
+data\world\maps\base\map_features.tga	167283	2025-10-11T18:53:28
+data\world\maps\base\map_fog.tga	12009	2025-10-11T18:53:28
+data\world\maps\base\map_ground_types.tga	671985	2025-10-11T18:52:56
+data\world\maps\base\map_heights.hgt	895964	2025-10-11T18:52:56
+data\world\maps\base\map_heights.tga	671985	2025-10-11T18:52:56
+data\world\maps\base\map_regions.tga	167283	2025-10-11T18:54:27
+data\world\maps\base\map_roughness.tga	669078	2025-10-11T18:52:56
+data\world\maps\base\map_trade_routes.tga	167283	2025-10-11T18:55:05
+data\world\maps\base\water_surface.tga	196652	2025-10-11T18:55:00
+data\world\maps\battle\custom\(1v1)_100yrs_war_mp\descr_battle.txt	5876	2025-10-11T18:55:23
+data\world\maps\battle\custom\(1v1)_100yrs_war_mp\map.wfc	10689381	2025-10-11T18:52:56
+data\world\maps\battle\custom\(1v1)_100yrs_war_mp\snapshot_battle.tga	254753	2025-10-11T18:54:36
+data\world\maps\battle\custom\(1v1)_deathtrack_mp\descr_battle.txt	8438	2025-10-11T18:53:28
+data\world\maps\battle\custom\(1v1)_deathtrack_mp\map.wfc	11775286	2025-10-11T18:52:56
+data\world\maps\battle\custom\(1v1)_deathtrack_mp\snapshot_battle.tga	254753	2025-10-11T18:53:51
+data\world\maps\battle\custom\(1v1)_fra_siege_mp\descr_battle.txt	7377	2025-10-11T18:54:27
+data\world\maps\battle\custom\(1v1)_fra_siege_mp\map.wfc	10649529	2025-10-11T18:52:56
+data\world\maps\battle\custom\(1v1)_fra_siege_mp\snapshot_battle.tga	254753	2025-10-11T18:54:27
+data\world\maps\battle\custom\(1v1)_highlanders_mp\descr_battle.txt	8016	2025-10-11T18:53:51
+data\world\maps\battle\custom\(1v1)_highlanders_mp\map.wfc	10552329	2025-10-11T18:52:56
+data\world\maps\battle\custom\(1v1)_highlanders_mp\snapshot_battle.tga	254753	2025-10-11T18:55:01
+data\world\maps\battle\custom\(1v1)_outremer_mp\descr_battle.txt	6685	2025-10-11T18:53:28
+data\world\maps\battle\custom\(1v1)_outremer_mp\map.wfc	10649549	2025-10-11T18:52:56
+data\world\maps\battle\custom\(1v1)_outremer_mp\snapshot_battle.tga	254753	2025-10-11T18:54:27
+data\world\maps\battle\custom\(1v1)_spa_siege_mp\descr_battle.txt	8005	2025-10-11T18:53:20
+data\world\maps\battle\custom\(1v1)_spa_siege_mp\map.wfc	11970307	2025-10-11T18:52:56
+data\world\maps\battle\custom\(1v1)_spa_siege_mp\snapshot_battle.tga	254753	2025-10-11T18:55:25
+data\world\maps\battle\custom\(2v1)_aztec_gold_mp\descr_battle.txt	8265	2025-10-11T18:54:27
+data\world\maps\battle\custom\(2v1)_aztec_gold_mp\map.wfc	10682307	2025-10-11T18:52:56
+data\world\maps\battle\custom\(2v1)_aztec_gold_mp\snapshot_battle.tga	254753	2025-10-11T18:55:01
+data\world\maps\battle\custom\(2v1)_deathtrack_mp\descr_battle.txt	9316	2025-10-11T18:53:20
+data\world\maps\battle\custom\(2v1)_deathtrack_mp\map.wfc	11775286	2025-10-11T18:52:56
+data\world\maps\battle\custom\(2v1)_deathtrack_mp\snapshot_battle.tga	254753	2025-10-11T18:53:51
+data\world\maps\battle\custom\(2v1)_highlanders_mp\descr_battle.txt	9195	2025-10-11T18:55:27
+data\world\maps\battle\custom\(2v1)_highlanders_mp\map.wfc	10552329	2025-10-11T18:52:56
+data\world\maps\battle\custom\(2v1)_highlanders_mp\snapshot_battle.tga	254753	2025-10-11T18:55:01
+data\world\maps\battle\custom\(2v2)_aztec_gold_mp\descr_battle.txt	12956	2025-10-11T18:53:20
+data\world\maps\battle\custom\(2v2)_aztec_gold_mp\map.wfc	10682307	2025-10-11T18:52:56
+data\world\maps\battle\custom\(2v2)_aztec_gold_mp\snapshot_battle.tga	254753	2025-10-11T18:55:01
+data\world\maps\battle\custom\(2v2)_crus_siege_mp\descr_battle.txt	12668	2025-10-11T18:55:25
+data\world\maps\battle\custom\(2v2)_crus_siege_mp\map.wfc	11201064	2025-10-11T18:52:56
+data\world\maps\battle\custom\(2v2)_crus_siege_mp\snapshot_battle.tga	254753	2025-10-11T18:55:27
+data\world\maps\battle\custom\(2v2)_quickstart_dan\descr_battle.txt	8126	2025-10-11T18:55:01
+data\world\maps\battle\custom\(2v2)_quickstart_dan\map.wfc	10561794	2025-10-11T18:52:56
+data\world\maps\battle\custom\(2v2)_quickstart_dan\snapshot_battle.tga	254753	2025-10-11T18:55:01
+data\world\maps\battle\custom\(2v2)_redoubt_mp\descr_battle.txt	14147	2025-10-11T18:53:20
+data\world\maps\battle\custom\(2v2)_redoubt_mp\map.wfc	11379626	2025-10-11T18:52:56
+data\world\maps\battle\custom\(2v2)_redoubt_mp\snapshot_battle.tga	254753	2025-10-11T18:55:02
+data\world\maps\battle\custom\(3v2)_desert_siege\descr_battle.txt	18422	2025-10-11T18:55:25
+data\world\maps\battle\custom\(3v2)_desert_siege\map.wfc	10549089	2025-10-11T18:52:56
+data\world\maps\battle\custom\(3v2)_desert_siege\snapshot_battle.tga	254753	2025-10-11T18:53:28
+data\world\maps\battle\custom\(3v3)_redoubt_mp\descr_battle.txt	20274	2025-10-11T18:54:38
+data\world\maps\battle\custom\(3v3)_redoubt_mp\map.wfc	11379626	2025-10-11T18:52:56
+data\world\maps\battle\custom\(3v3)_redoubt_mp\snapshot_battle.tga	254753	2025-10-11T18:55:02
+data\world\maps\battle\custom\agincourt\agincourt_script.txt	119083	2025-10-11T18:53:28
+data\world\maps\battle\custom\agincourt\descr_battle.txt	7676	2025-10-11T18:54:36
+data\world\maps\battle\custom\agincourt\loading_screen.tga	2326853	2025-10-11T18:52:56
+data\world\maps\battle\custom\agincourt\map.wfc	11296718	2025-10-11T18:52:56
+data\world\maps\battle\custom\agincourt\snapshot_battle.tga	339656	2025-10-11T18:52:56
+data\world\maps\battle\custom\alpineredux\descr_battle.txt	10080	2025-10-11T18:54:28
+data\world\maps\battle\custom\alpineredux\map.wfc	10966753	2025-10-11T18:52:56
+data\world\maps\battle\custom\alpineredux\snapshot_battle.tga	243307	2025-10-11T18:54:28
+data\world\maps\battle\custom\arsuf\arsuf_script.txt	31023	2025-10-11T18:54:28
+data\world\maps\battle\custom\arsuf\descr_battle.txt	7781	2025-10-11T18:55:23
+data\world\maps\battle\custom\arsuf\loading_screen.tga	2048084	2025-10-11T18:52:56
+data\world\maps\battle\custom\arsuf\map.wfc	11533685	2025-10-11T18:52:56
+data\world\maps\battle\custom\arsuf\snapshot_battle.tga	339656	2025-10-11T18:52:56
+data\world\maps\battle\custom\hastings\descr_battle.txt	7604	2025-10-11T18:53:51
+data\world\maps\battle\custom\hastings\descr_script.txt	135559	2025-10-11T18:53:28
+data\world\maps\battle\custom\hastings\loading_screen.tga	2131917	2025-10-11T18:52:56
+data\world\maps\battle\custom\hastings\map.wfc	10798185	2025-10-11T18:52:56
+data\world\maps\battle\custom\hastings\snapshot_battle.tga	339656	2025-10-11T18:52:56
+data\world\maps\battle\custom\otumba\descr_battle.txt	10507	2025-10-11T18:54:38
+data\world\maps\battle\custom\otumba\loading_screen.tga	2344686	2025-10-11T18:52:56
+data\world\maps\battle\custom\otumba\map.wfc	10555893	2025-10-11T18:52:56
+data\world\maps\battle\custom\otumba\otumba_script.txt	88002	2025-10-11T18:53:52
+data\world\maps\battle\custom\otumba\snapshot_battle.tga	255572	2025-10-11T18:53:21
+data\world\maps\battle\custom\pavia\descr_battle.txt	7906	2025-10-11T18:53:28
+data\world\maps\battle\custom\pavia\loading_screen.tga	2351252	2025-10-11T18:52:56
+data\world\maps\battle\custom\pavia\map.wfc	10981028	2025-10-11T18:52:56
+data\world\maps\battle\custom\pavia\pavia_script.txt	65638	2025-10-11T18:55:28
+data\world\maps\battle\custom\pavia\snapshot_battle.tga	339656	2025-10-11T18:52:56
+data\world\maps\battle\custom\setenil\descr_battle.txt	8072	2025-10-11T18:53:21
+data\world\maps\battle\custom\setenil\loading_screen.tga	1867311	2025-10-11T18:52:56
+data\world\maps\battle\custom\setenil\map.wfc	11970307	2025-10-11T18:52:56
+data\world\maps\battle\custom\setenil\setenil_script.txt	39929	2025-10-11T18:53:21
+data\world\maps\battle\custom\setenil\snapshot_battle.tga	254753	2025-10-11T18:55:28
+data\world\maps\battle\custom\tannenberg\descr_battle.txt	7109	2025-10-11T18:54:38
+data\world\maps\battle\custom\tannenberg\descr_script.txt	102503	2025-10-11T18:53:21
+data\world\maps\battle\custom\tannenberg\loading_screen.tga	1944370	2025-10-11T18:52:56
+data\world\maps\battle\custom\tannenberg\map.wfc	10826310	2025-10-11T18:52:56
+data\world\maps\battle\custom\tannenberg\snapshot_battle.tga	339656	2025-10-11T18:52:56
+data\world\maps\battle\norman_prologue\battle_of_hastings\cam2.cam	32880	2025-10-11T18:54:39
+data\world\maps\battle\norman_prologue\battle_of_hastings\descr_battle.txt	8633	2025-10-11T18:55:28
+data\world\maps\battle\norman_prologue\battle_of_hastings\hastings_intro.cam	50704	2025-10-11T18:54:37
+data\world\maps\battle\norman_prologue\battle_of_hastings\hastings_intro.cameragroupxml	1483	2025-10-11T18:54:38
+data\world\maps\battle\norman_prologue\battle_of_hastings\hastings_script.txt	94004	2025-10-11T18:53:52
+data\world\maps\battle\norman_prologue\battle_of_hastings\loading_screen.tga	2192200	2025-10-11T18:52:56
+data\world\maps\battle\norman_prologue\battle_of_hastings\map.wfc	12458148	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\campaign_script.txt	105051	2025-10-11T18:53:21
+data\world\maps\campaign\imperial_campaign\description.txt	40	2025-10-11T18:53:21
+data\world\maps\campaign\imperial_campaign\description_milan.txt	3640	2025-10-11T18:55:05
+data\world\maps\campaign\imperial_campaign\description_sicily.txt	4014	2025-10-11T18:53:52
+data\world\maps\campaign\imperial_campaign\description_venice.txt	3406	2025-10-11T18:54:28
+data\world\maps\campaign\imperial_campaign\descr_events.txt	6194	2025-10-11T18:53:21
+data\world\maps\campaign\imperial_campaign\descr_faction_movies.xml	5372	2025-10-11T18:55:22
+data\world\maps\campaign\imperial_campaign\descr_mercenaries.txt	34448	2025-10-11T18:53:21
+data\world\maps\campaign\imperial_campaign\descr_regions_and_settlement_name_lookup.txt	2987	2025-10-11T18:54:29
+data\world\maps\campaign\imperial_campaign\descr_strat.txt	120924	2025-10-11T18:53:21
+data\world\maps\campaign\imperial_campaign\descr_strat.txt.vanilla_backup	120924	2025-10-11T18:53:21
+data\world\maps\campaign\imperial_campaign\descr_win_conditions.txt	3171	2025-10-11T18:53:21
+data\world\maps\campaign\imperial_campaign\disasters.tga	119384	2025-10-11T18:53:21
+data\world\maps\campaign\imperial_campaign\map_aztecs.tga	273068	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_bulgaria.tga	422444	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_byzantium.tga	422444	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_croatia.tga	422444	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_denmark.tga	422444	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_egypt.tga	422444	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_england.tga	422444	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_fe.psd	3774176	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_france.tga	422444	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_hre.tga	422444	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_hungary.tga	422444	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_ireland.tga	422444	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_jerusalem.tga	422444	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_milan.tga	422444	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_mongols.tga	273068	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_moors.tga	422444	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_norway.tga	422444	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_papal_states.tga	422444	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_poland.tga	422444	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_portugal.tga	422444	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_ragusa.tga	422444	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_russia.tga	422444	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_scotland.tga	422444	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_serbia.tga	422444	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_sicily.tga	422444	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_spain.tga	422444	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_turks.tga	422444	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_venice.tga	422444	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_wales.tga	422444	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\map_wallachia.tga	422444	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\radar_map1.tga	125044	2025-10-11T18:53:16
+data\world\maps\campaign\imperial_campaign\radar_map2.tga	375018	2025-10-11T18:52:56
+data\world\maps\campaign\imperial_campaign\unlocked.txt	4	2026-06-20T18:02:45
+data\world\maps\campaign\imperial_campaign\vcs_bulgaria.tga	151844	2025-10-11T18:54:28
+data\world\maps\campaign\imperial_campaign\vcs_byzantium.tga	151844	2025-10-11T18:53:52
+data\world\maps\campaign\imperial_campaign\vcs_croatia.tga	151844	2025-10-11T18:54:28
+data\world\maps\campaign\imperial_campaign\vcs_denmark.tga	151844	2025-10-11T18:53:21
+data\world\maps\campaign\imperial_campaign\vcs_egypt.tga	151844	2025-10-11T18:53:21
+data\world\maps\campaign\imperial_campaign\vcs_england.tga	151844	2025-10-11T18:54:28
+data\world\maps\campaign\imperial_campaign\vcs_france.tga	151844	2025-10-11T18:53:21
+data\world\maps\campaign\imperial_campaign\vcs_hre.tga	151844	2025-10-11T18:53:52
+data\world\maps\campaign\imperial_campaign\vcs_hungary.tga	151844	2025-10-11T18:54:28
+data\world\maps\campaign\imperial_campaign\vcs_ireland.tga	151844	2025-10-11T18:54:28
+data\world\maps\campaign\imperial_campaign\vcs_jerusalem.tga	151844	2025-10-11T18:54:28
+data\world\maps\campaign\imperial_campaign\vcs_milan.tga	151844	2025-10-11T18:54:28
+data\world\maps\campaign\imperial_campaign\vcs_moors.tga	151844	2025-10-11T18:53:21
+data\world\maps\campaign\imperial_campaign\vcs_norway.tga	151844	2025-10-11T18:54:28
+data\world\maps\campaign\imperial_campaign\vcs_poland.tga	151844	2025-10-11T18:53:21
+data\world\maps\campaign\imperial_campaign\vcs_portugal.tga	151844	2025-10-11T18:55:05
+data\world\maps\campaign\imperial_campaign\vcs_ragusa.tga	151844	2025-10-11T18:54:28
+data\world\maps\campaign\imperial_campaign\vcs_russia.tga	151844	2025-10-11T18:53:21
+data\world\maps\campaign\imperial_campaign\vcs_scotland.tga	151844	2025-10-11T18:53:21
+data\world\maps\campaign\imperial_campaign\vcs_serbia.tga	151844	2025-10-11T18:54:28
+data\world\maps\campaign\imperial_campaign\vcs_sicily.tga	151844	2025-10-11T18:55:24
+data\world\maps\campaign\imperial_campaign\vcs_spain.tga	151844	2025-10-11T18:55:24
+data\world\maps\campaign\imperial_campaign\vcs_turks.tga	151844	2025-10-11T18:53:21
+data\world\maps\campaign\imperial_campaign\vcs_venice.tga	151844	2025-10-11T18:54:28
+data\world\maps\campaign\imperial_campaign\vcs_wales.tga	151844	2025-10-11T18:54:28
+data\world\maps\campaign\imperial_campaign\vcs_wallachia.tga	151844	2025-10-11T18:54:28
+data\world\maps\campaign\imperial_campaign\vc_bulgaria.tga	151844	2025-10-11T18:54:28
+data\world\maps\campaign\imperial_campaign\vc_byzantium.tga	151844	2025-10-11T18:53:52
+data\world\maps\campaign\imperial_campaign\vc_croatia.tga	151844	2025-10-11T18:54:28
+data\world\maps\campaign\imperial_campaign\vc_denmark.tga	151844	2025-10-11T18:55:05
+data\world\maps\campaign\imperial_campaign\vc_egypt.tga	151844	2025-10-11T18:53:52
+data\world\maps\campaign\imperial_campaign\vc_england.tga	151844	2025-10-11T18:54:28
+data\world\maps\campaign\imperial_campaign\vc_france.tga	151844	2025-10-11T18:55:05
+data\world\maps\campaign\imperial_campaign\vc_hre.tga	151844	2025-10-11T18:53:21
+data\world\maps\campaign\imperial_campaign\vc_hungary.tga	151844	2025-10-11T18:53:21
+data\world\maps\campaign\imperial_campaign\vc_ireland.tga	151844	2025-10-11T18:54:28
+data\world\maps\campaign\imperial_campaign\vc_jerusalem.tga	151844	2025-10-11T18:54:28
+data\world\maps\campaign\imperial_campaign\vc_milan.tga	151844	2025-10-11T18:54:39
+data\world\maps\campaign\imperial_campaign\vc_moors.tga	151844	2025-10-11T18:55:25
+data\world\maps\campaign\imperial_campaign\vc_norway.tga	151844	2025-10-11T18:54:28
+data\world\maps\campaign\imperial_campaign\vc_poland.tga	151844	2025-10-11T18:53:52
+data\world\maps\campaign\imperial_campaign\vc_portugal.tga	151844	2025-10-11T18:54:37
+data\world\maps\campaign\imperial_campaign\vc_ragusa.tga	151844	2025-10-11T18:54:28
+data\world\maps\campaign\imperial_campaign\vc_russia.tga	151844	2025-10-11T18:55:25
+data\world\maps\campaign\imperial_campaign\vc_scotland.tga	151844	2025-10-11T18:53:21
+data\world\maps\campaign\imperial_campaign\vc_serbia.tga	151844	2025-10-11T18:54:28
+data\world\maps\campaign\imperial_campaign\vc_sicily.tga	151844	2025-10-11T18:53:16
+data\world\maps\campaign\imperial_campaign\vc_spain.tga	151844	2025-10-11T18:55:05
+data\world\maps\campaign\imperial_campaign\vc_turks.tga	151844	2025-10-11T18:55:28
+data\world\maps\campaign\imperial_campaign\vc_venice.tga	151844	2025-10-11T18:53:16
+data\world\maps\campaign\imperial_campaign\vc_wales.tga	151844	2025-10-11T18:54:28
+data\world\maps\campaign\imperial_campaign\vc_wallachia.tga	151844	2025-10-11T18:54:28
+data\world\maps\campaign\norman_prologue\campaign_script.txt	75865	2025-10-11T18:53:16
+data\world\maps\campaign\norman_prologue\descr_events.txt	3061	2025-10-11T18:54:37
+data\world\maps\campaign\norman_prologue\descr_faction_movies.xml	1163	2025-10-11T18:53:52
+data\world\maps\campaign\norman_prologue\descr_regions_and_settlement_name_lookup.txt	2987	2025-10-11T18:54:29
+data\world\maps\campaign\norman_prologue\descr_strat.txt	20752	2025-10-11T18:55:05
+data\world\maps\campaign\norman_prologue\descr_win_conditions.txt	491	2025-10-11T18:55:28
+data\world\maps\campaign\norman_prologue\map_climates.tga	671985	2025-10-11T18:52:56
+data\world\maps\campaign\norman_prologue\map_fe.tga	422444	2025-10-11T18:52:56
+data\world\maps\campaign\norman_prologue\map_features.tga	167283	2025-10-11T18:53:16
+data\world\maps\campaign\norman_prologue\map_ground_types.tga	671985	2025-10-11T18:52:56
+data\world\maps\campaign\norman_prologue\map_heights.hgt	895964	2025-10-11T18:52:56
+data\world\maps\campaign\norman_prologue\map_heights.tga	671985	2025-10-11T18:52:56
+data\world\maps\campaign\norman_prologue\map_regions.tga	167283	2025-10-11T18:54:28
+data\world\maps\campaign\norman_prologue\map_roughness.tga	669078	2025-10-11T18:52:56
+data\world\maps\campaign\norman_prologue\map_trade_routes.tga	167283	2025-10-11T18:55:05
+data\world\maps\campaign\norman_prologue\radar_map1.tga	125044	2025-10-11T18:53:16
+data\world\maps\campaign\norman_prologue\radar_map2.tga	375018	2025-10-11T18:52:56
+data\world\maps\custom\arsuf\descr_battle.txt	471	2025-10-11T18:53:16
+data\world\maps\custom\arsuf\map.wfc	11533685	2025-10-11T18:52:56
+data\world\maps\custom\arsuf\snapshot_custom.tga	161849	2025-10-11T18:53:52
+data\world\maps\custom\canyon\descr_battle.txt	871	2025-10-11T18:55:25
+data\world\maps\custom\canyon\map.wfc	11886043	2025-10-11T18:52:56
+data\world\maps\custom\canyon\snapshot_custom.tga	161849	2025-10-11T18:53:21
+data\world\maps\custom\deathtrack\descr_battle.txt	873	2025-10-11T18:55:28
+data\world\maps\custom\deathtrack\map.wfc	11774962	2025-10-11T18:52:56
+data\world\maps\custom\deathtrack\snapshot_custom.tga	161849	2025-10-11T18:54:29
+data\world\maps\custom\edelweis\descr_battle.txt	863	2025-10-11T18:53:17
+data\world\maps\custom\edelweis\map.wfc	10966429	2025-10-11T18:52:56
+data\world\maps\custom\edelweis\snapshot_custom.tga	161849	2025-10-11T18:53:17
+data\world\maps\custom\grassy plain\descr_battle.txt	877	2025-10-11T18:54:39
+data\world\maps\custom\grassy plain\map.wfc	10614841	2025-10-11T18:52:56
+data\world\maps\custom\grassy plain\snapshot_custom.tga	161849	2025-10-11T18:53:52
+data\world\maps\custom\hattin\descr_battle.txt	680	2025-10-11T18:53:52
+data\world\maps\custom\hattin\map.wfc	11183552	2025-10-11T18:52:56
+data\world\maps\custom\hattin\snapshot_custom.tga	161849	2025-10-11T18:53:29
+data\world\maps\custom\le village\descr_battle.txt	876	2025-10-11T18:54:39
+data\world\maps\custom\le village\map.wfc	10689381	2025-10-11T18:52:56
+data\world\maps\custom\le village\snapshot_custom.tga	161849	2025-10-11T18:53:52
+data\world\maps\custom\pavia\descr_battle.txt	680	2025-10-11T18:53:18
+data\world\maps\custom\pavia\map.wfc	10981335	2025-10-11T18:52:56
+data\world\maps\custom\pavia\snapshot_custom.tga	161849	2025-10-11T18:54:29
+data\world\maps\custom\redoubt\descr_battle.txt	459	2025-10-11T18:54:29
+data\world\maps\custom\redoubt\map.wfc	11379626	2025-10-11T18:52:56
+data\world\maps\custom\redoubt\snapshot_custom.tga	161849	2025-10-11T18:54:39
+data\world\maps\custom\scorpions paradise\descr_battle.txt	885	2025-10-11T18:53:53
+data\world\maps\custom\scorpions paradise\map.wfc	11827200	2025-10-11T18:52:56
+data\world\maps\custom\scorpions paradise\snapshot_custom.tga	161849	2025-10-11T18:53:22
+data\world\maps\custom\tannenberg\descr_battle.txt	682	2025-10-11T18:53:22
+data\world\maps\custom\tannenberg\map.wfc	10826310	2025-10-11T18:52:56
+data\world\maps\custom\tannenberg\snapshot_custom.tga	161849	2025-10-11T18:54:29
+data\world\maps\custom\township\descr_battle.txt	872	2025-10-11T18:55:23
+data\world\maps\custom\township\map.wfc	10921325	2025-10-11T18:52:56
+data\world\maps\custom\township\snapshot_custom.tga	1120004	2025-10-11T18:52:56
+data\world\maps\custom\winter war\descr_battle.txt	876	2025-10-11T18:54:29
+data\world\maps\custom\winter war\map.wfc	10561746	2025-10-11T18:52:56
+data\world\maps\custom\winter war\snapshot_custom.tga	161849	2025-10-11T18:54:40
+dxsetup\apr2006_d3dx9_30_x86.cab	1116109	2025-10-11T18:52:56
+dxsetup\apr2006_xact_x86.cab	133991	2025-10-11T18:54:40
+dxsetup\dsetup.dll	74448	2025-10-11T18:53:20
+dxsetup\dsetup32.dll	2248912	2025-10-11T18:52:56
+dxsetup\dxdllreg_x86.cab	41890	2025-10-11T18:54:40
+dxsetup\dxnt.cab	13265040	2025-10-11T18:52:56
+dxsetup\dxsetup.exe	484560	2025-10-11T18:52:56
+dxsetup\dxupdate.cab	81733	2025-10-11T18:54:25
+logs\croatia_overhaul.log.txt	347248	2026-06-20T20:15:39
+miles\mssds3d.m3d	45056	2025-10-11T18:53:53
+miles\mssdsp.flt	126976	2025-10-11T18:55:10
+miles\msseax.m3d	155648	2025-10-11T18:54:37
+miles\mssmp3.asi	163840	2025-10-11T18:55:10
+miles\msssoft.m3d	86016	2025-10-11T18:53:21
+mods\americas\data\animations\pack.dat	51814673	2025-10-11T18:52:56
+mods\americas\data\animations\pack.idx	202500	2025-10-11T18:56:50
+mods\americas\data\animations\skeletons.dat	2002938	2025-10-11T18:52:56
+mods\americas\data\animations\skeletons.idx	3339	2025-10-11T18:56:50
+mods\americas\data\fmv\event\american_warpath.bik	9872948	2025-10-11T18:52:56
+mods\americas\data\fmv\event\black_death.bik	9536844	2025-10-11T18:52:56
+mods\americas\data\fmv\event\england_france_arrive.bik	9782260	2025-10-11T18:52:56
+mods\americas\data\fmv\event\spanish_expedition.bik	9909568	2025-10-11T18:52:56
+mods\americas\data\fmv\faction\americas_aztec_outro_loss.bik	14872120	2025-10-11T18:52:56
+mods\americas\data\fmv\faction\americas_aztec_outro_win.bik	22318708	2025-10-11T18:52:56
+mods\americas\data\fmv\faction\americas_faction_intro.bik	63063680	2025-10-11T18:52:56
+mods\americas\data\fmv\faction\americas_game_intro.bik	103222648	2025-10-11T18:52:56
+mods\americas\data\fmv\faction\americas_indian_outro_loss.bik	14868156	2025-10-11T18:52:56
+mods\americas\data\fmv\faction\americas_indian_outro_win.bik	22242488	2025-10-11T18:52:56
+mods\americas\data\fmv\faction\americas_spain_outro_loss.bik	14739756	2025-10-11T18:52:56
+mods\americas\data\fmv\faction\americas_spain_outro_win.bik	22470076	2025-10-11T18:52:56
+mods\americas\data\fmv\fmv_timings\americas_apachean_outro_lose_subtitle_timing.txt	173	2025-10-11T18:56:55
+mods\americas\data\fmv\fmv_timings\americas_apachean_outro_win_subtitle_timing.txt	86	2025-10-11T18:56:55
+mods\americas\data\fmv\fmv_timings\americas_kingdoms_game_intro_subtitle_timing.txt	347	2025-10-11T18:56:59
+mods\americas\data\fmv\fmv_timings\americas_meso_american_outro_lose_subtitle_timing.txt	92	2025-10-11T18:56:55
+mods\americas\data\fmv\fmv_timings\americas_meso_american_outro_win_subtitle_timing.txt	91	2025-10-11T18:56:56
+mods\americas\data\fmv\fmv_timings\americas_spanish_outro_lose_subtitle_timing.txt	82	2025-10-11T18:57:01
+mods\americas\data\fmv\fmv_timings\americas_spanish_outro_win_subtitle_timing.txt	85	2025-10-11T18:57:11
+mods\americas\data\fmv\fmv_timings\the_americas_narrator_subtitle_timing.txt	558	2025-10-11T18:56:56
+mods\americas\data\fmv\menu\dump0000.bik	23811304	2025-10-11T18:52:56
+mods\americas\data\sounds\events.dat	7223502	2025-10-11T18:52:56
+mods\americas\data\sounds\events.idx	16580	2025-10-11T18:59:22
+mods\americas\data\sounds\Music.dat	36075514	2025-10-11T18:52:56
+mods\americas\data\sounds\Music.idx	1374	2025-10-11T18:59:22
+mods\americas\data\sounds\SFX.dat	13865389	2025-10-11T18:52:56
+mods\americas\data\sounds\SFX.idx	6963	2025-10-11T18:59:24
+mods\americas\data\sounds\Voice.dat	109356267	2025-10-11T18:52:56
+mods\americas\data\sounds\Voice.idx	185384	2025-10-11T18:59:29
+mods\americas\data\world\maps\base\descr_disasters.txt	1568	2025-10-11T18:57:01
+mods\americas\data\world\maps\base\descr_regions.txt	10098	2025-10-11T18:56:56
+mods\americas\data\world\maps\base\descr_regions_and_settlement_name_lookup.txt	1265	2025-10-11T18:56:56
+mods\americas\data\world\maps\base\descr_sounds_music_types.txt	1509	2025-10-11T18:57:15
+mods\americas\data\world\maps\base\descr_strat.txt	69879	2025-10-11T18:57:15
+mods\americas\data\world\maps\base\descr_terrain.txt	242	2025-10-11T18:57:20
+mods\americas\data\world\maps\base\map.rwm	2376164	2025-10-11T18:52:56
+mods\americas\data\world\maps\base\map_climates.tga	370077	2025-10-11T18:52:56
+mods\americas\data\world\maps\base\map_fe.tga	422444	2025-10-11T18:52:56
+mods\americas\data\world\maps\base\map_features.tga	4815	2025-10-11T18:56:55
+mods\americas\data\world\maps\base\map_fog.tga	5749	2025-10-11T18:56:59
+mods\americas\data\world\maps\base\map_ground_types.tga	370077	2025-10-11T18:52:56
+mods\americas\data\world\maps\base\map_heights.hgt	493420	2025-10-11T18:52:56
+mods\americas\data\world\maps\base\map_heights.tga	370077	2025-10-11T18:52:56
+mods\americas\data\world\maps\base\map_regions.tga	92024	2025-10-11T18:56:56
+mods\americas\data\world\maps\base\map_roughness.tga	367938	2025-10-11T18:52:56
+mods\americas\data\world\maps\base\map_trade_routes.tga	91998	2025-10-11T18:56:55
+mods\americas\data\world\maps\base\water_surface.tga	196652	2025-10-11T18:56:56
+mods\americas\data\world\maps\battle\custom\(2v2)_aztec_ambush\descr_battle.txt	14013	2025-10-11T18:57:01
+mods\americas\data\world\maps\battle\custom\(2v2)_aztec_ambush\map.wfc	10724628	2025-10-11T18:52:56
+mods\americas\data\world\maps\battle\custom\(2v2)_aztec_ambush\snapshot_battle.tga	261164	2025-10-11T18:57:01
+mods\americas\data\world\maps\battle\custom\(2v2)_last_stand_mp\descr_battle.txt	13796	2025-10-11T18:57:20
+mods\americas\data\world\maps\battle\custom\(2v2)_last_stand_mp\map.wfc	10613062	2025-10-11T18:52:56
+mods\americas\data\world\maps\battle\custom\(2v2)_last_stand_mp\snapshot_battle.tga	254753	2025-10-11T18:57:01
+mods\americas\data\world\maps\campaign\imperial_campaign\campaign_script.txt	90214	2025-10-11T18:57:15
+mods\americas\data\world\maps\campaign\imperial_campaign\descr_events.txt	1040	2025-10-11T18:57:00
+mods\americas\data\world\maps\campaign\imperial_campaign\descr_faction_movies.xml	2282	2025-10-11T18:57:01
+mods\americas\data\world\maps\campaign\imperial_campaign\descr_mercenaries.txt	13390	2025-10-11T18:57:00
+mods\americas\data\world\maps\campaign\imperial_campaign\descr_regions_and_settlement_name_lookup.txt	1265	2025-10-11T18:56:56
+mods\americas\data\world\maps\campaign\imperial_campaign\descr_sounds_music_types.txt	2002	2025-10-11T18:56:55
+mods\americas\data\world\maps\campaign\imperial_campaign\descr_strat.txt	76605	2025-10-11T18:57:15
+mods\americas\data\world\maps\campaign\imperial_campaign\descr_win_conditions.txt	1045	2025-10-11T18:57:20
+mods\americas\data\world\maps\campaign\imperial_campaign\map_apachean.tga	307475	2025-10-11T18:52:56
+mods\americas\data\world\maps\campaign\imperial_campaign\map_aztecs.tga	292093	2025-10-11T18:52:56
+mods\americas\data\world\maps\campaign\imperial_campaign\map_chichimeca.tga	306119	2025-10-11T18:52:56
+mods\americas\data\world\maps\campaign\imperial_campaign\map_fog.tga	5262	2025-10-11T18:56:55
+mods\americas\data\world\maps\campaign\imperial_campaign\map_mayans.tga	307480	2025-10-11T18:52:56
+mods\americas\data\world\maps\campaign\imperial_campaign\map_spain.tga	307460	2025-10-11T18:52:56
+mods\americas\data\world\maps\campaign\imperial_campaign\map_tarascans.tga	307475	2025-10-11T18:52:56
+mods\americas\data\world\maps\campaign\imperial_campaign\map_tlaxcalans.tga	307470	2025-10-11T18:52:56
+mods\americas\data\world\maps\campaign\imperial_campaign\radar_map1.tga	68274	2025-10-11T18:56:56
+mods\americas\data\world\maps\campaign\imperial_campaign\radar_map2.tga	270702	2025-10-11T18:52:56
+mods\americas\data\world\maps\campaign\imperial_campaign\radar_map_background.tga	93794	2025-10-11T18:57:00
+mods\americas\data\world\maps\campaign\imperial_campaign\water_surface.tga	196652	2025-10-11T18:56:56
+mods\americas\data\world\maps\custom\arid_dunes\descr_battle.txt	874	2025-10-11T18:56:55
+mods\americas\data\world\maps\custom\arid_dunes\map.wfc	10632313	2025-10-11T18:52:56
+mods\americas\data\world\maps\custom\arid_dunes\snapshot_custom.tga	157712	2025-10-11T18:56:56
+mods\americas\data\world\maps\custom\desert_raid\descr_battle.txt	879	2025-10-11T18:56:55
+mods\americas\data\world\maps\custom\desert_raid\map.wfc	10571357	2025-10-11T18:52:56
+mods\americas\data\world\maps\custom\desert_raid\snapshot_custom.tga	133513	2025-10-11T18:57:16
+mods\americas\data\world\maps\custom\lake_choctaw\descr_battle.txt	876	2025-10-11T18:57:21
+mods\americas\data\world\maps\custom\lake_choctaw\map.wfc	10611442	2025-10-11T18:52:56
+mods\americas\data\world\maps\custom\lake_choctaw\snapshot_custom.tga	137084	2025-10-11T18:57:02
+mods\americas\data\world\maps\custom\tikal_valley\descr_battle.txt	876	2025-10-11T18:57:02
+mods\americas\data\world\maps\custom\tikal_valley\map.wfc	10549413	2025-10-11T18:52:56
+mods\americas\data\world\maps\custom\tikal_valley\snapshot_custom.tga	125223	2025-10-11T18:57:22
+mods\americas\data\world\maps\custom\tropical_island\descr_battle.txt	878	2025-10-11T18:56:56
+mods\americas\data\world\maps\custom\tropical_island\map.wfc	10549737	2025-10-11T18:52:56
+mods\americas\data\world\maps\custom\tropical_island\snapshot_custom.tga	158019	2025-10-11T18:56:57
+mods\americas\packs\data_0.pack	1067429582	2025-10-11T18:52:56
+mods\americas\packs\data_1.pack	620428525	2025-10-11T18:52:56
+mods\americas\packs\localized.pack	3406056	2025-10-11T18:52:56
+mods\british_isles\data\animations\pack.dat	51814673	2025-10-11T18:52:56
+mods\british_isles\data\animations\pack.idx	202500	2025-10-11T18:58:00
+mods\british_isles\data\animations\skeletons.dat	2002938	2025-10-11T18:52:56
+mods\british_isles\data\animations\skeletons.idx	3339	2025-10-11T18:57:12
+mods\british_isles\data\fmv\event\black_death.bik	9536844	2025-10-11T18:52:56
+mods\british_isles\data\fmv\event\english_crusaders_return.bik	14025860	2025-10-11T18:52:56
+mods\british_isles\data\fmv\event\william_wallace.bik	15005252	2025-10-11T18:52:56
+mods\british_isles\data\fmv\faction\britannia_faction_intro.bik	58811428	2025-10-11T18:52:56
+mods\british_isles\data\fmv\faction\britannia_game_intro.bik	103289656	2025-10-11T18:52:56
+mods\british_isles\data\fmv\faction\minor_lose.bik	9582824	2025-10-11T18:52:56
+mods\british_isles\data\fmv\faction\minor_win.bik	29461360	2025-10-11T18:52:56
+mods\british_isles\data\fmv\fmv_timings\britannia_kingdoms_game_intro_subtitle_timing.txt	351	2025-10-11T18:58:13
+mods\british_isles\data\fmv\fmv_timings\british_isles_narrator_subtitle_timing.txt	563	2025-10-11T18:57:09
+mods\british_isles\data\fmv\menu\dump0000.bik	23838424	2025-10-11T18:52:56
+mods\british_isles\data\sounds\events.dat	7752159	2025-10-11T18:52:56
+mods\british_isles\data\sounds\events.idx	16484	2025-10-11T18:59:27
+mods\british_isles\data\sounds\Music.dat	73960414	2025-10-11T18:52:56
+mods\british_isles\data\sounds\Music.idx	3880	2025-10-11T18:59:28
+mods\british_isles\data\sounds\SFX.dat	3158535	2025-10-11T18:52:56
+mods\british_isles\data\sounds\SFX.idx	1590	2025-10-11T18:59:28
+mods\british_isles\data\sounds\Voice.dat	492839	2025-10-11T18:52:56
+mods\british_isles\data\sounds\Voice.idx	1025	2025-10-11T18:59:28
+mods\british_isles\data\world\maps\base\descr_regions.txt	8778	2025-10-11T18:58:02
+mods\british_isles\data\world\maps\base\descr_regions_and_settlement_name_lookup.txt	1254	2025-10-11T18:57:09
+mods\british_isles\data\world\maps\base\descr_sounds_music_types.txt	4626	2025-10-11T18:57:28
+mods\british_isles\data\world\maps\base\descr_terrain.txt	242	2025-10-11T18:57:32
+mods\british_isles\data\world\maps\base\map.rwm	1937314	2025-10-11T18:52:56
+mods\british_isles\data\world\maps\base\map_climates.tga	280961	2025-10-11T18:52:56
+mods\british_isles\data\world\maps\base\map_fe.tga	422444	2025-10-11T18:52:56
+mods\british_isles\data\world\maps\base\map_features.tga	69786	2025-10-11T18:58:02
+mods\british_isles\data\world\maps\base\map_fog.tga	280961	2025-10-11T18:52:56
+mods\british_isles\data\world\maps\base\map_ground_types.tga	280935	2025-10-11T18:52:56
+mods\british_isles\data\world\maps\base\map_heights.hgt	374564	2025-10-11T18:52:56
+mods\british_isles\data\world\maps\base\map_heights.tga	280935	2025-10-11T18:52:56
+mods\british_isles\data\world\maps\base\map_regions.tga	69786	2025-10-11T18:57:28
+mods\british_isles\data\world\maps\base\map_roughness.tga	279090	2025-10-11T18:52:56
+mods\british_isles\data\world\maps\base\map_trade_routes.tga	69786	2025-10-11T18:57:09
+mods\british_isles\data\world\maps\base\water_surface.tga	196652	2025-10-11T18:57:17
+mods\british_isles\data\world\maps\battle\custom\(1v1)_beach_landing\descr_battle.txt	7608	2025-10-11T18:57:32
+mods\british_isles\data\world\maps\battle\custom\(1v1)_beach_landing\map.wfc	10650779	2025-10-11T18:52:56
+mods\british_isles\data\world\maps\battle\custom\(1v1)_beach_landing\snapshot_battle.tga	207916	2025-10-11T18:57:09
+mods\british_isles\data\world\maps\battle\custom\(1v1)_mountain_ambush\descr_battle.txt	7653	2025-10-11T18:57:32
+mods\british_isles\data\world\maps\battle\custom\(1v1)_mountain_ambush\map.wfc	11232310	2025-10-11T18:52:56
+mods\british_isles\data\world\maps\battle\custom\(1v1)_mountain_ambush\snapshot_battle.tga	219849	2025-10-11T18:57:17
+mods\british_isles\data\world\maps\battle\custom\(2v2)_highland_alliance\descr_battle.txt	14351	2025-10-11T18:58:02
+mods\british_isles\data\world\maps\battle\custom\(2v2)_highland_alliance\map.wfc	10549089	2025-10-11T18:52:56
+mods\british_isles\data\world\maps\battle\custom\(2v2)_highland_alliance\snapshot_battle.tga	249891	2025-10-11T18:57:32
+mods\british_isles\data\world\maps\campaign\imperial_campaign\campaign_script.txt	45368	2025-10-11T18:57:32
+mods\british_isles\data\world\maps\campaign\imperial_campaign\descr_events.txt	7736	2025-10-11T18:58:02
+mods\british_isles\data\world\maps\campaign\imperial_campaign\descr_faction_movies.xml	6596	2025-10-11T18:57:29
+mods\british_isles\data\world\maps\campaign\imperial_campaign\descr_mercenaries.txt	6755	2025-10-11T18:58:02
+mods\british_isles\data\world\maps\campaign\imperial_campaign\descr_regions_and_settlement_name_lookup.txt	1194	2025-10-11T18:57:32
+mods\british_isles\data\world\maps\campaign\imperial_campaign\descr_strat.txt	59031	2025-10-11T18:57:32
+mods\british_isles\data\world\maps\campaign\imperial_campaign\descr_win_conditions.txt	915	2025-10-11T18:57:29
+mods\british_isles\data\world\maps\campaign\imperial_campaign\map_denmark.tga	273581	2025-10-11T18:52:56
+mods\british_isles\data\world\maps\campaign\imperial_campaign\map_england.tga	275562	2025-10-11T18:52:56
+mods\british_isles\data\world\maps\campaign\imperial_campaign\map_fog.tga	4690	2025-10-11T18:57:09
+mods\british_isles\data\world\maps\campaign\imperial_campaign\map_ireland.tga	275395	2025-10-11T18:52:56
+mods\british_isles\data\world\maps\campaign\imperial_campaign\map_norway.tga	275485	2025-10-11T18:52:56
+mods\british_isles\data\world\maps\campaign\imperial_campaign\map_scotland.tga	275912	2025-10-11T18:52:56
+mods\british_isles\data\world\maps\campaign\imperial_campaign\map_wales.tga	275622	2025-10-11T18:52:56
+mods\british_isles\data\world\maps\campaign\imperial_campaign\radar_map1.tga	38097	2025-10-11T18:57:09
+mods\british_isles\data\world\maps\campaign\imperial_campaign\radar_map2.tga	150878	2025-10-11T18:58:15
+mods\british_isles\data\world\maps\campaign\imperial_campaign\radar_map_background.tga	94354	2025-10-11T18:57:29
+mods\british_isles\data\world\maps\campaign\imperial_campaign\vcs_england.tga	108974	2025-10-11T18:57:09
+mods\british_isles\data\world\maps\campaign\imperial_campaign\vcs_ireland.tga	109110	2025-10-11T18:58:02
+mods\british_isles\data\world\maps\campaign\imperial_campaign\vcs_norway.tga	109153	2025-10-11T18:57:09
+mods\british_isles\data\world\maps\campaign\imperial_campaign\vcs_scotland.tga	109011	2025-10-11T18:57:17
+mods\british_isles\data\world\maps\campaign\imperial_campaign\vcs_wales.tga	108879	2025-10-11T18:57:17
+mods\british_isles\data\world\maps\campaign\imperial_campaign\vc_england.tga	108608	2025-10-11T18:57:09
+mods\british_isles\data\world\maps\campaign\imperial_campaign\vc_ireland.tga	108863	2025-10-11T18:57:32
+mods\british_isles\data\world\maps\campaign\imperial_campaign\vc_norway.tga	109153	2025-10-11T18:57:09
+mods\british_isles\data\world\maps\campaign\imperial_campaign\vc_scotland.tga	109011	2025-10-11T18:57:17
+mods\british_isles\data\world\maps\campaign\imperial_campaign\vc_wales.tga	108879	2025-10-11T18:57:17
+mods\british_isles\data\world\maps\campaign\imperial_campaign\water_surface.tga	196652	2025-10-11T18:57:17
+mods\british_isles\data\world\maps\custom\beach landing\descr_battle.txt	875	2025-10-11T18:58:02
+mods\british_isles\data\world\maps\custom\beach landing\map.wfc	10650455	2025-10-11T18:52:56
+mods\british_isles\data\world\maps\custom\beach landing\snapshot_custom.tga	147684	2025-10-11T18:57:09
+mods\british_isles\data\world\maps\custom\english country\descr_battle.txt	879	2025-10-11T18:58:15
+mods\british_isles\data\world\maps\custom\english country\map.wfc	10603314	2025-10-11T18:52:56
+mods\british_isles\data\world\maps\custom\english country\snapshot_custom.tga	152480	2025-10-11T18:57:33
+mods\british_isles\data\world\maps\custom\grassy plain\descr_battle.txt	901	2025-10-11T18:57:17
+mods\british_isles\data\world\maps\custom\grassy plain\map.wfc	10614841	2025-10-11T18:52:56
+mods\british_isles\data\world\maps\custom\grassy plain\snapshot_custom.tga	143354	2025-10-11T18:58:29
+mods\british_isles\data\world\maps\custom\highland loch\descr_battle.txt	876	2025-10-11T18:57:09
+mods\british_isles\data\world\maps\custom\highland loch\map.wfc	10599370	2025-10-11T18:52:56
+mods\british_isles\data\world\maps\custom\highland loch\snapshot_custom.tga	152275	2025-10-11T18:58:16
+mods\british_isles\data\world\maps\custom\highland_alliance\descr_battle.txt	14352	2025-10-11T18:58:02
+mods\british_isles\data\world\maps\custom\highland_alliance\map.wfc	10549089	2025-10-11T18:52:56
+mods\british_isles\data\world\maps\custom\highland_alliance\snapshot_custom.tga	136539	2025-10-11T18:57:33
+mods\british_isles\data\world\maps\custom\irish marsh\descr_battle.txt	872	2025-10-11T18:58:16
+mods\british_isles\data\world\maps\custom\irish marsh\map.wfc	10549089	2025-10-11T18:52:56
+mods\british_isles\data\world\maps\custom\irish marsh\snapshot_custom.tga	159288	2025-10-11T18:57:33
+mods\british_isles\data\world\maps\custom\welsh pass\descr_battle.txt	872	2025-10-11T18:57:10
+mods\british_isles\data\world\maps\custom\welsh pass\map.wfc	10550061	2025-10-11T18:52:56
+mods\british_isles\data\world\maps\custom\welsh pass\snapshot_custom.tga	160732	2025-10-11T18:58:02
+mods\british_isles\packs\data_0.pack	820610472	2025-10-11T18:52:56
+mods\british_isles\packs\data_1.pack	254331500	2025-10-11T18:52:56
+mods\british_isles\packs\localized.pack	2982421	2025-10-11T18:52:56
+mods\croatia_overhaul\KINGDOMS_ASSETS.txt	2779	2026-06-19T20:39:24
+mods\croatia_overhaul\README.txt	2265	2026-06-19T20:39:24
+mods\croatia_overhaul\data\descr_regions.txt	2060	2026-06-19T20:39:24
+mods\croatia_overhaul\data\descr_strat.txt	2639	2026-06-19T20:39:24
+mods\croatia_overhaul\data\text\expanded.txt	1520	2026-06-19T23:44:42
+mods\croatia_overhaul\data\ui\bosnia\_OVDJE_IDU_ZASTAVE.txt	292	2026-06-19T20:39:24
+mods\croatia_overhaul\data\ui\croatia\_OVDJE_IDU_ZASTAVE.txt	292	2026-06-19T20:39:24
+mods\croatia_overhaul\data\ui\loading_screen\symbols\symbol128_bosnia.tga	49170	2026-06-19T23:20:30
+mods\croatia_overhaul\data\ui\loading_screen\symbols\symbol128_bulgaria.tga	49170	2026-06-19T23:31:45
+mods\croatia_overhaul\data\ui\loading_screen\symbols\symbol128_croatia.tga	49170	2026-06-19T23:20:30
+mods\croatia_overhaul\data\ui\loading_screen\symbols\symbol128_ireland.tga	49170	2026-06-19T23:44:42
+mods\croatia_overhaul\data\ui\loading_screen\symbols\symbol128_jerusalem.tga	49170	2026-06-19T23:44:42
+mods\croatia_overhaul\data\ui\loading_screen\symbols\symbol128_norway.tga	49170	2026-06-19T23:44:42
+mods\croatia_overhaul\data\ui\loading_screen\symbols\symbol128_ragusa.tga	49170	2026-06-19T23:31:45
+mods\croatia_overhaul\data\ui\loading_screen\symbols\symbol128_serbia.tga	49170	2026-06-19T23:20:30
+mods\croatia_overhaul\data\ui\loading_screen\symbols\symbol128_slave.tga	49170	2026-06-20T00:10:30
+mods\croatia_overhaul\data\ui\loading_screen\symbols\symbol128_wales.tga	49170	2026-06-19T23:44:42
+mods\croatia_overhaul\data\ui\loading_screen\symbols\symbol128_wallachia.tga	49170	2026-06-19T23:31:45
+mods\croatia_overhaul\data\ui\rebel_symbols\rebel_bosnia.tga	3090	2026-06-19T23:20:30
+mods\croatia_overhaul\data\ui\rebel_symbols\rebel_bulgaria.tga	3090	2026-06-19T23:31:45
+mods\croatia_overhaul\data\ui\rebel_symbols\rebel_croatia.tga	3090	2026-06-19T23:20:30
+mods\croatia_overhaul\data\ui\rebel_symbols\rebel_ireland.tga	3090	2026-06-19T23:44:42
+mods\croatia_overhaul\data\ui\rebel_symbols\rebel_jerusalem.tga	3090	2026-06-19T23:44:42
+mods\croatia_overhaul\data\ui\rebel_symbols\rebel_norway.tga	3090	2026-06-19T23:44:42
+mods\croatia_overhaul\data\ui\rebel_symbols\rebel_ragusa.tga	3090	2026-06-19T23:31:45
+mods\croatia_overhaul\data\ui\rebel_symbols\rebel_serbia.tga	3090	2026-06-19T23:20:30
+mods\croatia_overhaul\data\ui\rebel_symbols\rebel_slave.tga	3090	2026-06-20T00:10:30
+mods\croatia_overhaul\data\ui\rebel_symbols\rebel_wales.tga	3090	2026-06-19T23:44:42
+mods\croatia_overhaul\data\ui\rebel_symbols\rebel_wallachia.tga	3090	2026-06-19T23:31:45
+mods\croatia_overhaul\data\ui\serbia\_OVDJE_IDU_ZASTAVE.txt	292	2026-06-19T20:39:24
+mods\croatia_overhaul\data\ui\symbols\symbol_bosnia.tga	3090	2026-06-19T23:20:30
+mods\croatia_overhaul\data\ui\symbols\symbol_bulgaria.tga	3090	2026-06-19T23:31:45
+mods\croatia_overhaul\data\ui\symbols\symbol_croatia.tga	3090	2026-06-19T23:20:30
+mods\croatia_overhaul\data\ui\symbols\symbol_ireland.tga	3090	2026-06-19T23:44:42
+mods\croatia_overhaul\data\ui\symbols\symbol_jerusalem.tga	3090	2026-06-19T23:44:42
+mods\croatia_overhaul\data\ui\symbols\symbol_norway.tga	3090	2026-06-19T23:44:42
+mods\croatia_overhaul\data\ui\symbols\symbol_ragusa.tga	3090	2026-06-19T23:31:45
+mods\croatia_overhaul\data\ui\symbols\symbol_serbia.tga	3090	2026-06-19T23:20:30
+mods\croatia_overhaul\data\ui\symbols\symbol_slave.tga	3090	2026-06-20T00:10:30
+mods\croatia_overhaul\data\ui\symbols\symbol_wales.tga	3090	2026-06-19T23:44:42
+mods\croatia_overhaul\data\ui\symbols\symbol_wallachia.tga	3090	2026-06-19T23:31:45
+mods\croatia_overhaul\data\world\maps\base\descr_regions.txt	18738	2026-06-19T23:45:09
+mods\croatia_overhaul\data\world\maps\campaign\imperial_campaign\descr_strat.txt	131815	2026-06-19T23:45:54
+mods\crusades\data\animations\pack.dat	52537377	2025-10-11T18:52:56
+mods\crusades\data\animations\pack.idx	207675	2025-10-11T18:57:44
+mods\crusades\data\animations\skeletons.dat	2068748	2025-10-11T18:52:56
+mods\crusades\data\animations\skeletons.idx	3433	2025-10-11T18:57:53
+mods\crusades\data\fmv\event\black_death.bik	9536844	2025-10-11T18:52:56
+mods\crusades\data\fmv\event\christians_capture_jerusalem.bik	10636056	2025-10-11T18:52:56
+mods\crusades\data\fmv\event\first_jihad.bik	19279720	2025-10-11T18:52:56
+mods\crusades\data\fmv\event\first_jihad_christian.bik	30723032	2025-10-11T18:52:56
+mods\crusades\data\fmv\event\great_mosque_created.bik	11900888	2025-10-11T18:52:56
+mods\crusades\data\fmv\event\mongols_invade.bik	13637532	2025-10-11T18:52:56
+mods\crusades\data\fmv\event\muslims_capture_jerusalem.bik	11483684	2025-10-11T18:52:56
+mods\crusades\data\fmv\event\third_crusade.bik	9615356	2025-10-11T18:52:56
+mods\crusades\data\fmv\faction\crusades_faction_intro.bik	63215208	2025-10-11T18:52:56
+mods\crusades\data\fmv\faction\crusades_game_intro.bik	102894644	2025-10-11T18:52:56
+mods\crusades\data\fmv\faction\crusades_muslim_outro_loss.bik	15017848	2025-10-11T18:52:56
+mods\crusades\data\fmv\faction\crusades_muslim_outro_win.bik	22261192	2025-10-11T18:52:56
+mods\crusades\data\fmv\faction\minor_lose.bik	9582824	2025-10-11T18:52:56
+mods\crusades\data\fmv\faction\minor_win.bik	29461360	2025-10-11T18:52:56
+mods\crusades\data\fmv\fmv_timings\crusades_kingdoms_game_intro_subtitle_timing.txt	347	2025-10-11T18:57:35
+mods\crusades\data\fmv\fmv_timings\crusades_muslim_outro_lose_subtitle_timing.txt	85	2025-10-11T18:57:35
+mods\crusades\data\fmv\fmv_timings\crusades_muslim_outro_win_subtitle_timing.txt	84	2025-10-11T18:57:22
+mods\crusades\data\fmv\fmv_timings\crusades_narrator_subtitle_timing.txt	681	2025-10-11T18:57:49
+mods\crusades\data\fmv\fmv_timings\first_jihad_subtitle_timing.txt	0	2025-10-11T18:59:22
+mods\crusades\data\fmv\menu\dump0000.bik	24328532	2025-10-11T18:52:56
+mods\crusades\data\sounds\events.dat	7793073	2025-10-11T18:52:56
+mods\crusades\data\sounds\events.idx	16788	2025-10-11T18:59:25
+mods\crusades\data\sounds\Music.dat	48770066	2025-10-11T18:52:56
+mods\crusades\data\sounds\Music.idx	1902	2025-10-11T18:59:25
+mods\crusades\data\sounds\SFX.dat	8329210	2025-10-11T18:52:56
+mods\crusades\data\sounds\SFX.idx	3145	2025-10-11T18:59:27
+mods\crusades\data\sounds\Voice.dat	512422	2025-10-11T18:52:56
+mods\crusades\data\sounds\Voice.idx	1199	2025-10-11T18:59:26
+mods\crusades\data\world\maps\base\descr_disasters.txt	1567	2025-10-11T18:58:21
+mods\crusades\data\world\maps\base\descr_regions.txt	10415	2025-10-11T18:57:36
+mods\crusades\data\world\maps\base\descr_regions_and_settlement_name_lookup.txt	1346	2025-10-11T18:57:22
+mods\crusades\data\world\maps\base\descr_sounds_music_types.txt	3263	2025-10-11T18:58:00
+mods\crusades\data\world\maps\base\descr_terrain.txt	242	2025-10-11T18:58:00
+mods\crusades\data\world\maps\base\map.rwm	2318823	2025-10-11T18:52:56
+mods\crusades\data\world\maps\base\map_climates.tga	357255	2025-10-11T18:52:56
+mods\crusades\data\world\maps\base\map_fe.tga	422444	2025-10-11T18:52:56
+mods\crusades\data\world\maps\base\map_features.tga	88806	2025-10-11T18:59:07
+mods\crusades\data\world\maps\base\map_fog.tga	357281	2025-10-11T18:52:56
+mods\crusades\data\world\maps\base\map_ground_types.tga	357255	2025-10-11T18:52:56
+mods\crusades\data\world\maps\base\map_heights.hgt	476324	2025-10-11T18:52:56
+mods\crusades\data\world\maps\base\map_heights.tga	357255	2025-10-11T18:52:56
+mods\crusades\data\world\maps\base\map_regions.tga	88806	2025-10-11T18:57:36
+mods\crusades\data\world\maps\base\map_roughness.tga	355170	2025-10-11T18:52:56
+mods\crusades\data\world\maps\base\map_trade_routes.tga	88806	2025-10-11T18:57:22
+mods\crusades\data\world\maps\base\water_surface.tga	197669	2025-10-11T18:57:22
+mods\crusades\data\world\maps\battle\custom\(1v1)_oasis_rock_mp\descr_battle.txt	7480	2025-10-11T18:57:36
+mods\crusades\data\world\maps\battle\custom\(1v1)_oasis_rock_mp\map.wfc	11394871	2025-10-11T18:52:56
+mods\crusades\data\world\maps\battle\custom\(1v1)_oasis_rock_mp\snapshot_battle.tga	254753	2025-10-11T18:57:50
+mods\crusades\data\world\maps\battle\custom\(2v2)_antioch_ford\descr_battle.txt	10644	2025-10-11T18:59:04
+mods\crusades\data\world\maps\battle\custom\(2v2)_antioch_ford\map.wfc	10661146	2025-10-11T18:52:56
+mods\crusades\data\world\maps\battle\custom\(2v2)_antioch_ford\snapshot_battle.tga	254753	2025-10-11T18:59:10
+mods\crusades\data\world\maps\campaign\imperial_campaign\campaign_script.txt	66088	2025-10-11T18:57:50
+mods\crusades\data\world\maps\campaign\imperial_campaign\descr_disasters.txt	1568	2025-10-11T18:58:21
+mods\crusades\data\world\maps\campaign\imperial_campaign\descr_events.txt	2423	2025-10-11T18:58:21
+mods\crusades\data\world\maps\campaign\imperial_campaign\descr_faction_movies.xml	1563	2025-10-11T18:58:21
+mods\crusades\data\world\maps\campaign\imperial_campaign\descr_mercenaries.txt	14471	2025-10-11T18:58:21
+mods\crusades\data\world\maps\campaign\imperial_campaign\descr_regions_and_settlement_name_lookup.txt	1672	2025-10-11T18:57:36
+mods\crusades\data\world\maps\campaign\imperial_campaign\descr_sounds_music_types.txt	3660	2025-10-11T18:57:36
+mods\crusades\data\world\maps\campaign\imperial_campaign\descr_strat.txt	86869	2025-10-11T18:57:22
+mods\crusades\data\world\maps\campaign\imperial_campaign\descr_win_conditions.txt	1289	2025-10-11T18:57:36
+mods\crusades\data\world\maps\campaign\imperial_campaign\map_antioch.tga	285830	2025-10-11T18:52:56
+mods\crusades\data\world\maps\campaign\imperial_campaign\map_byzantium.tga	277359	2025-10-11T18:52:56
+mods\crusades\data\world\maps\campaign\imperial_campaign\map_egypt.tga	285050	2025-10-11T18:52:56
+mods\crusades\data\world\maps\campaign\imperial_campaign\map_fog.tga	5422	2025-10-11T18:59:03
+mods\crusades\data\world\maps\campaign\imperial_campaign\map_jerusalem.tga	289654	2025-10-11T18:52:56
+mods\crusades\data\world\maps\campaign\imperial_campaign\map_turks.tga	273054	2025-10-11T18:52:56
+mods\crusades\data\world\maps\campaign\imperial_campaign\radar_map1.tga	61537	2025-10-11T18:57:50
+mods\crusades\data\world\maps\campaign\imperial_campaign\radar_map2.tga	244990	2025-10-11T18:57:50
+mods\crusades\data\world\maps\campaign\imperial_campaign\radar_map_background.tga	94474	2025-10-11T18:58:21
+mods\crusades\data\world\maps\campaign\imperial_campaign\vcs_antioch.tga	109541	2025-10-11T18:58:21
+mods\crusades\data\world\maps\campaign\imperial_campaign\vcs_byzantium.tga	109519	2025-10-11T18:57:23
+mods\crusades\data\world\maps\campaign\imperial_campaign\vcs_egypt.tga	109640	2025-10-11T18:57:36
+mods\crusades\data\world\maps\campaign\imperial_campaign\vcs_jerusalem.tga	109520	2025-10-11T18:57:36
+mods\crusades\data\world\maps\campaign\imperial_campaign\vcs_turks.tga	109570	2025-10-11T18:57:36
+mods\crusades\data\world\maps\campaign\imperial_campaign\vc_antioch.tga	109654	2025-10-11T18:59:10
+mods\crusades\data\world\maps\campaign\imperial_campaign\vc_byzantium.tga	109691	2025-10-11T18:59:01
+mods\crusades\data\world\maps\campaign\imperial_campaign\vc_egypt.tga	109623	2025-10-11T18:57:50
+mods\crusades\data\world\maps\campaign\imperial_campaign\vc_jerusalem.tga	109690	2025-10-11T18:57:23
+mods\crusades\data\world\maps\campaign\imperial_campaign\vc_turks.tga	109657	2025-10-11T18:58:21
+mods\crusades\data\world\maps\campaign\imperial_campaign\water_surface.tga	180753	2025-10-11T18:58:21
+mods\crusades\data\world\maps\custom\broken teeth sands\descr_battle.txt	890	2025-10-11T18:57:50
+mods\crusades\data\world\maps\custom\broken teeth sands\map.wfc	10548765	2025-10-11T18:52:56
+mods\crusades\data\world\maps\custom\broken teeth sands\snapshot_custom.tga	144469	2025-10-11T18:58:21
+mods\crusades\data\world\maps\custom\flat crusade\descr_battle.txt	877	2025-10-11T18:58:58
+mods\crusades\data\world\maps\custom\flat crusade\map.wfc	10548749	2025-10-11T18:52:56
+mods\crusades\data\world\maps\custom\flat crusade\snapshot_custom.tga	146465	2025-10-11T18:57:36
+mods\crusades\data\world\maps\custom\oasis of death\description.txt	430	2025-10-11T18:57:36
+mods\crusades\data\world\maps\custom\oasis of death\descr_battle.txt	914	2025-10-11T18:57:23
+mods\crusades\data\world\maps\custom\oasis of death\map.wfc	10549413	2025-10-11T18:52:56
+mods\crusades\data\world\maps\custom\oasis of death\snapshot_custom.tga	161011	2025-10-11T18:57:36
+mods\crusades\data\world\maps\custom\pyramids of pain\descr_battle.txt	886	2025-10-11T18:58:21
+mods\crusades\data\world\maps\custom\pyramids of pain\map.wfc	10549089	2025-10-11T18:52:56
+mods\crusades\data\world\maps\custom\pyramids of pain\snapshot_custom.tga	138751	2025-10-11T18:57:23
+mods\crusades\data\world\maps\custom\quarry crossing\descr_battle.txt	880	2025-10-11T18:57:36
+mods\crusades\data\world\maps\custom\quarry crossing\map.wfc	11718381	2025-10-11T18:52:56
+mods\crusades\data\world\maps\custom\quarry crossing\snapshot_custom.tga	160732	2025-10-11T18:57:37
+mods\crusades\data\world\maps\custom\sand and water\descr_battle.txt	895	2025-10-11T18:58:01
+mods\crusades\data\world\maps\custom\sand and water\map.wfc	11394871	2025-10-11T18:52:56
+mods\crusades\data\world\maps\custom\sand and water\snapshot_custom.tga	148973	2025-10-11T18:57:37
+mods\crusades\data\world\maps\custom\spire of eagles\descr_battle.txt	885	2025-10-11T18:59:04
+mods\crusades\data\world\maps\custom\spire of eagles\map.wfc	10605405	2025-10-11T18:52:56
+mods\crusades\data\world\maps\custom\spire of eagles\snapshot_custom.tga	154449	2025-10-11T18:57:37
+mods\crusades\data\world\maps\custom\the many mosques\descr_battle.txt	886	2025-10-11T18:58:22
+mods\crusades\data\world\maps\custom\the many mosques\map.wfc	10776992	2025-10-11T18:52:56
+mods\crusades\data\world\maps\custom\the many mosques\snapshot_custom.tga	143052	2025-10-11T18:57:37
+mods\crusades\packs\data_0.pack	1002400239	2025-10-11T18:52:56
+mods\crusades\packs\data_1.pack	553892425	2025-10-11T18:52:56
+mods\crusades\packs\localized.pack	2980240	2025-10-11T18:52:56
+mods\teutonic\data\animations\pack.dat	51627403	2025-10-11T18:52:56
+mods\teutonic\data\animations\pack.idx	202017	2025-10-11T18:59:07
+mods\teutonic\data\animations\skeletons.dat	2068098	2025-10-11T18:52:56
+mods\teutonic\data\animations\skeletons.idx	3396	2025-10-11T18:58:56
+mods\teutonic\data\fmv\event\black_death.bik	9536844	2025-10-11T18:52:56
+mods\teutonic\data\fmv\event\kalmar_union.bik	10042672	2025-10-11T18:52:56
+mods\teutonic\data\fmv\event\lithuania_converts.bik	9730468	2025-10-11T18:52:56
+mods\teutonic\data\fmv\faction\minor_lose.bik	9582824	2025-10-11T18:52:56
+mods\teutonic\data\fmv\faction\minor_win.bik	29461360	2025-10-11T18:52:56
+mods\teutonic\data\fmv\faction\teutonic_faction_intro.bik	72359396	2025-10-11T18:52:56
+mods\teutonic\data\fmv\faction\teutonic_game_intro.bik	102593924	2025-10-11T18:52:56
+mods\teutonic\data\fmv\fmv_timings\teutonic_kalmar_union_subtitle_timing.txt	76	2025-10-11T18:58:19
+mods\teutonic\data\fmv\fmv_timings\teutonic_kingdoms_game_intro_subtitle_timing.txt	347	2025-10-11T18:58:19
+mods\teutonic\data\fmv\fmv_timings\teutonic_lithuania_converts_subtitle_timing.txt	169	2025-10-11T18:58:05
+mods\teutonic\data\fmv\fmv_timings\teutonic_narrator_subtitle_timing.txt	836	2025-10-11T18:59:13
+mods\teutonic\data\fmv\menu\dump0000.bik	24273376	2025-10-11T18:52:56
+mods\teutonic\data\sounds\events.dat	6641533	2025-10-11T18:52:56
+mods\teutonic\data\sounds\events.idx	16660	2025-10-11T18:59:29
+mods\teutonic\data\sounds\Music.dat	56371760	2025-10-11T18:52:56
+mods\teutonic\data\sounds\Music.idx	1674	2025-10-11T18:59:27
+mods\teutonic\data\sounds\SFX.dat	3241059	2025-10-11T18:52:56
+mods\teutonic\data\sounds\SFX.idx	1955	2025-10-11T18:59:31
+mods\teutonic\data\sounds\Voice.dat	808765	2025-10-11T18:52:56
+mods\teutonic\data\sounds\Voice.idx	2379	2025-10-11T18:59:30
+mods\teutonic\data\world\maps\base\descr_regions.txt	11273	2025-10-11T18:58:06
+mods\teutonic\data\world\maps\base\descr_regions_and_settlement_name_lookup.txt	1809	2025-10-11T18:58:06
+mods\teutonic\data\world\maps\base\descr_sounds_music_types.txt	4070	2025-10-11T18:59:13
+mods\teutonic\data\world\maps\base\descr_terrain.txt	242	2025-10-11T18:58:28
+mods\teutonic\data\world\maps\base\map.rwm	1196612	2025-10-11T18:52:56
+mods\teutonic\data\world\maps\base\map_climates.tga	174519	2025-10-11T18:59:11
+mods\teutonic\data\world\maps\base\map_fe.tga	422444	2025-10-11T18:52:56
+mods\teutonic\data\world\maps\base\map_features.tga	43278	2025-10-11T18:58:20
+mods\teutonic\data\world\maps\base\map_fog.tga	174519	2025-10-11T18:58:28
+mods\teutonic\data\world\maps\base\map_ground_types.tga	174519	2025-10-11T18:58:20
+mods\teutonic\data\world\maps\base\map_heights.hgt	232676	2025-10-11T18:58:57
+mods\teutonic\data\world\maps\base\map_heights.tga	174519	2025-10-11T18:58:20
+mods\teutonic\data\world\maps\base\map_regions.tga	43304	2025-10-11T18:59:17
+mods\teutonic\data\world\maps\base\map_roughness.tga	173058	2025-10-11T18:58:28
+mods\teutonic\data\world\maps\base\map_trade_routes.tga	43278	2025-10-11T18:59:16
+mods\teutonic\data\world\maps\base\water_surface.tga	196652	2025-10-11T18:58:35
+mods\teutonic\data\world\maps\battle\custom\(2v2)_lake_peipus_mp\descr_battle.txt	13112	2025-10-11T18:58:35
+mods\teutonic\data\world\maps\battle\custom\(2v2)_lake_peipus_mp\map.wfc	11405729	2025-10-11T18:52:56
+mods\teutonic\data\world\maps\battle\custom\(2v2)_lake_peipus_mp\snapshot_battle.tga	254753	2025-10-11T18:58:35
+mods\teutonic\data\world\maps\battle\custom\(2v2)_village_vilnius_mp\descr_battle.txt	13365	2025-10-11T18:59:16
+mods\teutonic\data\world\maps\battle\custom\(2v2)_village_vilnius_mp\map.wfc	12013165	2025-10-11T18:52:56
+mods\teutonic\data\world\maps\battle\custom\(2v2)_village_vilnius_mp\snapshot_battle.tga	254753	2025-10-11T18:58:20
+mods\teutonic\data\world\maps\campaign\imperial_campaign\campaign_script.txt	35792	2025-10-11T18:58:20
+mods\teutonic\data\world\maps\campaign\imperial_campaign\descr_events.txt	5423	2025-10-11T18:58:20
+mods\teutonic\data\world\maps\campaign\imperial_campaign\descr_faction_movies.xml	2178	2025-10-11T18:58:28
+mods\teutonic\data\world\maps\campaign\imperial_campaign\descr_mercenaries.txt	17651	2025-10-11T18:58:36
+mods\teutonic\data\world\maps\campaign\imperial_campaign\descr_regions_and_settlement_name_lookup.txt	1809	2025-10-11T18:58:06
+mods\teutonic\data\world\maps\campaign\imperial_campaign\descr_strat.txt	69639	2025-10-11T18:59:17
+mods\teutonic\data\world\maps\campaign\imperial_campaign\descr_win_conditions.txt	1112	2025-10-11T18:58:20
+mods\teutonic\data\world\maps\campaign\imperial_campaign\map_denmark.tga	306130	2025-10-11T18:52:56
+mods\teutonic\data\world\maps\campaign\imperial_campaign\map_fog.tga	3058	2025-10-11T18:58:57
+mods\teutonic\data\world\maps\campaign\imperial_campaign\map_hre.tga	299816	2025-10-11T18:52:56
+mods\teutonic\data\world\maps\campaign\imperial_campaign\map_lithuania.tga	298041	2025-10-11T18:52:56
+mods\teutonic\data\world\maps\campaign\imperial_campaign\map_mongols.tga	298441	2025-10-11T18:52:56
+mods\teutonic\data\world\maps\campaign\imperial_campaign\map_norway.tga	312106	2025-10-11T18:52:56
+mods\teutonic\data\world\maps\campaign\imperial_campaign\map_novgorod.tga	282701	2025-10-11T18:52:56
+mods\teutonic\data\world\maps\campaign\imperial_campaign\map_poland.tga	300198	2025-10-11T18:52:56
+mods\teutonic\data\world\maps\campaign\imperial_campaign\map_teutonic_order.tga	301709	2025-10-11T18:52:56
+mods\teutonic\data\world\maps\campaign\imperial_campaign\radar_map1.tga	64569	2025-10-11T18:59:04
+mods\teutonic\data\world\maps\campaign\imperial_campaign\radar_map2.tga	138942	2025-10-11T18:58:20
+mods\teutonic\data\world\maps\campaign\imperial_campaign\radar_map_background.tga	31730	2025-10-11T18:58:36
+mods\teutonic\data\world\maps\campaign\imperial_campaign\vcs_denmark.tga	113888	2025-10-11T18:58:36
+mods\teutonic\data\world\maps\campaign\imperial_campaign\vcs_hre.tga	113868	2025-10-11T18:58:29
+mods\teutonic\data\world\maps\campaign\imperial_campaign\vcs_lithuania.tga	113871	2025-10-11T18:58:06
+mods\teutonic\data\world\maps\campaign\imperial_campaign\vcs_novgorod.tga	113875	2025-10-11T18:59:04
+mods\teutonic\data\world\maps\campaign\imperial_campaign\vcs_poland.tga	113884	2025-10-11T18:58:29
+mods\teutonic\data\world\maps\campaign\imperial_campaign\vcs_teutonic_order.tga	113867	2025-10-11T18:59:16
+mods\teutonic\data\world\maps\campaign\imperial_campaign\vc_denmark.tga	113888	2025-10-11T18:58:36
+mods\teutonic\data\world\maps\campaign\imperial_campaign\vc_hre.tga	113868	2025-10-11T18:58:29
+mods\teutonic\data\world\maps\campaign\imperial_campaign\vc_lithuania.tga	113871	2025-10-11T18:58:06
+mods\teutonic\data\world\maps\campaign\imperial_campaign\vc_novgorod.tga	113875	2025-10-11T18:59:04
+mods\teutonic\data\world\maps\campaign\imperial_campaign\vc_poland.tga	113884	2025-10-11T18:58:29
+mods\teutonic\data\world\maps\campaign\imperial_campaign\vc_teutonic_order.tga	113867	2025-10-11T18:59:16
+mods\teutonic\data\world\maps\custom\blackforest\descr_battle.txt	874	2025-10-11T18:59:13
+mods\teutonic\data\world\maps\custom\blackforest\map.wfc	11418763	2025-10-11T18:52:56
+mods\teutonic\data\world\maps\custom\blackforest\snapshot_custom.tga	150961	2025-10-11T18:58:29
+mods\teutonic\data\world\maps\custom\foothills\descr_battle.txt	877	2025-10-11T18:58:06
+mods\teutonic\data\world\maps\custom\foothills\map.wfc	10873970	2025-10-11T18:52:56
+mods\teutonic\data\world\maps\custom\foothills\snapshot_custom.tga	144627	2025-10-11T18:59:14
+mods\teutonic\data\world\maps\custom\grassy plain\descr_battle.txt	875	2025-10-11T18:58:29
+mods\teutonic\data\world\maps\custom\grassy plain\map.wfc	10614841	2025-10-11T18:52:56
+mods\teutonic\data\world\maps\custom\grassy plain\snapshot_custom.tga	143354	2025-10-11T18:58:29
+mods\teutonic\data\world\maps\custom\kamno_marsh\descr_battle.txt	874	2025-10-11T18:59:11
+mods\teutonic\data\world\maps\custom\kamno_marsh\map.wfc	10773616	2025-10-11T18:52:56
+mods\teutonic\data\world\maps\custom\kamno_marsh\snapshot_custom.tga	145767	2025-10-11T18:58:57
+mods\teutonic\data\world\maps\custom\mountain_dale\descr_battle.txt	917	2025-10-11T18:58:36
+mods\teutonic\data\world\maps\custom\mountain_dale\map.wfc	10810690	2025-10-11T18:52:56
+mods\teutonic\data\world\maps\custom\mountain_dale\snapshot_custom.tga	148092	2025-10-11T18:58:36
+mods\teutonic\data\world\maps\custom\sanctuary\descr_battle.txt	871	2025-10-11T18:59:17
+mods\teutonic\data\world\maps\custom\sanctuary\map.wfc	10852685	2025-10-11T18:52:56
+mods\teutonic\data\world\maps\custom\sanctuary\snapshot_custom.tga	156783	2025-10-11T18:58:07
+mods\teutonic\data\world\maps\custom\village_vilinus\descr_battle.txt	878	2025-10-11T18:58:36
+mods\teutonic\data\world\maps\custom\village_vilinus\map.wfc	12013165	2025-10-11T18:52:56
+mods\teutonic\data\world\maps\custom\village_vilinus\snapshot_custom.tga	143600	2025-10-11T18:59:16
+mods\teutonic\packs\data_0.pack	835226715	2025-10-11T18:52:56
+mods\teutonic\packs\data_1.pack	348408719	2025-10-11T18:52:56
+mods\teutonic\packs\localized.pack	2892854	2025-10-11T18:52:56
+packs\data_0.pack	1013426292	2025-10-11T18:52:56
+packs\data_0.pack.bak	1013426292	2025-10-11T18:52:56
+packs\data_1.pack	726802234	2025-10-11T18:52:56
+packs\data_2.pack	908785574	2025-10-11T18:52:56
+packs\data_3.pack	886662535	2025-10-11T18:52:56
+packs\data_4.pack	350412881	2025-10-11T18:52:56
+packs\localized.pack	2193545	2025-10-11T18:52:56
+preferences\advice	4	2026-06-20T19:31:40
+preferences\keys.dat	27724	2026-06-20T19:31:40
+preferences\player.txt	18	2026-06-20T20:15:33
+tools\unpacker\unpacker.exe	352256	2025-10-11T18:52:56
+tools\unpacker\unpack_all.bat	75	2025-10-11T18:55:47
+tools\unpacker\unpack_americas.bat	126	2025-10-11T18:55:47
+tools\unpacker\unpack_britannia.bat	136	2025-10-11T18:54:29
+tools\unpacker\unpack_crusades.bat	126	2025-10-11T18:55:47
+tools\unpacker\unpack_teutonic.bat	126	2025-10-11T18:55:47

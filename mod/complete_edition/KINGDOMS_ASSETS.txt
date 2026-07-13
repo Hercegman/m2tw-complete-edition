@@ -1,0 +1,68 @@
+================================================================
+  KORAK 6: PREBACIVANJE NACIJA IZ KINGDOMS
+  (Wales, Ireland, Jerusalem, Norway/Sweden)
+================================================================
+
+Prednost: ove nacije VEC POSTOJE u Kingdoms kampanjama sa
+gotovim zastavama, UI-em, jedinicama i imenima. Ne radis nista
+od nule - samo kopiras assete i registriras frakciju.
+
+----------------------------------------------------------------
+GDJE SE NALAZE (Steam, glavni game folder -> mods\):
+----------------------------------------------------------------
+  Wales, Ireland   ->  mods\britannia\
+  Jerusalem        ->  mods\crusades\
+  Norway, Denmark  ->  mods\teutonic\  (+ Denmark vec u vanilli)
+
+----------------------------------------------------------------
+STO PREBACITI ZA SVAKU NACIJU:
+----------------------------------------------------------------
+1. ZASTAVE I UI:
+   iz  mods\<kampanja>\data\ui\<faction>\
+   u   mods\croatia_overhaul\data\ui\<faction>\
+   (cijeli folder frakcije - sadrzi zastave, simbole, kartice)
+
+2. SIMBOLI:
+   data\ui\symbols\symbol_<faction>.tga
+   data\ui\rebel_symbols\
+   data\ui\loading_screen\symbols\
+
+3. DEFINICIJA FRAKCIJE:
+   iz <kampanja>\data\descr_sm_factions.txt iskopiraj cijeli
+   blok te frakcije (npr "faction wales ... ") i zalijepi u
+   nas descr_sm_factions.txt.
+
+4. JEDINICE (opcionalno ali preporuceno):
+   - export_descr_unit.txt  (statovi jedinica)
+   - export_descr_buildings.txt (tko sto moze graditi)
+   - data\units\ (modeli/teksture jedinica te nacije)
+   - data\unit_models\
+   Prebaci samo unose vezane za tu frakciju.
+
+5. IMENA:
+   iz <kampanja>\data\text\ povuci imena frakcije, generala,
+   gradova u nas expanded.txt / names.txt.
+
+----------------------------------------------------------------
+KLJUCNA PAZNJA:
+----------------------------------------------------------------
+- Kingdoms kulture: Wales/Ireland = northern_european.
+  Jerusalem = ima vlastitu logiku (crusader states).
+  Provjeri da kultura postoji u nasem modu.
+- Imena frakcija moraju biti JEDINSTVENA. Ako i vanilla i
+  Kingdoms koriste isti interni naziv, koristi onaj koji vec
+  postoji - ne duplicirati.
+- Nakon dodavanja, OBAVEZNO ih upisi u descr_strat.txt
+  (playable) + dodijeli regiju u descr_regions.txt.
+
+----------------------------------------------------------------
+SLOT MATEMATIKA (drzi na oku):
+----------------------------------------------------------------
+  Vanilla GC:                    ~21
+  Croatia, Bosnia, Serbia:        +3   = 24
+  Wales, Ireland:                 +2   = 26
+  Jerusalem:                      +1   = 27
+  Norway (+ Sweden ako zelis):    +1-2 = 28-29
+  ----------------------------------------
+  LIMIT: 31. Imas rezerve za jos 2.
+  slave (rebeli) se racuna u limit i OSTAJE.

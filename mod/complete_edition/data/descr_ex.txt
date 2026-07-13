@@ -1,0 +1,9 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; M2EX extended settings override for Complete Edition.
+; Based on data/descr_ex.txt shipped with M2EX (release 21/06).
+; The ONLY thing we change is the faction cap.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Maximum number of factions (M2EX default: 31).
+; Complete Edition targets 44 registered factions; headroom for later phases.
+max_factions 50
