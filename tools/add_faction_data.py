@@ -37,6 +37,9 @@ DLC = {
 }
 
 # faction -> (EDU roster source faction, expanded source: ("dlc", pack) or ("template", short, adjective, display))
+# The first roster source is also the "mate" whose descr_character/banner
+# entries get cloned; extra sources only widen the unit roster (the maintainer: the
+# Balkan kingdoms should field a hungarian/russian mix, ragusa venetian).
 FACTIONS = {
     "croatia":   ("hungary",   ("template", "Croatia", "Croatian", "Kingdom of Croatia")),
     "ragusa":    ("venice",    ("template", "Ragusa", "Ragusan", "Republic of Ragusa")),
@@ -47,6 +50,13 @@ FACTIONS = {
     "ireland":   ("scotland",  ("dlc", "british_isles")),
     "norway":    ("denmark",   ("dlc", "british_isles")),
     "jerusalem": ("france",    ("dlc", "crusades")),
+}
+
+EXTRA_ROSTER = {
+    "croatia": ["russia"],
+    "serbia": ["hungary", "russia"],
+    "bulgaria": ["hungary", "russia"],
+    "wallachia": ["russia"],
 }
 
 STRENGTHS = {
@@ -156,7 +166,8 @@ def step1_edu():
         if m:
             owners = [o.strip() for o in m.group(2).split(",") if o.strip()]
             for fac, (roster_src, _) in FACTIONS.items():
-                if roster_src in owners and fac not in owners:
+                sources = [roster_src] + EXTRA_ROSTER.get(fac, [])
+                if fac not in owners and any(s in owners for s in sources):
                     owners.append(fac)
                     added[fac] += 1
             line = m.group(1) + ", ".join(owners)
@@ -468,23 +479,44 @@ def step8_banners_xml():
 def step10_edb():
     """export_descr_buildings: without recruit_pool/building entries the new
     factions cannot recruit or build ANYTHING. Append each new faction next to
-    its roster mate in every `factions { ... }` list (names are capitalized
-    in the EDB)."""
+    its roster sources in every `factions { ... }` list — but a recruit_pool
+    line is only extended when the faction actually owns that unit in the
+    final EDU (otherwise the engine spams 'unit does not match up to the
+    ownership' asserts, as GR Ballista did for serbia)."""
+    # unit -> owners from the already-generated EDU
+    edu = read(os.path.join(DATA, "export_descr_unit.txt"))
+    unit_owners = {}
+    unit = None
+    for line in edu.split("\n"):
+        m = re.match(r"^type\s+(.*?)\s*$", line)
+        if m:
+            unit = m.group(1)
+        m = re.match(r"^ownership\s+(.*?)\s*$", line)
+        if m and unit:
+            unit_owners[unit.lower()] = {o.strip().lower() for o in m.group(1).split(",")}
+
     src = read(os.path.join(VAN, "export_descr_buildings.txt"))
     added = {f: 0 for f in FACTIONS}
+    out_lines = []
+    for line in src.split("\n"):
+        m = re.match(r'^(\s*)recruit_pool\s+"([^"]+)"', line)
+        pool_unit = m.group(2).lower() if m else None
 
-    def extend(m):
-        inner = m.group(1)
-        names = [n.strip() for n in inner.split(",") if n.strip()]
-        lower = {n.lower() for n in names}
-        for fac, mate in ROSTER_MATE.items():
-            if mate in lower and fac not in lower:
+        def extend(mm):
+            names = [n.strip() for n in mm.group(1).split(",") if n.strip()]
+            lower = {n.lower() for n in names}
+            for fac, (mate, _) in FACTIONS.items():
+                sources = [mate] + EXTRA_ROSTER.get(fac, [])
+                if fac in lower or not any(s in lower for s in sources):
+                    continue
+                if pool_unit is not None and fac not in unit_owners.get(pool_unit, ()):
+                    continue
                 names.append(fac.capitalize())
                 added[fac] += 1
-        return "factions { " + ", ".join(names) + ", }"
+            return "factions { " + ", ".join(names) + ", }"
 
-    out = re.sub(r"factions\s*\{([^}]*)\}", extend, src)
-    write(os.path.join(DATA, "export_descr_buildings.txt"), out)
+        out_lines.append(re.sub(r"factions\s*\{([^}]*)\}", extend, line))
+    write(os.path.join(DATA, "export_descr_buildings.txt"), "\n".join(out_lines))
     print("EDB faction-list additions:", added)
     assert all(v > 0 for v in added.values()), "some faction got no EDB entries"
 
@@ -536,6 +568,9 @@ def step9_strat_symbols():
             rf"(^faction\s+{fac}\b.*?^symbol\s+)models_strat/\S+",
             rf"\g<1>models_strat/symbol_{fac}.cas",
             smf, count=1, flags=re.M | re.S)
+    # NOTE: logo_index/small_logo_index stay on the mates' enums — M2EX.exe
+    # strings contain no FACTION_LOGO_WALES/CROATIA/... (checked), so custom
+    # per-faction logos need an M2EX feature; tracked for the polish milestone.
     write(smf_path, smf)
     print(f"strat symbols: {copied} -> own .cas, sm_factions updated")
 

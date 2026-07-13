@@ -33,6 +33,9 @@ echo "Game : $GAME"
 echo "[1/3] mod folder  -> mods/complete_edition"
 run mkdir -p "$GAME/mods/complete_edition"
 run cp -r "$REPO/mod/complete_edition/data" "$GAME/mods/complete_edition/"
+# the engine caches the campaign map in map.rwm; a stale cache after
+# descr_regions/descr_strat changes causes wrong region binding
+run rm -f "$GAME/mods/complete_edition/data/world/maps/base/map.rwm"
 
 echo "[2/3] mod cfg     -> mods/complete_edition/complete_edition.cfg"
 run cp "$REPO/launcher/complete_edition.cfg" "$GAME/mods/complete_edition/"

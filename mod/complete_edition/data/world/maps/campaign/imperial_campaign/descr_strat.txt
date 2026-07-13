@@ -1122,7 +1122,7 @@ unit		galley				exp 1 armour 0 weapon_lvl 0
 unit		galley				exp 1 armour 0 weapon_lvl 0
 unit		galley				exp 1 armour 0 weapon_lvl 0
 
-character	Alessandro Selvo, named character, male, age 28, x 168, y 95 
+character	Alessandro Selvo, named character, male, age 28, x 146, y 107 
 traits LoyaltyStarter 1 , PoliticsSkill 2 , GoodAdministrator 2 , ReligionStarter 1 
 army
 unit		SE Bodyguard				exp 1 armour 0 weapon_lvl 0
@@ -2618,7 +2618,7 @@ unit		Bosnian Archers				exp 0 armour 0 weapon_lvl 0
 character	Ulaszlo, priest, male, age 34, x 192, y 115 
 traits NaturalPriestSkill 2 , GoodDenouncer 2 , PriestLevel 1 
 
-character	Kalman, named character, male, heir, age 20, x 196, y 114 
+character	Kalman, named character, male, heir, age 20, x 172, y 121 
 traits Factionheir 1 , LoyaltyStarter 1 , BattleChivalry 2 , GoodCommander 2 , ReligionStarter 1 
 army
 unit		NE Bodyguard				exp 1 armour 0 weapon_lvl 0
@@ -2967,7 +2967,7 @@ settlement
 	}
 }
 
-character	Dmitar Zvonimir, named character, male, leader, age 45, x 157, y 115
+character	Dmitar Zvonimir, named character, male, leader, age 45, x 160, y 108
 traits Factionleader 1 , GoodCommander 2 , NaturalMilitarySkill 2 , BattleChivalry 3 , PublicFaith 2 , ReligionStarter 1
 ancillaries apothecary
 army
@@ -2978,7 +2978,7 @@ unit		Bosnian Archers				exp 0 armour 0 weapon_lvl 0
 unit		Bosnian Archers				exp 0 armour 0 weapon_lvl 0
 unit		Magyar Cavalry				exp 0 armour 0 weapon_lvl 0
 
-character	Stjepan, named character, male, heir, age 22, x 159, y 114
+character	Stjepan, named character, male, heir, age 22, x 160, y 107
 traits Factionheir 1 , LoyaltyStarter 1 , BattleChivalry 2 , GoodCommander 1 , ReligionStarter 1
 army
 unit		EE Bodyguard				exp 1 armour 0 weapon_lvl 0
@@ -2986,10 +2986,10 @@ unit		EE Spear Militia				exp 0 armour 0 weapon_lvl 0
 unit		EE Spear Militia				exp 0 armour 0 weapon_lvl 0
 unit		Bosnian Archers				exp 0 armour 0 weapon_lvl 0
 
-character	Petar, diplomat, male, age 28, x 157, y 115
+character	Petar, diplomat, male, age 28, x 159, y 108
 traits GoodDiplomat 2
 
-character	Miroslav, spy, male, age 24, x 160, y 113
+character	Miroslav, spy, male, age 24, x 161, y 108
 traits GoodSpy 2
 
 character_record		Helena, 	female, age 42, alive, never_a_leader
@@ -3028,7 +3028,7 @@ settlement castle
 	}
 }
 
-character	Paskoje Sorkocevic, named character, male, leader, age 48, x 157, y 121
+character	Paskoje Sorkocevic, named character, male, leader, age 48, x 168, y 95
 traits Factionleader 1 , GoodAdministrator 3 , PoliticsSkill 3 , GoodMerchant 2 , GoodDiplomat 2 , ReligionStarter 1
 ancillaries apothecary
 army
@@ -3037,15 +3037,15 @@ unit		Italian Spear Militia				exp 1 armour 0 weapon_lvl 0
 unit		Italian Spear Militia				exp 1 armour 0 weapon_lvl 0
 unit		Peasant Archers				exp 0 armour 0 weapon_lvl 0
 
-character	Durad Buncic, diplomat, male, age 35, x 157, y 121
+character	Durad Buncic, diplomat, male, age 35, x 168, y 94
 traits GoodDiplomat 3
 
-character	Marin Caboga, spy, male, age 28, x 160, y 122
+character	Marin Caboga, spy, male, age 28, x 167, y 95
 traits GoodSpy 2
 
-character	Luka Sorkocevic, merchant, male, age 32, x 158, y 120
+character	Luka Sorkocevic, merchant, male, age 32, x 169, y 95
 
-character	Junije Sorkocevic, named character, male, heir, age 22, x 156, y 121
+character	Junije Sorkocevic, named character, male, heir, age 22, x 168, y 96
 traits Factionheir 1 , NaturalPrincess 2 , GoodPrincess 2 , IAmPrincess 1
 
 character_record		Mara Sorkocevic, 	female, age 44, alive, never_a_leader
@@ -3076,7 +3076,7 @@ settlement castle
 	}
 }
 
-character	Konstantin Bodin, named character, male, leader, age 44, x 185, y 135
+character	Konstantin Bodin, named character, male, leader, age 44, x 194, y 99
 traits Factionleader 1 , GoodCommander 2 , NaturalMilitarySkill 2 , BattleChivalry 2 , PublicFaith 3 , ReligionStarter 1
 ancillaries apothecary
 army
@@ -3087,14 +3087,14 @@ unit		Bosnian Archers				exp 0 armour 0 weapon_lvl 0
 unit		Bosnian Archers				exp 0 armour 0 weapon_lvl 0
 unit		Magyar Cavalry				exp 0 armour 0 weapon_lvl 0
 
-character	Petar Deljan, named character, male, heir, age 22, x 186, y 136
+character	Petar Deljan, named character, male, heir, age 22, x 194, y 98
 traits Factionheir 1 , LoyaltyStarter 1 , BattleChivalry 2 , NaturalMilitarySkill 2 , ReligionStarter 1
 army
 unit		EE Bodyguard				exp 1 armour 0 weapon_lvl 0
 unit		EE Spear Militia				exp 0 armour 0 weapon_lvl 0
 unit		Bosnian Archers				exp 0 armour 0 weapon_lvl 0
 
-character	Sveta Bodin, diplomat, male, age 30, x 183, y 133
+character	Sveta Bodin, diplomat, male, age 30, x 193, y 99
 traits GoodDiplomat 2
 
 character_record		Radoslava, 	female, age 40, alive, never_a_leader
@@ -3125,7 +3125,7 @@ settlement
 	}
 }
 
-character	Seneslav, named character, male, leader, age 40, x 191, y 128
+character	Seneslav, named character, male, leader, age 40, x 201, y 109
 traits Factionleader 1 , GoodCommander 1 , NaturalMilitarySkill 1 , BattleChivalry 2 , PublicFaith 2 , ReligionStarter 1
 ancillaries apothecary
 army
@@ -3135,7 +3135,7 @@ unit		EE Spear Militia				exp 0 armour 0 weapon_lvl 0
 unit		Bosnian Archers				exp 0 armour 0 weapon_lvl 0
 unit		Magyar Cavalry				exp 0 armour 0 weapon_lvl 0
 
-character	Litovoi, named character, male, heir, age 19, x 192, y 129
+character	Litovoi, named character, male, heir, age 19, x 201, y 108
 traits Factionheir 1 , LoyaltyStarter 1 , BattleChivalry 1 , ReligionStarter 1
 army
 unit		EE Bodyguard				exp 1 armour 0 weapon_lvl 0
@@ -3173,7 +3173,7 @@ settlement castle
 	}
 }
 
-character	Vukan, named character, male, leader, age 42, x 182, y 128
+character	Vukan, named character, male, leader, age 42, x 196, y 114
 traits Factionleader 1 , GoodCommander 2 , NaturalMilitarySkill 2 , BattleChivalry 2 , PublicFaith 2 , ReligionStarter 1
 ancillaries apothecary
 army
@@ -3184,7 +3184,7 @@ unit		Bosnian Archers				exp 0 armour 0 weapon_lvl 0
 unit		Bosnian Archers				exp 0 armour 0 weapon_lvl 0
 unit		Magyar Cavalry				exp 0 armour 0 weapon_lvl 0
 
-character	Nemanja, named character, male, heir, age 20, x 184, y 127
+character	Nemanja, named character, male, heir, age 20, x 196, y 113
 traits Factionheir 1 , LoyaltyStarter 1 , BattleChivalry 2 , NaturalMilitarySkill 1 , ReligionStarter 1
 army
 unit		EE Bodyguard				exp 1 armour 0 weapon_lvl 0
@@ -3192,7 +3192,7 @@ unit		EE Spear Militia				exp 0 armour 0 weapon_lvl 0
 unit		EE Spear Militia				exp 0 armour 0 weapon_lvl 0
 unit		Bosnian Archers				exp 0 armour 0 weapon_lvl 0
 
-character	Tihomir, diplomat, male, age 25, x 183, y 129
+character	Tihomir, diplomat, male, age 25, x 195, y 114
 traits GoodDiplomat 1
 
 character_record		Mileva, 	female, age 40, alive, never_a_leader
@@ -3226,7 +3226,7 @@ settlement castle
 		type hinterland_roads roads
 	}
 }
-character	Gruffudd ap Cynan, named character, male, leader, age 45, x 99, y 155
+character	Gruffudd ap Cynan, named character, male, leader, age 45, x 94, y 157
 traits Factionleader 1 , GoodCommander 2 , NaturalMilitarySkill 2 , BattleChivalry 3 , PublicFaith 2 , ReligionStarter 1
 ancillaries apothecary
 army
@@ -3235,7 +3235,7 @@ unit		Spear Militia			exp 0 armour 0 weapon_lvl 0
 unit		Spear Militia			exp 0 armour 0 weapon_lvl 0
 unit		Peasant Archers			exp 0 armour 0 weapon_lvl 0
 
-character	Owain, named character, male, heir, age 20, x 99, y 155
+character	Owain, named character, male, heir, age 20, x 93, y 157
 traits Factionheir 1 , LoyaltyStarter 1 , NaturalMilitarySkill 1 , ReligionStarter 1
 army
 unit		NE Bodyguard			exp 0 armour 0 weapon_lvl 0
@@ -3267,7 +3267,7 @@ settlement
 		type hinterland_roads roads
 	}
 }
-character	Muirchertach O Brien, named character, male, leader, age 40, x 85, y 162
+character	Muirchertach O Brien, named character, male, leader, age 40, x 90, y 162
 traits Factionleader 1 , GoodCommander 2 , NaturalMilitarySkill 2 , BattleChivalry 2 , PublicFaith 2 , ReligionStarter 1
 ancillaries apothecary
 army
@@ -3276,7 +3276,7 @@ unit		Spear Militia			exp 0 armour 0 weapon_lvl 0
 unit		Spear Militia			exp 0 armour 0 weapon_lvl 0
 unit		Peasant Archers			exp 0 armour 0 weapon_lvl 0
 
-character	Donal, named character, male, heir, age 22, x 85, y 162
+character	Donal, named character, male, heir, age 22, x 90, y 161
 traits Factionheir 1 , LoyaltyStarter 1 , NaturalMilitarySkill 1 , ReligionStarter 1
 army
 unit		NE Bodyguard			exp 0 armour 0 weapon_lvl 0
@@ -3308,7 +3308,7 @@ settlement castle
 		type hinterland_roads roads
 	}
 }
-character	Olaf Kyrre, named character, male, leader, age 50, x 137, y 185
+character	Olaf Kyrre, named character, male, leader, age 50, x 142, y 187
 traits Factionleader 1 , GoodCommander 1 , NaturalMilitarySkill 2 , BattleChivalry 2 , PublicFaith 2 , ReligionStarter 1
 ancillaries apothecary
 army
@@ -3317,7 +3317,7 @@ unit		Spear Militia			exp 0 armour 0 weapon_lvl 0
 unit		Spear Militia			exp 0 armour 0 weapon_lvl 0
 unit		Peasant Archers			exp 0 armour 0 weapon_lvl 0
 
-character	Magnus, named character, male, heir, age 18, x 137, y 185
+character	Magnus, named character, male, heir, age 18, x 142, y 186
 traits Factionheir 1 , LoyaltyStarter 1 , NaturalMilitarySkill 1 , ReligionStarter 1
 army
 unit		NE Bodyguard			exp 0 armour 0 weapon_lvl 0
@@ -3357,7 +3357,7 @@ settlement
 		type market corn_exchange
 	}
 }
-character	Godefroy de Bouillon, named character, male, leader, age 40, x 235, y 46
+character	Godefroy de Bouillon, named character, male, leader, age 40, x 254, y 51
 traits Factionleader 1 , GoodCommander 3 , NaturalMilitarySkill 3 , BattleChivalry 4 , PublicFaith 3 , ReligionStarter 1
 ancillaries apothecary
 army
@@ -3367,7 +3367,7 @@ unit		Italian Spear Militia		exp 1 armour 0 weapon_lvl 0
 unit		Peasant Archers			exp 0 armour 0 weapon_lvl 0
 unit		Peasant Archers			exp 0 armour 0 weapon_lvl 0
 
-character	Baldwin, named character, male, heir, age 22, x 235, y 46
+character	Baldwin, named character, male, heir, age 22, x 254, y 50
 traits Factionheir 1 , LoyaltyStarter 1 , NaturalMilitarySkill 2 , GoodCommander 1 , ReligionStarter 1
 army
 unit		SE Bodyguard			exp 1 armour 0 weapon_lvl 0
@@ -4173,7 +4173,7 @@ unit		Nubian Spearmen				exp 1 armour 0 weapon_lvl 0
 unit		Tuareg Camel Spearmens				exp 1 armour 0 weapon_lvl 0
 unit		Sudanese Tribesmen				exp 0 armour 0 weapon_lvl 0
 
-character	sub_faction england, Harold Dowell, general, male, age 24, x 90, y 162 
+character	sub_faction england, Harold Dowell, general, male, age 24, x 121, y 121 
 army
 unit		Peasant Archers				exp 1 armour 0 weapon_lvl 0
 unit		Peasant Archers				exp 1 armour 0 weapon_lvl 0
@@ -4259,7 +4259,7 @@ unit		Armenian Archers				exp 0 armour 0 weapon_lvl 0
 unit		SE Spear Militia				exp 1 armour 0 weapon_lvl 0
 unit		SE Spear Militia				exp 0 armour 0 weapon_lvl 0
 
-character	sub_faction byzantium, Trifyllios, general, male, age 25, x 201, y 109 
+character	sub_faction byzantium, Trifyllios, general, male, age 25, x 120, y 122 
 army
 unit		S Peasant Archers				exp 0 armour 0 weapon_lvl 0
 unit		S Peasant Archers				exp 0 armour 0 weapon_lvl 0
@@ -4268,7 +4268,7 @@ unit		Bulgarian Brigands				exp 1 armour 0 weapon_lvl 0
 unit		SE Town Militia				exp 0 armour 0 weapon_lvl 0
 unit		Magyar Cavalry				exp 1 armour 0 weapon_lvl 0
 
-character	sub_faction hungary, Ugron, general, male, age 28, x 194, y 99 
+character	sub_faction hungary, Ugron, general, male, age 28, x 122, y 122 
 army
 unit		EE Peasants				exp 0 armour 0 weapon_lvl 0
 unit		S Peasant Archers				exp 0 armour 0 weapon_lvl 0
@@ -4278,7 +4278,7 @@ unit		Bulgarian Brigands				exp 1 armour 0 weapon_lvl 0
 unit		Magyar Cavalry				exp 0 armour 0 weapon_lvl 0
 unit		Magyar Cavalry				exp 0 armour 0 weapon_lvl 0
 
-character	sub_faction hungary, Markus Sohnker, general, male, age 24, x 160, y 108 
+character	sub_faction hungary, Markus Sohnker, general, male, age 24, x 121, y 123 
 army
 unit		S Archer Militia				exp 1 armour 0 weapon_lvl 0
 unit		S Archer Militia				exp 1 armour 0 weapon_lvl 0
@@ -4434,7 +4434,7 @@ unit		Desert Archers				exp 1 armour 0 weapon_lvl 0
 unit		ME Spear Militia				exp 1 armour 0 weapon_lvl 0
 unit		ME Spear Militia				exp 1 armour 0 weapon_lvl 0
 
-character	sub_faction egypt, Ghali Saled, general, male, age 26, x 254, y 51 
+character	sub_faction egypt, Ghali Saled, general, male, age 26, x 121, y 120 
 army
 unit		ME Peasant Archers				exp 1 armour 0 weapon_lvl 0
 unit		ME Peasant Archers				exp 0 armour 0 weapon_lvl 0
@@ -4507,7 +4507,7 @@ unit		Crossbow Militia				exp 0 armour 0 weapon_lvl 0
 unit		Sergeant Spearmen				exp 0 armour 0 weapon_lvl 0
 unit		Sergeant Spearmen				exp 0 armour 0 weapon_lvl 0
 
-character	sub_faction denmark, Jon Loftsson, general, male, age 28, x 142, y 187 
+character	sub_faction denmark, Jon Loftsson, general, male, age 28, x 120, y 121 
 army
 unit		Viking Raiders				exp 1 armour 0 weapon_lvl 0
 unit		Viking Raiders				exp 1 armour 0 weapon_lvl 0
@@ -4602,7 +4602,7 @@ unit		Highland Rabble				exp 0 armour 0 weapon_lvl 0
 unit		Highland Archers				exp 0 armour 0 weapon_lvl 0
 unit		Highland Archers				exp 0 armour 0 weapon_lvl 0
 
-character	sub_faction england, Aelfgar Hewlinge, general, male, age 29, x 94, y 157 
+character	sub_faction england, Aelfgar Hewlinge, general, male, age 29, x 122, y 121 
 army
 unit		Welsh Spearmen				exp 1 armour 0 weapon_lvl 0
 unit		Welsh Spearmen				exp 0 armour 0 weapon_lvl 0
