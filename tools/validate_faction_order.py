@@ -17,6 +17,9 @@ import re
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+import strings_bin
+
 ROOT = os.path.dirname(HERE)
 DATA = os.path.join(ROOT, "mod", "complete_edition", "data")
 VANILLA_SMF = os.path.join(ROOT, "research", "vanilla-extract", "data", "descr_sm_factions.txt")
@@ -24,7 +27,8 @@ VANILLA_SMF = os.path.join(ROOT, "research", "vanilla-extract", "data", "descr_s
 SMF = os.path.join(DATA, "descr_sm_factions.txt")
 STRAT = os.path.join(DATA, "world", "maps", "campaign", "imperial_campaign", "descr_strat.txt")
 EDU = os.path.join(DATA, "export_descr_unit.txt")
-EXPANDED = os.path.join(DATA, "text", "expanded.txt")
+EXPANDED_BIN = os.path.join(DATA, "text", "expanded.txt.strings.bin")
+NAMES_TXT = os.path.join(DATA, "descr_names.txt")
 
 # ownership lines may also name cultures
 CULTURES = {
@@ -78,25 +82,61 @@ def main():
             if f not in registered:
                 err(f"descr_strat: {section} lists unregistered faction '{f}'")
 
-    # --- EDU ownership ---
-    for i, line in enumerate(read(EDU).split("\n"), 1):
-        m = re.match(r"^ownership\s+(.*)$", line.strip())
+    # --- EDU ownership + per-faction general unit ---
+    general_owners = set()
+    edu_lines = read(EDU).split("\n")
+    in_attrs_general = False
+    for i, line in enumerate(edu_lines, 1):
+        s = line.strip()
+        if s.startswith("attributes"):
+            in_attrs_general = re.search(r"\bgeneral_unit\b", s) is not None
+        m = re.match(r"^ownership\s+(.*)$", s)
         if not m:
             continue
-        for name in re.split(r"[,\s]+", m.group(1).strip()):
-            if name and name not in registered and name not in CULTURES:
+        owners = [n for n in re.split(r"[,\s]+", m.group(1).strip()) if n]
+        for name in owners:
+            if name not in registered and name not in CULTURES:
                 err(f"export_descr_unit:{i}: ownership names unknown faction '{name}'")
+        if in_attrs_general:
+            general_owners.update(owners)
+            in_attrs_general = False
+    for f in strat_factions:
+        if f == "slave":
+            continue
+        if f not in general_owners:
+            err(f"export_descr_unit: no general_unit (bodyguard) owned by campaign faction '{f}'")
 
-    # --- expanded.txt name keys for new factions ---
-    if os.path.exists(EXPANDED):
-        expanded = read(EXPANDED).lower()
+    # --- expanded.txt.strings.bin name keys for new factions ---
+    if os.path.exists(EXPANDED_BIN):
+        keys = {k for k, _ in strings_bin.read_bin(EXPANDED_BIN)}
         for f in new_factions:
             if f == "slave":
                 continue
-            if f not in expanded:
-                err(f"text/expanded.txt: no name entry for new faction '{f}'")
+            for req in (f.upper(), f"{f.upper()}_STRENGTH", f"{f.upper()}_WEAKNESS"):
+                if req not in keys:
+                    err(f"expanded.txt.strings.bin: missing key {{{req}}} for '{f}'")
     else:
-        err("text/expanded.txt missing")
+        err("text/expanded.txt.strings.bin missing")
+
+    # --- descr_names: block + named strat characters present in pools ---
+    if os.path.exists(NAMES_TXT):
+        names_txt = read(NAMES_TXT)
+        name_factions = set(re.findall(r"^faction:\s*(\w+)", names_txt, re.M))
+        for f in strat_factions:
+            if f != "slave" and f not in name_factions:
+                err(f"descr_names.txt: no name-pool block for campaign faction '{f}'")
+        pool_words = set(re.findall(r"^\t\t(.+?)\s*$", names_txt, re.M))
+        for m in re.finditer(r"^character\s+([^,]+),\s*named character", read(STRAT), re.M):
+            full = m.group(1).strip()
+            parts = full.split(" ", 1)
+            for p in parts:
+                # strat writes multi-word pool names with underscores (al_Alai
+                # in strat = "al Alai" in the pool)
+                norm = p.replace("_", " ")
+                if norm not in pool_words and full not in pool_words:
+                    err(f"descr_strat named character '{full}': '{norm}' not in any descr_names pool")
+    else:
+        err("descr_names.txt missing")
 
     # --- UI assets for new factions (vanilla ones live in packs) ---
     for f in new_factions:

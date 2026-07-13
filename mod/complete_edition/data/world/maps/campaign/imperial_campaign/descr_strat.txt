@@ -3045,7 +3045,7 @@ traits GoodSpy 2
 
 character	Luka Sorkocevic, merchant, male, age 32, x 158, y 120
 
-character	Anita Sorkocevic, named character, female, heir, age 22, x 156, y 121
+character	Junije Sorkocevic, named character, male, heir, age 22, x 156, y 121
 traits Factionheir 1 , NaturalPrincess 2 , GoodPrincess 2 , IAmPrincess 1
 
 character_record		Mara Sorkocevic, 	female, age 44, alive, never_a_leader
@@ -3192,7 +3192,7 @@ unit		EE Spear Militia				exp 0 armour 0 weapon_lvl 0
 unit		EE Spear Militia				exp 0 armour 0 weapon_lvl 0
 unit		Bosnian Archers				exp 0 armour 0 weapon_lvl 0
 
-character	Milica, diplomat, female, age 25, x 183, y 129
+character	Tihomir, diplomat, male, age 25, x 183, y 129
 traits GoodDiplomat 1
 
 character_record		Mileva, 	female, age 40, alive, never_a_leader
