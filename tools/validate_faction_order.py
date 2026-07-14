@@ -157,9 +157,10 @@ def main():
     # --- UI assets for new factions (vanilla ones live in packs) ---
     for f in new_factions:
         for rel in (
-            f"ui/symbols/symbol_{f}.tga",
-            f"ui/rebel_symbols/rebel_{f}.tga",
-            f"ui/loading_screen/symbols/symbol128_{f}.tga",
+            f"ui/faction_symbols/{f}.tga",
+            f"loading_screen/symbols/symbol128_{f}.tga",
+            f"menu/symbols/fe_buttons_48/symbol48_{f}.tga",
+            f"menu/symbols/fe_symbols_80/{f}.tga",
         ):
             if not os.path.exists(os.path.join(DATA, rel)):
                 err(f"missing UI asset for '{f}': data/{rel}")

@@ -1,71 +1,97 @@
 #!/usr/bin/env python3
-"""Generate real, unique heraldry for the factions that have no Kingdoms art.
+"""Generate faction art for the Balkan five by compositing custom heraldry
+INTO genuine CA icon canvases — frame, shape, alpha and anti-aliasing stay
+byte-for-byte vanilla (the maintainer: "identicno").
 
-Pure-Python pixel drawing -> TGA (ui/menu icons) and DDS (.texture banners,
-strat-map symbol textures). Designs:
-  croatia   - red/white chequy (sahovnica)
-  serbia    - white cross on red with four firesteels (approximated)
-  bulgaria  - gold saltire on dark red (Asen dynasty colours)
-  ragusa    - white field, blue fess, red border (Libertas colours)
-  wallachia - gold pale on azure with white sun disc
+Method (verified on the extracted vanilla art):
+  * every menu icon type shares its alpha mask across ALL factions;
+  * the metallic frame = pixels identical across factions;
+  * so: canvas = donor faction's file (per variant), frame mask = pixels
+    identical across three donors, heraldry written only into the interior.
 
-Outputs overwrite the wales-placeholder art. DLC factions (wales, ireland,
-norway, jerusalem) keep their genuine Kingdoms assets and are not touched.
+Designs: croatia chequy (sahovnica), serbian cross with firesteels,
+bulgarian gold saltire, ragusan white/blue/red, wallachian gold pale + sun.
+
+Also regenerates the battle-banner .texture files and the strat symbol .cas
+textures (unchanged mechanics from earlier rounds).
+
+DLC factions (wales/ireland/norway/jerusalem) keep their genuine Kingdoms
+art and are not touched here.
 """
 import os
-import struct
 import shutil
+import struct
+import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+import tga
+
 ROOT = os.path.dirname(HERE)
 DATA = os.path.join(ROOT, "mod", "complete_edition", "data")
 BASE_MS = os.path.join(ROOT, "research", "base-extract", "data", "models_strat")
+D_MENU = os.path.join(ROOT, "research", "base-extract", "data_menu")
+D_UI = os.path.join(ROOT, "research", "base-extract", "data_ui")
 
 GOLD = (212, 175, 55)
 WHITE = (240, 240, 240)
 
+FRAME_DONORS = ["hungary", "venice", "england"]
 
-# ---------------- pixel buffer helpers ----------------
+# canvas donor per faction (visual base whose frame we keep — any works,
+# use the roster mate for consistency); also the fe_faction_units montage
+CANVAS_DONOR = {
+    "croatia": "hungary",
+    "ragusa": "venice",
+    "serbia": "byzantium",
+    "bulgaria": "byzantium",
+    "wallachia": "hungary",
+}
+
+# .cas donor whose texture-path string has the SAME LENGTH (binary patch)
+CAS_DONOR = {
+    "croatia": "hungary",      # 7 = 7
+    "ragusa": "venice",        # 6 = 6
+    "serbia": "france",        # 6 = 6
+    "bulgaria": "scotland",    # 8 = 8
+    "wallachia": "byzantium",  # 9 = 9
+}
+
+BANNER_W, BANNER_H = 1024, 512
+
+
+# ---------------- designs (RGB matrix) ----------------
 
 def buf(w, h, color):
     return [[color] * w for _ in range(h)]
 
 
-def rect(b, x0, y0, x1, y1, color):
-    h = len(b)
-    w = len(b[0])
-    for y in range(max(0, int(y0)), min(h, int(y1))):
-        for x in range(max(0, int(x0)), min(w, int(x1))):
+def frect(b, fx0, fy0, fx1, fy1, color):
+    h, w = len(b), len(b[0])
+    for y in range(max(0, int(fy0 * h)), min(h, int(fy1 * h))):
+        for x in range(max(0, int(fx0 * w)), min(w, int(fx1 * w))):
             b[y][x] = color
 
 
-def frect(b, fx0, fy0, fx1, fy1, color):
-    h = len(b)
-    w = len(b[0])
-    rect(b, fx0 * w, fy0 * h, fx1 * w, fy1 * h, color)
-
-
 def border(b, frac, color):
-    h = len(b)
-    w = len(b[0])
+    h, w = len(b), len(b[0])
     t = max(1, int(min(w, h) * frac))
-    rect(b, 0, 0, w, t, color)
-    rect(b, 0, h - t, w, h, color)
-    rect(b, 0, 0, t, h, color)
-    rect(b, w - t, 0, w, h, color)
+    frect(b, 0, 0, 1, 0, color)
+    for y in range(h):
+        for x in range(w):
+            if x < t or x >= w - t or y < t or y >= h - t:
+                b[y][x] = color
 
 
 def checker(b, n, c1, c2):
-    h = len(b)
-    w = len(b[0])
+    h, w = len(b), len(b[0])
     for y in range(h):
         for x in range(w):
             b[y][x] = c1 if ((x * n // w) + (y * n // h)) % 2 == 0 else c2
 
 
 def saltire(b, frac, color):
-    h = len(b)
-    w = len(b[0])
+    h, w = len(b), len(b[0])
     t = min(w, h) * frac
     for y in range(h):
         for x in range(w):
@@ -75,8 +101,7 @@ def saltire(b, frac, color):
 
 
 def circle(b, fcx, fcy, frad, color):
-    h = len(b)
-    w = len(b[0])
+    h, w = len(b), len(b[0])
     cx, cy, r = fcx * w, fcy * h, frad * min(w, h)
     for y in range(h):
         for x in range(w):
@@ -84,35 +109,14 @@ def circle(b, fcx, fcy, frad, color):
                 b[y][x] = color
 
 
-def transform(b, fn):
-    return [[fn(px) for px in row] for row in b]
-
-
-def greyscale(b):
-    return transform(b, lambda p: ((p[0] * 3 + p[1] * 6 + p[2]) // 10,) * 3)
-
-
-def brighten(b, d):
-    return transform(b, lambda p: tuple(min(255, c + d) for c in p))
-
-
-def desaturate(b):
-    def f(p):
-        g = (p[0] + p[1] + p[2]) // 3
-        return ((p[0] + g) // 2, (p[1] + g) // 2, (p[2] + g) // 2)
-    return transform(b, f)
-
-
-# ---------------- designs ----------------
-
 def draw_design(fac, w, h):
     b = buf(w, h, WHITE)
     if fac == "croatia":
         checker(b, 5, (200, 25, 35), WHITE)
     elif fac == "serbia":
         b = buf(w, h, (175, 20, 30))
-        frect(b, 0.42, 0.0, 0.58, 1.0, WHITE)   # vertical arm
-        frect(b, 0.0, 0.42, 1.0, 0.58, WHITE)   # horizontal arm
+        frect(b, 0.42, 0.0, 0.58, 1.0, WHITE)
+        frect(b, 0.0, 0.42, 1.0, 0.58, WHITE)
         for fx, fy in ((0.17, 0.17), (0.67, 0.17), (0.17, 0.67), (0.67, 0.67)):
             frect(b, fx, fy, fx + 0.16, fy + 0.16, WHITE)
             frect(b, fx + 0.04, fy + 0.04, fx + 0.12, fy + 0.12, (175, 20, 30))
@@ -133,24 +137,9 @@ def draw_design(fac, w, h):
     return b
 
 
-# ---------------- writers ----------------
-
-def write_tga(path, b):
-    h = len(b)
-    w = len(b[0])
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    hdr = struct.pack("<BBBHHBHHHHBB", 0, 0, 2, 0, 0, 0, 0, 0, w, h, 24, 0x20)
-    body = bytearray()
-    for row in b:
-        for r, g, bl in row:
-            body += bytes((bl, g, r))
-    open(path, "wb").write(hdr + bytes(body))
-
-
 def shield_alpha(w, h):
-    """Heater-shield alpha mask: straight top, sides tapering to a bottom
-    point — the shape all vanilla faction icons use (32-bit TGA, alpha 0
-    outside). Returns per-pixel 0/255 alpha rows."""
+    """Heater-shield alpha used only where no CA canvas exists (standards
+    atlas cells)."""
     alpha = []
     for y in range(h):
         fy = y / (h - 1)
@@ -159,159 +148,205 @@ def shield_alpha(w, h):
         elif fy <= 0.5:
             hw = 0.46
         else:
-            t = (fy - 0.5) / 0.47
-            hw = 0.46 * max(0.0, 1.0 - t ** 1.7)
-        row = []
-        for x in range(w):
-            fx = x / (w - 1)
-            row.append(255 if abs(fx - 0.5) <= hw else 0)
-        alpha.append(row)
+            hw = 0.46 * max(0.0, 1.0 - ((fy - 0.5) / 0.47) ** 1.7)
+        alpha.append([255 if abs(x / (w - 1) - 0.5) <= hw else 0 for x in range(w)])
     return alpha
 
 
-def write_shield_tga(path, b):
-    """32-bit TGA with the design clipped to a shield shape (dark outline,
-    transparent outside) — matches the vanilla icon format (bpp=32, desc 0x28)."""
-    h = len(b)
-    w = len(b[0])
-    alpha = shield_alpha(w, h)
-    outline = (35, 30, 30)
-    t = max(1, min(w, h) // 24)
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    hdr = struct.pack("<BBBHHBHHHHBB", 0, 0, 2, 0, 0, 0, 0, 0, w, h, 32, 0x28)
-    body = bytearray()
+# ---------------- variant tints ----------------
+
+def tint(px, variant):
+    r, g, b = px
+    if variant == "roll":
+        return (min(255, r + 40), min(255, g + 40), min(255, b + 40))
+    if variant == "select":
+        return (min(255, r + 25), min(255, g + 25), min(255, b + 25))
+    if variant == "grey":
+        l = (r * 3 + g * 6 + b) // 10
+        return (max(0, l - 15), max(0, l - 10), min(255, l + 15))
+    return px
+
+
+# ---------------- compositing ----------------
+
+def frame_mask(paths):
+    """pixels identical across all given canvases (and opaque) = frame."""
+    imgs = [tga.read(p) for p in paths]
+    h, w = len(imgs[0]), len(imgs[0][0])
+    mask = [[False] * w for _ in range(h)]
     for y in range(h):
         for x in range(w):
-            a = alpha[y][x]
-            if a == 0:
-                body += b"\x00\x00\x00\x00"
+            p0 = imgs[0][y][x]
+            if p0[3] == 0:
                 continue
-            edge = False
-            for dy in range(-t, t + 1):
-                for dx in range(-t, t + 1):
-                    yy, xx = y + dy, x + dx
-                    if not (0 <= yy < h and 0 <= xx < w) or alpha[yy][xx] == 0:
-                        edge = True
-                        break
-                if edge:
-                    break
-            r, g, bl = outline if edge else b[y][x]
-            body += bytes((bl, g, r, 255))
-    open(path, "wb").write(hdr + bytes(body))
+            if all(im[y][x] == p0 for im in imgs[1:]):
+                mask[y][x] = True
+    return mask
 
 
-def dds_bytes(b):
-    h = len(b)
-    w = len(b[0])
+def composite(canvas_path, mask, fac, variant, out_path):
+    canvas = tga.read(canvas_path)
+    h, w = len(canvas), len(canvas[0])
+    design = draw_design(fac, w, h)
+    out = []
+    for y in range(h):
+        row = []
+        for x in range(w):
+            r, g, b, a = canvas[y][x]
+            if a == 0 or mask[y][x]:
+                row.append((r, g, b, a))          # outside or frame: keep CA art
+            else:
+                dr, dg, db = tint(design[y][x], variant)
+                row.append((dr, dg, db, a))       # interior: our heraldry
+        out.append(row)
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
+    tga.write(out_path, out, origin_topdown=False)
+
+
+# ---------------- DDS / .texture writers (battle banners, strat symbols) ----
+
+def dds_bytes(rgb):
+    h, w = len(rgb), len(rgb[0])
     hdr = struct.pack(
         "<4sIIIIIII44xIIIIIIIIIIII4x",
         b"DDS ", 124, 0x0000100F, h, w, w * 4, 0, 0,
         32, 0x41, 0, 32, 0x00FF0000, 0x0000FF00, 0x000000FF, 0xFF000000,
         0x1000, 0, 0, 0)
-    assert len(hdr) == 128, len(hdr)
     body = bytearray()
-    for row in b:
-        for r, g, bl in row:
-            body += bytes((bl, g, r, 255))
+    for row in rgb:
+        for r, g, b in row:
+            body += bytes((b, g, r, 255))
     return hdr + bytes(body)
 
 
-def write_dds(path, b):
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    open(path, "wb").write(dds_bytes(b))
-
-
-def write_texture(path, b, wrapper):
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    open(path, "wb").write(wrapper + dds_bytes(b))
-
-
-def tga_dims(path):
-    d = open(path, "rb").read(18)
-    return struct.unpack_from("<HH", d, 12)
-
-
-# ---------------- main ----------------
-
-# faction -> .cas donor whose texture-path string has the SAME LENGTH
-CAS_DONOR = {
-    "croatia": "hungary",      # 7 = 7
-    "ragusa": "venice",        # 6 = 6
-    "serbia": "france",        # 6 = 6
-    "bulgaria": "scotland",    # 8 = 8
-    "wallachia": "byzantium",  # 9 = 9
-}
-# banner _trans (banner shape alpha) donor — the roster mate looks right
-TRANS_DONOR = {
-    "croatia": "hungary", "ragusa": "venice", "serbia": "byzantium",
-    "bulgaria": "byzantium", "wallachia": "hungary",
-}
-
-BANNER_W, BANNER_H = 1024, 512
-
-
 def main():
-    wales_banner = os.path.join(DATA, "banners", "textures", "faction_banner_wales.texture")
-    wrapper = open(wales_banner, "rb").read(48)
+    menu_out = os.path.join(DATA, "menu", "symbols")
+    variants = [("", "base"), ("_roll", "roll"), ("_select", "select"), ("_grey", "grey")]
 
-    menu = os.path.join(DATA, "menu", "symbols")
-    dims24 = tga_dims(os.path.join(menu, "fe_buttons_24", "symbol24_wales.tga"))
-    dims48 = tga_dims(os.path.join(menu, "fe_buttons_48", "symbol48_wales.tga"))
-    dims80 = tga_dims(os.path.join(menu, "fe_symbols_80", "wales.tga"))
-    dimsfu = tga_dims(os.path.join(menu, "fe_faction_units", "wales.tga"))
+    # precompute frame masks per (dir, pattern, variant)
+    button_sets = [("fe_buttons_48", "symbol48_{f}{v}.tga"),
+                   ("fe_buttons_24", "symbol24_{f}{v}.tga")]
+    single_sets = [("fe_symbols_80", "{f}.tga")]
 
-    for fac in CAS_DONOR:
-        # --- ui icons (shield-shaped, 32-bit alpha like vanilla) ---
-        write_shield_tga(os.path.join(DATA, "ui", "symbols", f"symbol_{fac}.tga"),
-                         draw_design(fac, 32, 32))
-        write_shield_tga(os.path.join(DATA, "ui", "rebel_symbols", f"rebel_{fac}.tga"),
-                         desaturate(draw_design(fac, 32, 32)))
-        write_shield_tga(os.path.join(DATA, "ui", "faction_symbols", f"{fac}.tga"),
-                         draw_design(fac, 54, 54))
-        write_shield_tga(os.path.join(DATA, "ui", "loading_screen", "symbols", f"symbol128_{fac}.tga"),
-                         draw_design(fac, 128, 128))
+    for fac in CANVAS_DONOR:
+        donor = CANVAS_DONOR[fac]
 
-        # --- menu selector art (shield-shaped buttons) ---
-        write_shield_tga(os.path.join(menu, "fe_symbols_80", f"{fac}.tga"),
-                         draw_design(fac, *dims80))
-        write_tga(os.path.join(menu, "fe_faction_units", f"{fac}.tga"),
-                  draw_design(fac, *dimsfu))
-        for size, dname, prefix in ((dims48, "fe_buttons_48", "symbol48"),
-                                    (dims24, "fe_buttons_24", "symbol24")):
-            base = draw_design(fac, *size)
-            sel = [row[:] for row in base]
-            border(sel, 0.07, GOLD)
-            for suffix, img in (("", base), ("_roll", brighten(base, 35)),
-                                ("_select", sel), ("_grey", greyscale(base))):
-                write_shield_tga(os.path.join(menu, dname, f"{prefix}_{fac}{suffix}.tga"), img)
+        # --- menu buttons with 4 variants ---
+        for d, pat in button_sets:
+            for suffix, variant in variants:
+                paths = [os.path.join(D_MENU, d, pat.format(f=df, v=suffix))
+                         for df in FRAME_DONORS]
+                mask = frame_mask(paths)
+                canvas = os.path.join(D_MENU, d, pat.format(f=donor, v=suffix))
+                if not os.path.exists(canvas):
+                    canvas = paths[0]
+                composite(canvas, mask, fac, variant,
+                          os.path.join(menu_out, d, pat.format(f=fac, v=suffix)))
 
-        # --- battle banner textures (.texture wrapper + DDS) ---
+        # --- single-file menu emblems ---
+        for d, pat in single_sets:
+            paths = [os.path.join(D_MENU, d, pat.format(f=df)) for df in FRAME_DONORS]
+            mask = frame_mask(paths)
+            canvas = os.path.join(D_MENU, d, pat.format(f=donor))
+            if not os.path.exists(canvas):
+                canvas = paths[0]
+            composite(canvas, mask, fac, "base",
+                      os.path.join(menu_out, d, pat.format(f=fac)))
+
+        # --- fe_faction_units: unit-roster montage, no compositable frame ---
+        src = os.path.join(D_MENU, "fe_faction_units", f"{donor}.tga")
+        dst = os.path.join(menu_out, "fe_faction_units", f"{fac}.tga")
+        os.makedirs(os.path.dirname(dst), exist_ok=True)
+        shutil.copyfile(src, dst)
+
+        # --- loading screen emblem (correct path: data/loading_screen/...) ---
+        paths = [os.path.join(D_MENU, f"symbol128_{df}.tga") for df in FRAME_DONORS]
+        mask = frame_mask(paths)
+        canvas = os.path.join(D_MENU, f"symbol128_{donor}.tga")
+        composite(canvas, mask, fac, "base",
+                  os.path.join(DATA, "loading_screen", "symbols", f"symbol128_{fac}.tga"))
+
+        # --- ui/faction_symbols (54x54): donor alpha, heraldry fills shape ---
+        donor_fs = tga.read(os.path.join(D_UI, f"{donor}.tga"))
+        h, w = len(donor_fs), len(donor_fs[0])
+        design = draw_design(fac, w, h)
+        out = []
+        for y in range(h):
+            row = []
+            for x in range(w):
+                a = donor_fs[y][x][3]
+                near_edge = a > 0 and any(
+                    not (0 <= y + dy < h and 0 <= x + dx < w) or donor_fs[y + dy][x + dx][3] == 0
+                    for dy in (-2, -1, 0, 1, 2) for dx in (-2, -1, 0, 1, 2))
+                if a == 0:
+                    row.append((0, 0, 0, 0))
+                elif near_edge:
+                    r, g, b = design[y][x]
+                    row.append((r * 11 // 20, g * 11 // 20, b * 11 // 20, a))
+                else:
+                    r, g, b = design[y][x]
+                    row.append((r, g, b, a))
+            out.append(row)
+        fs_path = os.path.join(DATA, "ui", "faction_symbols", f"{fac}.tga")
+        os.makedirs(os.path.dirname(fs_path), exist_ok=True)
+        tga.write(fs_path, out, origin_topdown=True)
+
+        # --- battle banner .texture + strat symbol .cas/dds (as before) ---
         tex_dir = os.path.join(DATA, "banners", "textures")
+        os.makedirs(tex_dir, exist_ok=True)
+        wrapper = open(os.path.join(tex_dir, "faction_banner_wales.texture"), "rb").read(48)
         design = draw_design(fac, BANNER_W, BANNER_H)
-        write_texture(os.path.join(tex_dir, f"faction_banner_{fac}.texture"), design, wrapper)
+        open(os.path.join(tex_dir, f"faction_banner_{fac}.texture"), "wb").write(
+            wrapper + dds_bytes(design))
         royal = [row[:] for row in design]
         border(royal, 0.04, GOLD)
-        write_texture(os.path.join(tex_dir, f"royal_banner_{fac}.texture"), royal, wrapper)
-        # vanilla banner textures live in packs; reuse the DLC wales _trans
-        # shape which we already ship (same mesh family)
+        open(os.path.join(tex_dir, f"royal_banner_{fac}.texture"), "wb").write(
+            wrapper + dds_bytes(royal))
         shutil.copyfile(os.path.join(tex_dir, "faction_banner_wales_trans.texture"),
                         os.path.join(tex_dir, f"faction_banner_{fac}_trans.texture"))
 
-        # --- strat-map symbol: donor .cas with patched texture path + our dds ---
-        donor = CAS_DONOR[fac]
-        cas = open(os.path.join(BASE_MS, f"symbol_{donor}.cas"), "rb").read()
-        old = f"#banner_symbol_{donor}.tga".encode()
+        cas_donor = CAS_DONOR[fac]
+        cas = open(os.path.join(BASE_MS, f"symbol_{cas_donor}.cas"), "rb").read()
+        old = f"#banner_symbol_{cas_donor}.tga".encode()
         new = f"#banner_symbol_{fac}.tga".encode()
-        assert len(old) == len(new), (fac, donor)
-        assert old in cas, f"{old} not found in donor cas"
-        cas = cas.replace(old, new)
+        assert len(old) == len(new) and old in cas
         ms_dir = os.path.join(DATA, "models_strat")
-        os.makedirs(ms_dir, exist_ok=True)
-        open(os.path.join(ms_dir, f"symbol_{fac}.cas"), "wb").write(cas)
-        write_dds(os.path.join(ms_dir, "textures", f"#banner_symbol_{fac}.tga.dds"),
-                  draw_design(fac, 128, 128))
+        os.makedirs(os.path.join(ms_dir, "textures"), exist_ok=True)
+        open(os.path.join(ms_dir, f"symbol_{fac}.cas"), "wb").write(cas.replace(old, new))
+        open(os.path.join(ms_dir, "textures", f"#banner_symbol_{fac}.tga.dds"), "wb").write(
+            dds_bytes(draw_design(fac, 128, 128)))
 
-    print(f"heraldry generated for {list(CAS_DONOR)}")
+    # DLC factions: genuine loading-screen emblems to the CORRECT path
+    DLC_LOAD = {
+        "wales": "british_isles", "ireland": "british_isles",
+        "norway": "british_isles", "jerusalem": "crusades",
+    }
+    for fac, dlc in DLC_LOAD.items():
+        dst = os.path.join(DATA, "loading_screen", "symbols", f"symbol128_{fac}.tga")
+        os.makedirs(os.path.dirname(dst), exist_ok=True)
+        src = os.path.join(ROOT, "research", "dlc-extract", dlc, "mods", dlc,
+                           "data", "loading_screen", "symbols", f"symbol128_{fac}.tga")
+        if os.path.exists(src):
+            shutil.copyfile(src, dst)
+            continue
+        # british_isles ships no symbol128 art — scale its genuine 90x90
+        # fe_symbols_80 emblem up to 128 (nearest neighbour, alpha kept)
+        emblem = tga.read(os.path.join(ROOT, "research", "dlc-extract", dlc, "mods",
+                                       dlc, "data", "menu", "symbols",
+                                       "fe_symbols_80", f"{fac}.tga"))
+        sh, sw = len(emblem), len(emblem[0])
+        scaled = [[emblem[y * sh // 128][x * sw // 128] for x in range(128)]
+                  for y in range(128)]
+        tga.write(dst, scaled, origin_topdown=False)
+
+    # retire the invented paths from earlier rounds (wrong locations)
+    for stale in ("ui/symbols", "ui/rebel_symbols", "ui/loading_screen"):
+        p = os.path.join(DATA, *stale.split("/"))
+        if os.path.isdir(p):
+            shutil.rmtree(p)
+
+    print(f"heraldry composited onto CA canvases for {list(CANVAS_DONOR)}; "
+          f"loading emblems at data/loading_screen/symbols; stale ui dirs removed")
 
 
 if __name__ == "__main__":

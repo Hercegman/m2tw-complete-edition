@@ -36,6 +36,10 @@ run cp -r "$REPO/mod/complete_edition/data" "$GAME/mods/complete_edition/"
 # the engine caches the campaign map in map.rwm; a stale cache after
 # descr_regions/descr_strat changes causes wrong region binding
 run rm -f "$GAME/mods/complete_edition/data/world/maps/base/map.rwm"
+# retired asset locations from earlier rounds (cp -r does not delete)
+run rm -rf "$GAME/mods/complete_edition/data/ui/symbols" \
+           "$GAME/mods/complete_edition/data/ui/rebel_symbols" \
+           "$GAME/mods/complete_edition/data/ui/loading_screen"
 
 echo "[2/3] mod cfg     -> mods/complete_edition/complete_edition.cfg"
 run cp "$REPO/launcher/complete_edition.cfg" "$GAME/mods/complete_edition/"

@@ -504,7 +504,7 @@ rebel_symbol				models_strat/symbol_rebels.CAS
 primary_colour				red 220, green 30, blue 30
 secondary_colour			red 240, green 240, blue 240
 loading_logo				loading_screen/symbols/symbol128_croatia.tga
-standard_index				19
+standard_index				24
 logo_index					FACTION_LOGO_HUNGARY
 small_logo_index			SMALL_FACTION_LOGO_HUNGARY
 triumph_value				5
@@ -524,7 +524,7 @@ rebel_symbol				models_strat/symbol_rebels.CAS
 primary_colour				red 30, green 70, blue 190
 secondary_colour			red 240, green 200, blue 40
 loading_logo				loading_screen/symbols/symbol128_ragusa.tga
-standard_index				0
+standard_index				25
 logo_index					FACTION_LOGO_VENICE
 small_logo_index			SMALL_FACTION_LOGO_VENICE
 triumph_value				5
@@ -544,7 +544,7 @@ rebel_symbol				models_strat/symbol_rebels.CAS
 primary_colour				red 150, green 20, blue 20
 secondary_colour			red 240, green 230, blue 200
 loading_logo				loading_screen/symbols/symbol128_serbia.tga
-standard_index				15
+standard_index				26
 logo_index					FACTION_LOGO_BYZANTIUM
 small_logo_index			SMALL_FACTION_LOGO_BYZANTIUM
 triumph_value				5
@@ -564,7 +564,7 @@ rebel_symbol				models_strat/symbol_rebels.CAS
 primary_colour				red 70, green 120, blue 60
 secondary_colour			red 230, green 230, blue 230
 loading_logo				loading_screen/symbols/symbol128_bulgaria.tga
-standard_index				15
+standard_index				27
 logo_index					FACTION_LOGO_BYZANTIUM
 small_logo_index			SMALL_FACTION_LOGO_BYZANTIUM
 triumph_value				5
@@ -584,7 +584,7 @@ rebel_symbol				models_strat/symbol_rebels.CAS
 primary_colour				red 230, green 180, blue 40
 secondary_colour			red 90, green 30, blue 30
 loading_logo				loading_screen/symbols/symbol128_wallachia.tga
-standard_index				15
+standard_index				28
 logo_index					FACTION_LOGO_BYZANTIUM
 small_logo_index			SMALL_FACTION_LOGO_BYZANTIUM
 triumph_value				5
@@ -604,7 +604,7 @@ rebel_symbol				models_strat/symbol_rebels.CAS
 primary_colour				red 0, green 140, blue 70
 secondary_colour			red 240, green 240, blue 240
 loading_logo				loading_screen/symbols/symbol128_wales.tga
-standard_index				6
+standard_index				29
 logo_index					FACTION_LOGO_SCOTLAND
 small_logo_index			SMALL_FACTION_LOGO_SCOTLAND
 triumph_value				5
@@ -624,7 +624,7 @@ rebel_symbol				models_strat/symbol_rebels.CAS
 primary_colour				red 240, green 140, blue 0
 secondary_colour			red 0, green 120, blue 60
 loading_logo				loading_screen/symbols/symbol128_ireland.tga
-standard_index				6
+standard_index				30
 logo_index					FACTION_LOGO_SCOTLAND
 small_logo_index			SMALL_FACTION_LOGO_SCOTLAND
 triumph_value				5
@@ -644,7 +644,7 @@ rebel_symbol				models_strat/symbol_rebels.CAS
 primary_colour				red 120, green 30, blue 160
 secondary_colour			red 240, green 240, blue 240
 loading_logo				loading_screen/symbols/symbol128_norway.tga
-standard_index				4
+standard_index				31
 logo_index					FACTION_LOGO_DENMARK
 small_logo_index			SMALL_FACTION_LOGO_DENMARK
 triumph_value				5
@@ -664,7 +664,7 @@ rebel_symbol				models_strat/symbol_rebels.CAS
 primary_colour				red 245, green 245, blue 245
 secondary_colour			red 200, green 40, blue 40
 loading_logo				loading_screen/symbols/symbol128_jerusalem.tga
-standard_index				3
+standard_index				32
 logo_index					FACTION_LOGO_PAPAL_STATES
 small_logo_index			SMALL_FACTION_LOGO_PAPAL_STATES
 triumph_value				5

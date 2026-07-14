@@ -1,0 +1,5 @@
+; Complete Edition - M2EX engine toggles.
+; Parse descr_model_battle.txt directly instead of the binary
+; battle_models.modeldb (which has no entries for our factions).
+; All other options keep M2EX's safe mod defaults.
+model_battle_source  text

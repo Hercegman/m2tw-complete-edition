@@ -1,0 +1,115 @@
+; descr_caps_ex.txt
+;
+; Engine feature toggles which can't be enabled transparently. Mods that don't ship this file get safe defaults so nothing breaks silently.
+
+
+; where sea trade fleet count comes from:
+;   port_level   = port building level (original non-Kingdoms behaviour)
+;   capability   = CAPABILITY_TRADE_FLEET from EDB (requires trade_fleet caps in export_descr_buildings)
+trade_fleet_source  capability
+
+; sprite definition format:
+;   sd    = legacy binary .sd/.rsd files (default for mods)
+;   xml   = v7 .sd.xml with runtime atlas packing
+sprite_format  xml
+
+; vegetation database source:
+;   binary = load vegetation.db binary cache (default for mods)
+;   text   = parse descr_vegetation.txt directly at runtime
+vegetation_source  text
+
+; items database source:
+;   binary = load descr_items.db binary cache (default for mods)
+;   text   = parse descr_items.txt directly at runtime
+items_source  text
+
+; model battle source:
+;   modeldb = load battle_models.modelDB (Boost text archive, default for mods)
+;   text    = parse descr_model_battle.txt directly at runtime
+model_battle_source  text
+
+; portrait pool mode:
+;   merged   = portraits from all overlay scopes (mod + vanilla) are pooled together (default)
+;   isolated = only portraits from the highest-priority scope are used (for total conversions)
+portrait_pool  merged
+
+; armour upgrade gating:
+;   per_unit  = max armour upgrades limited by entries in armour_ug_levels (default - vanilla M2 behaviour, lancers and other "under-declared" units cannot upgrade)
+;   universal = every unit can be upgraded to the maximum armour upgrades (currently 3); missing tiers reuse the last declared model with incremented level value (matches RTW behaviour)
+armour_upgrade_gating  universal
+
+; default_recruitment_slots - baseline recruitment points granted to every settlement before building caps stack on top.
+;   1 = vanilla RTW (one unit completes per turn before building bonuses)
+;   0 = strict M2 parity: settlements get nothing unless a building grants `recruitment_slots N` in EDB
+; Building caps with `recruitment_slots bonus N` always stack on top of this value (summed across buildings).
+default_recruitment_slots  0
+
+; resource_role_source - how the engine decides resource ROLES that used to be hard-coded:
+;   * which resources are MINEABLE (earn mine income + show a mine model when the region builds a mine)
+;   * which single resource is the SLAVE resource (the one the enslave-population mechanic spawns)
+;
+;   legacy_names : back-compat. "gold"/"silver" are mineable and "slaves" is the slave resource
+;                  by NAME, even when descr_sm_resources.txt omits the has_mine / is_slave flags -
+;                  so resource files written before those flags existed keep working. This is the
+;                  compiled-in default used when the line below is absent.
+;   data_only    : trust ONLY the has_mine / is_slave flags in descr_sm_resources.txt; names mean
+;                  nothing. Use this once your resources are flagged - then any resource can be
+;                  mineable, the slave resource can be renamed, new roles added, and so on.
+resource_role_source  data_only
+
+; sea trade tuning - all three default to exact vanilla behaviour (changing none of them is a no-op):
+;   sea_trade_base_multiplier   = flat richness applied to every sea trade route (the old hard-coded 8.0)
+;   sea_trade_distance_exponent = shape of the distance falloff. route income = base * 100 / (route_mp ^ exponent),
+;                                 where route_mp is the admiral's optimal-path movement-point cost between the two
+;                                 ports. 1.0 = vanilla linear falloff; >1 = trade drops off faster (shorter reach);
+;                                 <1 = distance matters less (longer reach).
+;   sea_trade_max_mp            = hard cutoff. a port whose route_mp exceeds this earns no sea trade. 0 = no limit.
+sea_trade_base_multiplier    8.0
+sea_trade_distance_exponent  1.0
+sea_trade_max_mp             0
+
+; fog_of_war_shroud - how unexplored campaign-map tiles are drawn:
+;   black   = opaque black void over never-seen tiles (default, classic M2)
+;   vanilla = the lighter RTW-style grey shroud (see-through: terrain stays visible but dimmed)
+;   cloudy  = uniform grey haze that hides terrain detail (only what's currently in sight stays clear)
+fog_of_war_shroud  black
+
+; population_on_disband - when a unit is disbanded on a settlement of its own faction, hand its
+; soldiers back to that settlement's population.
+;   false = M2 default; disbanding just removes the unit (Medieval never had this)
+;   true  = Rome behaviour; the men rejoin the local population
+population_on_disband  false
+
+; population_on_recruit - whether recruiting a unit costs settlement population, and whether
+; cancelling a queued unit refunds it. Medieval 2 never charged population to recruit, so this is
+; off by default; turn it on (with population_on_disband) for a Rome-style population economy.
+;   true  = recruiting draws down population, cancelling returns it
+;   false = M2 default; recruiting costs no population
+population_on_recruit  false
+
+; population_normalise - base the population cost/return on a unit base size instead of the
+; on-field size inflated by the unit-size setting (small/normal/large/huge). Keeps the campaign
+; population economy independent of that battlefield choice: a 60-man peasant costs 60 at any size.
+;   false = scaled cost (the unit-size multiplier applies)
+;   true  = always use the base size
+population_normalise  false
+
+; brigand_order_scaling - tie brigand (rebel) spawn chance to a province's public order, so banditry
+; reflects bad governance instead of appearing at random.
+;   true  = well-governed provinces see far fewer brigands, poorly-governed ones see roughly the
+;           vanilla rate (capped so it never exceeds vanilla). (default)
+;   false = vanilla: brigand spawns ignore public order
+brigand_order_scaling  true
+
+; multiplayer custom battle team caps - how many sides a free-for-all custom battle can split into,
+; and how many armies may share one side. The values below are vanilla M2; they're listed explicitly
+; so the toggle is discoverable. Raising max_battle_teams only takes full effect if the team-select
+; menu (mtw2.lnt) lays out the required layout:
+;   * one team-name + team-florins row per team               (max_battle_teams of each)
+;   * a grid of faction-symbol receiver panels                (max_battle_teams x max_players_per_team)
+; A short layout doesn't crash, but teams without a receiver row can't be picked - a player sent there
+; is bounced back to team 1. The engine logs the shortfall ("N receivers laid out ... M expected").
+;   max_battle_teams     - sides in a custom battle. 2 to 8; default 4.
+;   max_players_per_team - armies sharing one side. 1 to 7; default 7.
+max_battle_teams      4
+max_players_per_team  7
