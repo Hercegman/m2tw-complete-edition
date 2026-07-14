@@ -135,10 +135,14 @@ def main():
     caps = os.path.join(DATA, "descr_caps_ex.txt")
     with open(caps, "w", encoding="latin-1", newline="\n") as f:
         f.write("; Complete Edition - M2EX engine toggles.\n"
-                "; Parse descr_model_battle.txt directly instead of the binary\n"
-                "; battle_models.modeldb (which has no entries for our factions).\n"
+                "; model_battle_source text: parse descr_model_battle.txt directly\n"
+                ";   instead of the binary battle_models.modeldb (which has no\n"
+                ";   entries for our factions).\n"
+                "; sprite_format xml: load ui sprites from strategy/shared.sd.xml\n"
+                ";   (we add FACTION_LOGO_* crest sprites for the new factions).\n"
                 "; All other options keep M2EX's safe mod defaults.\n"
-                "model_battle_source  text\n")
+                "model_battle_source  text\n"
+                "sprite_format  xml\n")
 
     # coverage check: every needed EDU soldier model must exist in the dump
     missing_models = [mdl for mdl in need
