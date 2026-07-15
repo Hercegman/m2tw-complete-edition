@@ -54,3 +54,9 @@ Builds are tested by the maintainer (never launched from tooling); the game trac
 and is triaged with `tools/check_log.py`. See `docs/HANDOFF.md`.
 
 Repo conventions: commit messages and dev-log entries in English.
+
+## Contributing
+
+Want to help? Fork the repo and open a pull request — see
+[CONTRIBUTING.md](CONTRIBUTING.md) for the build pipeline and the crucial
+distinction between generated and hand-edited files.
