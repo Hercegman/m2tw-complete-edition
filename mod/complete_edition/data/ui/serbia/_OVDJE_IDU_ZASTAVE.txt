@@ -1,6 +1,0 @@
-Ovdje ide UI te frakcije:
-  - standard.tga / standard_dead.tga   (bojna zastava)
-  - logo_faction.tga                   (logo)
-  - menu zastave, faction selection slike
-Najlakse: kopiraj cijeli ui/<faction> folder neke postojece
-nacije, pa zamijeni .tga slike svojima (isti dimenzije/imena).

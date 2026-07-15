@@ -1,0 +1,6 @@
+This is where the UI for that faction goes:
+  - standard.tga / standard_dead.tga   (battle banner)
+  - logo_faction.tga                   (logo)
+  - menu banners, faction selection images
+Easiest: copy the whole ui/<faction> folder of an existing
+faction, then swap the .tga images for your own (same dimensions/names).

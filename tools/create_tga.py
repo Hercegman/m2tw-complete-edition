@@ -43,9 +43,9 @@ mod = r"C:\Program Files (x86)\Steam\steamapps\common\Medieval II Total War\mods
 
 # Faction color schemes (R, G, B)
 factions = {
-    'croatia': (200, 30, 30),    # crvena - hrvatska zastava
-    'bosnia':  (30, 60, 160),    # plava - bosanska zastava
-    'serbia':  (150, 20, 20),    # tamno crvena - srpska zastava
+    'croatia': (200, 30, 30),    # red - Croatian flag
+    'bosnia':  (30, 60, 160),    # blue - Bosnian flag
+    'serbia':  (150, 20, 20),    # dark red - Serbian flag
 }
 
 for faction, (r, g, b) in factions.items():
@@ -64,8 +64,8 @@ for faction, (r, g, b) in factions.items():
     create_tga(128, 128, r, g, b,
         f"{mod}/data/ui/loading_screen/symbols/symbol128_{faction}.tga")
 
-print("\nSve TGA zastave kreirane!")
-print(f"\nPutanje:")
+print("\nAll TGA banners created!")
+print(f"\nPaths:")
 for faction in factions:
     print(f"  {mod}/data/ui/symbols/symbol_{faction}.tga")
     print(f"  {mod}/data/ui/rebel_symbols/rebel_{faction}.tga")

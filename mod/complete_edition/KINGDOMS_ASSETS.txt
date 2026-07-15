@@ -1,68 +1,68 @@
 ================================================================
-  KORAK 6: PREBACIVANJE NACIJA IZ KINGDOMS
+  STEP 6: PORTING FACTIONS FROM KINGDOMS
   (Wales, Ireland, Jerusalem, Norway/Sweden)
 ================================================================
 
-Prednost: ove nacije VEC POSTOJE u Kingdoms kampanjama sa
-gotovim zastavama, UI-em, jedinicama i imenima. Ne radis nista
-od nule - samo kopiras assete i registriras frakciju.
+Advantage: these factions ALREADY EXIST in the Kingdoms campaigns with
+finished banners, UI, units and names. You are not building anything
+from scratch - you just copy the assets and register the faction.
 
 ----------------------------------------------------------------
-GDJE SE NALAZE (Steam, glavni game folder -> mods\):
+WHERE THEY LIVE (Steam, main game folder -> mods\):
 ----------------------------------------------------------------
   Wales, Ireland   ->  mods\britannia\
   Jerusalem        ->  mods\crusades\
-  Norway, Denmark  ->  mods\teutonic\  (+ Denmark vec u vanilli)
+  Norway, Denmark  ->  mods\teutonic\  (+ Denmark already in vanilla)
 
 ----------------------------------------------------------------
-STO PREBACITI ZA SVAKU NACIJU:
+WHAT TO PORT FOR EACH FACTION:
 ----------------------------------------------------------------
-1. ZASTAVE I UI:
-   iz  mods\<kampanja>\data\ui\<faction>\
-   u   mods\croatia_overhaul\data\ui\<faction>\
-   (cijeli folder frakcije - sadrzi zastave, simbole, kartice)
+1. BANNERS AND UI:
+   from  mods\<campaign>\data\ui\<faction>\
+   to    mods\croatia_overhaul\data\ui\<faction>\
+   (the whole faction folder - contains banners, symbols, cards)
 
-2. SIMBOLI:
+2. SYMBOLS:
    data\ui\symbols\symbol_<faction>.tga
    data\ui\rebel_symbols\
    data\ui\loading_screen\symbols\
 
-3. DEFINICIJA FRAKCIJE:
-   iz <kampanja>\data\descr_sm_factions.txt iskopiraj cijeli
-   blok te frakcije (npr "faction wales ... ") i zalijepi u
-   nas descr_sm_factions.txt.
+3. FACTION DEFINITION:
+   from <campaign>\data\descr_sm_factions.txt copy the whole
+   block of that faction (e.g. "faction wales ... ") and paste it
+   into our descr_sm_factions.txt.
 
-4. JEDINICE (opcionalno ali preporuceno):
-   - export_descr_unit.txt  (statovi jedinica)
-   - export_descr_buildings.txt (tko sto moze graditi)
-   - data\units\ (modeli/teksture jedinica te nacije)
+4. UNITS (optional but recommended):
+   - export_descr_unit.txt  (unit stats)
+   - export_descr_buildings.txt (who can build what)
+   - data\units\ (unit models/textures for that faction)
    - data\unit_models\
-   Prebaci samo unose vezane za tu frakciju.
+   Port only the entries related to that faction.
 
-5. IMENA:
-   iz <kampanja>\data\text\ povuci imena frakcije, generala,
-   gradova u nas expanded.txt / names.txt.
-
-----------------------------------------------------------------
-KLJUCNA PAZNJA:
-----------------------------------------------------------------
-- Kingdoms kulture: Wales/Ireland = northern_european.
-  Jerusalem = ima vlastitu logiku (crusader states).
-  Provjeri da kultura postoji u nasem modu.
-- Imena frakcija moraju biti JEDINSTVENA. Ako i vanilla i
-  Kingdoms koriste isti interni naziv, koristi onaj koji vec
-  postoji - ne duplicirati.
-- Nakon dodavanja, OBAVEZNO ih upisi u descr_strat.txt
-  (playable) + dodijeli regiju u descr_regions.txt.
+5. NAMES:
+   from <campaign>\data\text\ pull the faction, general and
+   settlement names into our expanded.txt / names.txt.
 
 ----------------------------------------------------------------
-SLOT MATEMATIKA (drzi na oku):
+KEY THINGS TO WATCH:
+----------------------------------------------------------------
+- Kingdoms cultures: Wales/Ireland = northern_european.
+  Jerusalem = has its own logic (crusader states).
+  Make sure the culture exists in our mod.
+- Faction names must be UNIQUE. If both vanilla and Kingdoms
+  use the same internal name, use the one that already
+  exists - do not duplicate.
+- After adding, you MUST register them in descr_strat.txt
+  (playable) + assign a region in descr_regions.txt.
+
+----------------------------------------------------------------
+SLOT MATH (keep an eye on it):
 ----------------------------------------------------------------
   Vanilla GC:                    ~21
   Croatia, Bosnia, Serbia:        +3   = 24
   Wales, Ireland:                 +2   = 26
   Jerusalem:                      +1   = 27
-  Norway (+ Sweden ako zelis):    +1-2 = 28-29
+  Norway (+ Sweden if you want):  +1-2 = 28-29
   ----------------------------------------
-  LIMIT: 31. Imas rezerve za jos 2.
-  slave (rebeli) se racuna u limit i OSTAJE.
+  LIMIT: 31. You have room for 2 more.
+  slave (rebels) counts toward the limit and STAYS.

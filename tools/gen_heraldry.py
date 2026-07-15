@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate faction art for the Balkan five by compositing custom heraldry
 INTO genuine CA icon canvases — frame, shape, alpha and anti-aliasing stay
-byte-for-byte vanilla (the maintainer: "identicno").
+byte-for-byte vanilla (the maintainer: "identical").
 
 Method (verified on the extracted vanilla art):
   * every menu icon type shares its alpha mask across ALL factions;
@@ -9,7 +9,7 @@ Method (verified on the extracted vanilla art):
   * so: canvas = donor faction's file (per variant), frame mask = pixels
     identical across three donors, heraldry written only into the interior.
 
-Designs: croatia chequy (sahovnica), serbian cross with firesteels,
+Designs: croatia chequy (Croatian checkerboard), serbian cross with firesteels,
 bulgarian gold saltire, ragusan white/blue/red, wallachian gold pale + sun.
 
 Also regenerates the battle-banner .texture files and the strat symbol .cas
