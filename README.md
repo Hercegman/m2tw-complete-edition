@@ -6,6 +6,30 @@ map, and every rebel settlement that had a real polity in 1080 replaced by that 
 Teutonic Order, Lithuania, Novgorod, Antioch, Sweden, Bohemia, Aragon, Genoa, Georgia,
 Cilician Armenia, Kievan Rus, …). Target: 44 registered factions.
 
+> **Status: work in progress / beta.** 9 new factions are playable today
+> (Croatia, Ragusa, Serbia, Bulgaria, Wallachia, Wales, Ireland, Norway,
+> Jerusalem) with their own crests, banners, unit rosters and unit cards.
+
+## Install (for players)
+
+Requirements: Medieval II Total War **Definitive Edition** (Steam) with all
+Kingdoms DLC campaigns, on Windows.
+
+1. Install **M2EX** (engine extender, release **21/06** or newer):
+   download `M2EX.7z` from https://github.com/Pannoniae/rex/releases and
+   extract it into your game folder
+   (`...\Steam\steamapps\common\Medieval II Total War\`), allowing overwrite.
+2. Download this repository (green **Code → Download ZIP** button).
+3. From the ZIP, copy the CONTENTS of `mod/complete_edition/` into
+   `<game>\mods\complete_edition\` and the two files from `launcher/` as
+   follows: `complete_edition.bat` into the game root,
+   `complete_edition.cfg` into `<game>\mods\complete_edition\`.
+4. Run `complete_edition.bat` from the game root. Start a new Grand
+   Campaign — the new factions appear in the faction selector.
+
+Notes: saves are not compatible across mod updates; the mod does not touch
+your vanilla installation apart from the M2EX engine files.
+
 Runs on the **M2EX/REX** engine extender (github.com/Pannoniae/rex), which removes the
 31-faction hard cap (config-gated via `data/descr_ex.txt` → `max_factions`).
 Successor to the `croatia-overhaul` project — its working 9-faction loose-file
