@@ -35,10 +35,30 @@ DONORS = {
 }
 
 
+def mount_models():
+    """descr_mount type name -> model-db key (e.g. 'barded horse' ->
+    'mount_barded_horse'). Mount models have per-faction texture lists too —
+    a missing faction entry renders the horse INVISIBLE."""
+    path = os.path.join(ROOT, "research", "vanilla-extract", "data", "descr_mount.txt")
+    text = open(path, encoding="latin-1").read()
+    out = {}
+    cur = None
+    for line in text.split("\n"):
+        m = re.match(r"^type\s+(.+?)\s*$", line)
+        if m:
+            cur = m.group(1).strip()
+        m = re.match(r"^model\s+(\S+)\s*$", line)
+        if m and cur:
+            out[cur] = m.group(1).lower()
+            cur = None
+    return out
+
+
 def edu_model_factions():
     """battle model (lowercased) -> set of new factions owning a unit that
-    uses it. Covers `soldier`, `officer` and `armour_ug_models` — all of
-    which resolve through the model database (mounts go via descr_mount)."""
+    uses it. Covers `soldier`, `officer`, `armour_ug_models` AND `mount`
+    (via descr_mount type->model) — everything the model db resolves."""
+    mounts = mount_models()
     text = open(EDU, encoding="latin-1").read()
     need = {}
     models = set()
@@ -54,6 +74,10 @@ def edu_model_factions():
         m = re.match(r"^armour_ug_models\s+(.*)$", line)
         if m:
             models.update(x.strip().lower() for x in m.group(1).split(",") if x.strip())
+            continue
+        m = re.match(r"^mount\s+(.+?)\s*$", line)
+        if m and m.group(1).strip() in mounts:
+            models.add(mounts[m.group(1).strip()])
             continue
         m = re.match(r"^ownership\s+(.*)$", line)
         if m and models:
