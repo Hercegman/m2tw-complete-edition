@@ -138,11 +138,10 @@ def main():
                 "; model_battle_source text: parse descr_model_battle.txt directly\n"
                 ";   instead of the binary battle_models.modeldb (which has no\n"
                 ";   entries for our factions).\n"
-                "; sprite_format xml: load ui sprites from strategy/shared.sd.xml\n"
-                ";   (we add FACTION_LOGO_* crest sprites for the new factions).\n"
-                "; All other options keep M2EX's safe mod defaults.\n"
-                "model_battle_source  text\n"
-                "sprite_format  xml\n")
+                "; sprite_format stays on the default binary sd: the mod ships\n"
+                ";   patched ui/strategy.sd + ui/shared.sd with the new factions'\n"
+                ";   crest sprites (the xml route broke the registry in mod scope).\n"
+                "model_battle_source  text\n")
 
     # coverage check: every needed EDU soldier model must exist in the dump
     missing_models = [mdl for mdl in need

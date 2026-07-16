@@ -5,14 +5,20 @@ campaign HUD shield — the way the Kingdoms DLCs did it.
 Reverse-engineering result (verified): `logo_index`/`small_logo_index` tokens
 are resolved BY SPRITE NAME in the runtime sprite registry, not via a
 compiled enum (the BI DLC's FACTION_LOGO_WALES exists in no exe, yet works).
-M2EX runs `sprite_format xml`, so sprites are authored in ui/strategy.sd.xml
-and ui/shared.sd.xml with plain TGA atlas pages — no binary .sd editing.
 
-We ship: complete strategy.sd.xml + shared.sd.xml (M2EX's root files + our
-page block), stratpage_ce_01.tga (big 68x76 crests) and sharedpage_ce_00.tga
-(small 32x32), and point each new faction's logo_index at its own token.
-Kingdoms four get their genuine DLC crest pixels; the Balkan five get the
-heraldry composited into the CA crest frame (donor crests define the mask).
+Round-7 lesson: the `sprite_format xml` route broke the registry in mod
+scope (engine's xml->sd conversion failed; every unresolved sprite defaulted
+to atlas index 0 -> "tower"/"1" everywhere). So we do EXACTLY what the BI
+DLC ships: **patched BINARY ui/strategy.sd + ui/shared.sd** in the mod.
+Binary layout (calibrated against the .sd.xml coords, byte-verified):
+  header:  u32 magic=6, u32 numPages, u32 numSprites
+  page:    u32 nameLen, name, blob = 14-byte header + (w*h)//8 hit-mask
+           (32782 bytes for every 512x512 page - copied verbatim for ours)
+  sprite:  u32 nameLen, name, 8 x u16 = (page, x0, x0+w-1, y0, y0+h-1, 1,0,0)
+We append one page + 9 sprites to each file and bump the header counts.
+Atlas TGAs: stratpage_ce_01.tga (68x76 crests), sharedpage_ce_00.tga (32x32);
+Kingdoms four get genuine DLC crest pixels, the Balkan five get heraldry
+composited into the CA crest frame.
 """
 import os
 import re
@@ -122,6 +128,51 @@ def build_atlas(crests, cw, ch, cols):
     return atlas, coords
 
 
+def parse_pages(xml_text):
+    """ordered [(page_file, w, h)] from an sd.xml (dims drive blob sizes)."""
+    return [(m.group(1), int(m.group(2)), int(m.group(3))) for m in
+            re.finditer(r'<page file="([^"]+)" w="(\d+)" h="(\d+)"', xml_text)]
+
+
+def patch_sd(base_sd_path, xml_text, page_name, sprites, out_path):
+    """Append one 512x512 page + sprite records to a binary .sd (BI-style)."""
+    import struct
+    d = open(base_sd_path, "rb").read()
+    magic, npages, nsprites = struct.unpack("<III", d[:12])
+    assert magic == 6, base_sd_path
+    pages = parse_pages(xml_text)[:npages]
+
+    off = 12
+    donor_blob = None
+    for name, w, h in pages:
+        (nl,) = struct.unpack_from("<I", d, off)
+        fname = d[off + 4:off + 4 + nl].decode("latin1")
+        assert fname == name, (fname, name)
+        blob_len = 14 + (w * h) // 8
+        blob = d[off + 4 + nl: off + 4 + nl + blob_len]
+        if w == 512 and h == 512 and donor_blob is None:
+            donor_blob = blob
+        off += 4 + nl + blob_len
+    pages_end = off
+    assert donor_blob is not None and len(donor_blob) == 32782
+
+    # sanity: the sprite table starts here with a plausible name record
+    (first_len,) = struct.unpack_from("<I", d, pages_end)
+    assert 0 < first_len < 128, f"bad sprite table start in {base_sd_path}"
+
+    new_page = struct.pack("<I", len(page_name)) + page_name.encode() + donor_blob
+    new_sprites = b""
+    for tok, (x, y, w, h) in sprites:
+        new_sprites += struct.pack("<I", len(tok)) + tok.encode()
+        new_sprites += struct.pack("<8H", npages, x, x + w - 1, y, y + h - 1, 1, 0, 0)
+
+    out = (struct.pack("<III", magic, npages + 1, nsprites + len(sprites))
+           + d[12:pages_end] + new_page + d[pages_end:] + new_sprites)
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
+    open(out_path, "wb").write(out)
+    return npages
+
+
 def main():
     game_ui = os.path.join(GAME, "data", "ui")
     strat_xml = open(os.path.join(game_ui, "strategy.sd.xml"), encoding="latin-1").read()
@@ -161,25 +212,23 @@ def main():
     tga.write(os.path.join(out_ui, "stratpage_ce_01.tga"), big_atlas, origin_topdown=True)
     tga.write(os.path.join(out_ui, "sharedpage_ce_00.tga"), small_atlas, origin_topdown=True)
 
-    def page_block(pagefile, tokens, coords, w, h):
-        lines = [f'  <page file="{pagefile}" w="512" h="512">']
-        for (x, y), tok in zip(coords, tokens):
-            lines.append(f'    <sprite name="{tok}" x="{x}" y="{y}" w="{w}" h="{h}" alpha="1"/>')
-        lines.append("  </page>")
-        return "\n".join(lines) + "\n"
-
+    # patch the BINARY .sd files (the mechanism the BI DLC ships and the
+    # engine provenly loads from mod scope)
+    sd_src = os.path.join(ROOT, "research", "base-extract", "data_sd")
     big_tokens = [f"FACTION_LOGO_{f.upper()}" for f in ORDER]
     small_tokens = [f"SMALL_FACTION_LOGO_{f.upper()}" for f in ORDER]
-    strat_out = strat_xml.replace("</sprite_definitions>",
-                                  page_block("stratpage_ce_01.tga", big_tokens, big_xy, BIG_W, BIG_H)
-                                  + "</sprite_definitions>")
-    shared_out = shared_xml.replace("</sprite_definitions>",
-                                    page_block("sharedpage_ce_00.tga", small_tokens, small_xy, SM_W, SM_H)
-                                    + "</sprite_definitions>")
-    with open(os.path.join(out_ui, "strategy.sd.xml"), "w", encoding="latin-1", newline="\n") as f:
-        f.write(strat_out)
-    with open(os.path.join(out_ui, "shared.sd.xml"), "w", encoding="latin-1", newline="\n") as f:
-        f.write(shared_out)
+    patch_sd(os.path.join(sd_src, "strategy.sd"), strat_xml, "stratpage_ce_01.tga",
+             [(tok, (x, y, BIG_W, BIG_H)) for tok, (x, y) in zip(big_tokens, big_xy)],
+             os.path.join(out_ui, "strategy.sd"))
+    patch_sd(os.path.join(sd_src, "shared.sd"), shared_xml, "sharedpage_ce_00.tga",
+             [(tok, (x, y, SM_W, SM_H)) for tok, (x, y) in zip(small_tokens, small_xy)],
+             os.path.join(out_ui, "shared.sd"))
+
+    # the failed round-7 xml route must not linger in the mod
+    for stale in ("strategy.sd.xml", "shared.sd.xml"):
+        p = os.path.join(out_ui, stale)
+        if os.path.exists(p):
+            os.remove(p)
 
     # page TGAs must be findable from every culture's interface dir as well
     for culture in ("southern_european", "northern_european", "eastern_european",
@@ -202,7 +251,7 @@ def main():
         f.write(smf)
 
     print(f"logos: {len(ORDER)} big + small crests -> stratpage_ce_01/sharedpage_ce_00, "
-          f"sd.xml shipped, sm_factions tokens set")
+          f"patched binary strategy.sd + shared.sd shipped, sm_factions tokens set")
 
 
 if __name__ == "__main__":

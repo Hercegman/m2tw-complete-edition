@@ -142,21 +142,23 @@ def main():
     else:
         err("descr_names.txt missing")
 
-    # --- unit cards + crest sprites ---
-    strat_sd = os.path.join(DATA, "ui", "strategy.sd.xml")
-    shared_sd = os.path.join(DATA, "ui", "shared.sd.xml")
-    strat_sd_text = read(strat_sd) if os.path.exists(strat_sd) else ""
-    shared_sd_text = read(shared_sd) if os.path.exists(shared_sd) else ""
+    # --- unit cards + crest sprites (binary .sd, searched as raw bytes) ---
+    strat_sd = os.path.join(DATA, "ui", "strategy.sd")
+    shared_sd = os.path.join(DATA, "ui", "shared.sd")
+    strat_sd_text = (open(strat_sd, "rb").read().decode("latin-1")
+                     if os.path.exists(strat_sd) else "")
+    shared_sd_text = (open(shared_sd, "rb").read().decode("latin-1")
+                      if os.path.exists(shared_sd) else "")
     for f in new_factions:
         if f == "slave" or f not in strat_factions:
             continue
         cards_dir = os.path.join(DATA, "ui", "units", f)
         if not os.path.isdir(cards_dir) or not os.listdir(cards_dir):
             err(f"ui/units/{f}/ missing or empty (unit cards show as peasants)")
-        if f"FACTION_LOGO_{f.upper()}\"" not in strat_sd_text:
-            err(f"strategy.sd.xml: no FACTION_LOGO_{f.upper()} sprite")
-        if f"SMALL_FACTION_LOGO_{f.upper()}\"" not in shared_sd_text:
-            err(f"shared.sd.xml: no SMALL_FACTION_LOGO_{f.upper()} sprite")
+        if f"FACTION_LOGO_{f.upper()}" not in strat_sd_text:
+            err(f"ui/strategy.sd: no FACTION_LOGO_{f.upper()} sprite")
+        if f"SMALL_FACTION_LOGO_{f.upper()}" not in shared_sd_text:
+            err(f"ui/shared.sd: no SMALL_FACTION_LOGO_{f.upper()} sprite")
 
     # --- EDB recruitment/building availability ---
     edb_path = os.path.join(DATA, "export_descr_buildings.txt")

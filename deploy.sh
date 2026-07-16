@@ -40,6 +40,10 @@ run rm -f "$GAME/mods/complete_edition/data/world/maps/base/map.rwm"
 run rm -rf "$GAME/mods/complete_edition/data/ui/symbols" \
            "$GAME/mods/complete_edition/data/ui/rebel_symbols" \
            "$GAME/mods/complete_edition/data/ui/loading_screen"
+# the round-7 xml sprite route is dead; kill leftover xml so the engine
+# never converts them again (crests ship as patched binary .sd)
+run rm -f "$GAME/mods/complete_edition/data/ui/strategy.sd.xml" \
+          "$GAME/mods/complete_edition/data/ui/shared.sd.xml"
 
 echo "[2/3] mod cfg     -> mods/complete_edition/complete_edition.cfg"
 run cp "$REPO/launcher/complete_edition.cfg" "$GAME/mods/complete_edition/"
