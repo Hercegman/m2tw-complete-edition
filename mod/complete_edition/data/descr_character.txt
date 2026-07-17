@@ -74,6 +74,18 @@ strat_model		southern_general
 battle_model	Northern_General
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
+faction			genoa
+dictionary		15
+strat_model		southern_general
+battle_model	Northern_General
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			pisa
+dictionary		15
+strat_model		southern_general
+battle_model	Northern_General
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
 faction			papal_states
 dictionary		15
 strat_model		southern_general; default level 0
@@ -88,6 +100,12 @@ battle_model	Northern_General
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
 faction			norway
+dictionary		2
+strat_model		northern_general
+battle_model	Northern_General
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			sweden
 dictionary		2
 strat_model		northern_general
 battle_model	Northern_General
@@ -141,7 +159,25 @@ strat_model		northern_general
 battle_model	Northern_General
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
+faction			antioch
+dictionary		2
+strat_model		northern_general
+battle_model	Northern_General
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
 faction			hre
+dictionary		2
+strat_model		northern_general
+battle_model	Northern_General
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			teutonic_order
+dictionary		2
+strat_model		northern_general
+battle_model	Northern_General
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			bohemia
 dictionary		2
 strat_model		northern_general
 battle_model	Northern_General
@@ -183,6 +219,12 @@ strat_model		northern_general
 battle_model	Northern_General
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
+faction			lithuania
+dictionary		2
+strat_model		northern_general
+battle_model	Northern_General
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
 faction			byzantium
 dictionary		2
 strat_model		southern_general
@@ -201,6 +243,18 @@ strat_model		southern_general
 battle_model	Northern_General
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
+faction			georgia
+dictionary		2
+strat_model		southern_general
+battle_model	Northern_General
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			armenia
+dictionary		2
+strat_model		southern_general
+battle_model	Northern_General
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
 faction			moors
 dictionary		2
 strat_model		islamic_general
@@ -213,7 +267,25 @@ strat_model		northern_general
 battle_model	Northern_General
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
+faction			novgorod
+dictionary		2
+strat_model		northern_general
+battle_model	Northern_General
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			kievan_rus
+dictionary		2
+strat_model		northern_general
+battle_model	Northern_General
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
 faction			spain
+dictionary		2
+strat_model		southern_general
+battle_model	Northern_General
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			aragon
 dictionary		2
 strat_model		southern_general
 battle_model	Northern_General
@@ -280,6 +352,18 @@ strat_model		southern_captain
 battle_model	Northern_Captain
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
+faction			genoa
+dictionary		15
+strat_model		southern_captain
+battle_model	Northern_Captain
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			pisa
+dictionary		15
+strat_model		southern_captain
+battle_model	Northern_Captain
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
 faction			papal_states
 dictionary		15
 strat_model		southern_captain
@@ -293,6 +377,12 @@ battle_model	Northern_Captain
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
 faction			norway
+dictionary		2
+strat_model		northern_captain
+battle_model	Northern_Captain
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			sweden
 dictionary		2
 strat_model		northern_captain
 battle_model	Northern_Captain
@@ -346,7 +436,25 @@ strat_model		northern_captain
 battle_model	Northern_Captain
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
+faction			antioch
+dictionary		2
+strat_model		northern_captain
+battle_model	Northern_Captain
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
 faction			hre
+dictionary		2
+strat_model		northern_captain
+battle_model	Northern_Captain
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			teutonic_order
+dictionary		2
+strat_model		northern_captain
+battle_model	Northern_Captain
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			bohemia
 dictionary		2
 strat_model		northern_captain
 battle_model	Northern_Captain
@@ -388,6 +496,12 @@ strat_model		northern_captain
 battle_model	Northern_Captain
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
+faction			lithuania
+dictionary		2
+strat_model		northern_captain
+battle_model	Northern_Captain
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
 faction			byzantium
 dictionary		2
 strat_model		southern_captain
@@ -406,6 +520,18 @@ strat_model		southern_captain
 battle_model	Northern_Captain
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
+faction			georgia
+dictionary		2
+strat_model		southern_captain
+battle_model	Northern_Captain
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			armenia
+dictionary		2
+strat_model		southern_captain
+battle_model	Northern_Captain
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
 faction			moors
 dictionary		2
 strat_model		islamic_captain
@@ -418,7 +544,25 @@ strat_model		northern_captain
 battle_model	Northern_Captain
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
+faction			novgorod
+dictionary		2
+strat_model		northern_captain
+battle_model	Northern_Captain
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			kievan_rus
+dictionary		2
+strat_model		northern_captain
+battle_model	Northern_Captain
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
 faction			spain
+dictionary		2
+strat_model		southern_captain
+battle_model	Northern_Captain
+battle_equip	gladius, chainmail shirt helmet and rectangular shield
+
+faction			aragon
 dictionary		2
 strat_model		southern_captain
 battle_model	Northern_Captain
@@ -478,6 +622,14 @@ faction			milan
 dictionary		15
 strat_model		southern_spy
 
+faction			genoa
+dictionary		15
+strat_model		southern_spy
+
+faction			pisa
+dictionary		15
+strat_model		southern_spy
+
 faction			papal_states
 dictionary		15
 strat_model		southern_spy
@@ -487,6 +639,10 @@ dictionary		2
 strat_model		northern_spy
 
 faction			norway
+dictionary		2
+strat_model		northern_spy
+
+faction			sweden
 dictionary		2
 strat_model		northern_spy
 
@@ -526,7 +682,19 @@ faction			jerusalem
 dictionary		2
 strat_model		northern_spy
 
+faction			antioch
+dictionary		2
+strat_model		northern_spy
+
 faction			hre
+dictionary		2
+strat_model		northern_spy
+
+faction			teutonic_order
+dictionary		2
+strat_model		northern_spy
+
+faction			bohemia
 dictionary		2
 strat_model		northern_spy
 
@@ -554,6 +722,10 @@ faction			poland
 dictionary		2
 strat_model		northern_spy
 
+faction			lithuania
+dictionary		2
+strat_model		northern_spy
+
 faction			byzantium
 dictionary		2
 strat_model		southern_spy
@@ -566,6 +738,14 @@ faction			bulgaria
 dictionary		2
 strat_model		southern_spy
 
+faction			georgia
+dictionary		2
+strat_model		southern_spy
+
+faction			armenia
+dictionary		2
+strat_model		southern_spy
+
 faction			moors
 dictionary		2
 strat_model		islamic_spy
@@ -574,7 +754,19 @@ faction			russia
 dictionary		2
 strat_model		northern_spy
 
+faction			novgorod
+dictionary		2
+strat_model		northern_spy
+
+faction			kievan_rus
+dictionary		2
+strat_model		northern_spy
+
 faction			spain
+dictionary		2
+strat_model		southern_spy
+
+faction			aragon
 dictionary		2
 strat_model		southern_spy
 
@@ -630,6 +822,14 @@ faction			milan
 dictionary		15
 strat_model		southern_assassin
 
+faction			genoa
+dictionary		15
+strat_model		southern_assassin
+
+faction			pisa
+dictionary		15
+strat_model		southern_assassin
+
 faction			papal_states
 dictionary		15
 strat_model		southern_assassin
@@ -639,6 +839,10 @@ dictionary		2
 strat_model		northern_assassin
 
 faction			norway
+dictionary		2
+strat_model		northern_assassin
+
+faction			sweden
 dictionary		2
 strat_model		northern_assassin
 
@@ -674,7 +878,19 @@ faction			jerusalem
 dictionary		2
 strat_model		northern_assassin
 
+faction			antioch
+dictionary		2
+strat_model		northern_assassin
+
 faction			hre
+dictionary		2
+strat_model		northern_assassin
+
+faction			teutonic_order
+dictionary		2
+strat_model		northern_assassin
+
+faction			bohemia
 dictionary		2
 strat_model		northern_assassin
 
@@ -702,6 +918,10 @@ faction			poland
 dictionary		2
 strat_model		northern_assassin
 
+faction			lithuania
+dictionary		2
+strat_model		northern_assassin
+
 faction			byzantium
 dictionary		2
 strat_model		southern_assassin
@@ -714,6 +934,14 @@ faction			bulgaria
 dictionary		2
 strat_model		southern_assassin
 
+faction			georgia
+dictionary		2
+strat_model		southern_assassin
+
+faction			armenia
+dictionary		2
+strat_model		southern_assassin
+
 faction			moors
 dictionary		2
 strat_model		islamic_assassin
@@ -722,7 +950,19 @@ faction			russia
 dictionary		2
 strat_model		northern_assassin
 
+faction			novgorod
+dictionary		2
+strat_model		northern_assassin
+
+faction			kievan_rus
+dictionary		2
+strat_model		northern_assassin
+
 faction			spain
+dictionary		2
+strat_model		southern_assassin
+
+faction			aragon
 dictionary		2
 strat_model		southern_assassin
 
@@ -779,6 +1019,14 @@ faction			milan
 dictionary		15
 strat_model		southern_ambassador
 
+faction			genoa
+dictionary		15
+strat_model		southern_ambassador
+
+faction			pisa
+dictionary		15
+strat_model		southern_ambassador
+
 faction			papal_states
 dictionary		15
 strat_model		southern_ambassador
@@ -788,6 +1036,10 @@ dictionary		2
 strat_model		northern_ambassador
 
 faction			norway
+dictionary		2
+strat_model		northern_ambassador
+
+faction			sweden
 dictionary		2
 strat_model		northern_ambassador
 
@@ -823,7 +1075,19 @@ faction			jerusalem
 dictionary		2
 strat_model		northern_ambassador
 
+faction			antioch
+dictionary		2
+strat_model		northern_ambassador
+
 faction			hre
+dictionary		2
+strat_model		northern_ambassador
+
+faction			teutonic_order
+dictionary		2
+strat_model		northern_ambassador
+
+faction			bohemia
 dictionary		2
 strat_model		northern_ambassador
 
@@ -851,6 +1115,10 @@ faction			poland
 dictionary		2
 strat_model		northern_ambassador
 
+faction			lithuania
+dictionary		2
+strat_model		northern_ambassador
+
 faction			byzantium
 dictionary		2
 strat_model		southern_ambassador
@@ -863,6 +1131,14 @@ faction			bulgaria
 dictionary		2
 strat_model		southern_ambassador
 
+faction			georgia
+dictionary		2
+strat_model		southern_ambassador
+
+faction			armenia
+dictionary		2
+strat_model		southern_ambassador
+
 faction			moors
 dictionary		2
 strat_model		islamic_ambassador
@@ -871,7 +1147,19 @@ faction			russia
 dictionary		2
 strat_model		northern_ambassador
 
+faction			novgorod
+dictionary		2
+strat_model		northern_ambassador
+
+faction			kievan_rus
+dictionary		2
+strat_model		northern_ambassador
+
 faction			spain
+dictionary		2
+strat_model		southern_ambassador
+
+faction			aragon
 dictionary		2
 strat_model		southern_ambassador
 
@@ -926,6 +1214,14 @@ faction			milan
 dictionary		15
 strat_model		scipii_admiral
 
+faction			genoa
+dictionary		15
+strat_model		scipii_admiral
+
+faction			pisa
+dictionary		15
+strat_model		scipii_admiral
+
 faction			papal_states
 dictionary		15
 strat_model		senate_admiral
@@ -935,6 +1231,10 @@ dictionary		2
 strat_model		macedon_admiral
 
 faction			norway
+dictionary		2
+strat_model		macedon_admiral
+
+faction			sweden
 dictionary		2
 strat_model		macedon_admiral
 
@@ -970,7 +1270,19 @@ faction			jerusalem
 dictionary		2
 strat_model		gaul_admiral
 
+faction			antioch
+dictionary		2
+strat_model		gaul_admiral
+
 faction			hre
+dictionary		2
+strat_model		german_admiral
+
+faction			teutonic_order
+dictionary		2
+strat_model		german_admiral
+
+faction			bohemia
 dictionary		2
 strat_model		german_admiral
 
@@ -998,6 +1310,10 @@ faction			poland
 dictionary		2
 strat_model		dacia_admiral
 
+faction			lithuania
+dictionary		2
+strat_model		dacia_admiral
+
 faction			byzantium
 dictionary		2
 strat_model		greek_cities_admiral
@@ -1010,6 +1326,14 @@ faction			bulgaria
 dictionary		2
 strat_model		greek_cities_admiral
 
+faction			georgia
+dictionary		2
+strat_model		greek_cities_admiral
+
+faction			armenia
+dictionary		2
+strat_model		greek_cities_admiral
+
 faction			moors
 dictionary		2
 strat_model		numidia_admiral
@@ -1018,7 +1342,19 @@ faction			russia
 dictionary		2
 strat_model		scythia_admiral
 
+faction			novgorod
+dictionary		2
+strat_model		scythia_admiral
+
+faction			kievan_rus
+dictionary		2
+strat_model		scythia_admiral
+
 faction			spain
+dictionary		2
+strat_model		spain_admiral
+
+faction			aragon
 dictionary		2
 strat_model		spain_admiral
 
@@ -1066,6 +1402,14 @@ faction			milan
 dictionary		15
 strat_model		southern_princess
 
+faction			genoa
+dictionary		15
+strat_model		southern_princess
+
+faction			pisa
+dictionary		15
+strat_model		southern_princess
+
 faction			papal_states
 dictionary		15
 strat_model		southern_princess
@@ -1075,6 +1419,10 @@ dictionary		2
 strat_model		northern_princess
 
 faction			norway
+dictionary		2
+strat_model		northern_princess
+
+faction			sweden
 dictionary		2
 strat_model		northern_princess
 
@@ -1110,7 +1458,19 @@ faction			jerusalem
 dictionary		2
 strat_model		northern_princess
 
+faction			antioch
+dictionary		2
+strat_model		northern_princess
+
 faction			hre
+dictionary		2
+strat_model		northern_princess
+
+faction			teutonic_order
+dictionary		2
+strat_model		northern_princess
+
+faction			bohemia
 dictionary		2
 strat_model		northern_princess
 
@@ -1138,6 +1498,10 @@ faction			poland
 dictionary		2
 strat_model		northern_princess
 
+faction			lithuania
+dictionary		2
+strat_model		northern_princess
+
 faction			byzantium
 dictionary		2
 strat_model		southern_princess
@@ -1150,6 +1514,14 @@ faction			bulgaria
 dictionary		2
 strat_model		southern_princess
 
+faction			georgia
+dictionary		2
+strat_model		southern_princess
+
+faction			armenia
+dictionary		2
+strat_model		southern_princess
+
 faction			moors
 dictionary		2
 strat_model		princess
@@ -1158,7 +1530,19 @@ faction			russia
 dictionary		2
 strat_model		northern_princess
 
+faction			novgorod
+dictionary		2
+strat_model		northern_princess
+
+faction			kievan_rus
+dictionary		2
+strat_model		northern_princess
+
 faction			spain
+dictionary		2
+strat_model		southern_princess
+
+faction			aragon
 dictionary		2
 strat_model		southern_princess
 
@@ -1213,6 +1597,14 @@ faction			milan
 dictionary		15
 strat_model		southern_merchant
 
+faction			genoa
+dictionary		15
+strat_model		southern_merchant
+
+faction			pisa
+dictionary		15
+strat_model		southern_merchant
+
 faction			papal_states
 dictionary		15
 strat_model		southern_merchant
@@ -1222,6 +1614,10 @@ dictionary		2
 strat_model		northern_merchant
 
 faction			norway
+dictionary		2
+strat_model		northern_merchant
+
+faction			sweden
 dictionary		2
 strat_model		northern_merchant
 
@@ -1257,7 +1653,19 @@ faction			jerusalem
 dictionary		2
 strat_model		northern_merchant
 
+faction			antioch
+dictionary		2
+strat_model		northern_merchant
+
 faction			hre
+dictionary		2
+strat_model		northern_merchant
+
+faction			teutonic_order
+dictionary		2
+strat_model		northern_merchant
+
+faction			bohemia
 dictionary		2
 strat_model		northern_merchant
 
@@ -1285,6 +1693,10 @@ faction			poland
 dictionary		2
 strat_model		northern_merchant
 
+faction			lithuania
+dictionary		2
+strat_model		northern_merchant
+
 faction			byzantium
 dictionary		2
 strat_model		southern_merchant
@@ -1297,6 +1709,14 @@ faction			bulgaria
 dictionary		2
 strat_model		southern_merchant
 
+faction			georgia
+dictionary		2
+strat_model		southern_merchant
+
+faction			armenia
+dictionary		2
+strat_model		southern_merchant
+
 faction			moors
 dictionary		2
 strat_model		islamic_merchant
@@ -1305,7 +1725,19 @@ faction			russia
 dictionary		2
 strat_model		northern_merchant
 
+faction			novgorod
+dictionary		2
+strat_model		northern_merchant
+
+faction			kievan_rus
+dictionary		2
+strat_model		northern_merchant
+
 faction			spain
+dictionary		2
+strat_model		southern_merchant
+
+faction			aragon
 dictionary		2
 strat_model		southern_merchant
 
@@ -1368,6 +1800,18 @@ strat_model		catholic_priest						; default model
 strat_model		catholic_bishop						; medium level priest
 strat_model		catholic_cardinal					; advanced priest
 
+faction			genoa
+dictionary		15
+strat_model		catholic_priest						; default model
+strat_model		catholic_bishop						; medium level priest
+strat_model		catholic_cardinal					; advanced priest
+
+faction			pisa
+dictionary		15
+strat_model		catholic_priest						; default model
+strat_model		catholic_bishop						; medium level priest
+strat_model		catholic_cardinal					; advanced priest
+
 faction			papal_states
 dictionary		15
 strat_model		catholic_priest						; default model
@@ -1381,6 +1825,12 @@ strat_model		catholic_bishop						; medium level priest
 strat_model		catholic_cardinal					; advanced priest
 
 faction			norway
+dictionary		2
+strat_model		catholic_priest						; default model
+strat_model		catholic_bishop						; medium level priest
+strat_model		catholic_cardinal					; advanced priest
+
+faction			sweden
 dictionary		2
 strat_model		catholic_priest						; default model
 strat_model		catholic_bishop						; medium level priest
@@ -1434,7 +1884,25 @@ strat_model		catholic_priest						; default model
 strat_model		catholic_bishop						; medium level priest
 strat_model		catholic_cardinal					; advanced priest
 
+faction			antioch
+dictionary		2
+strat_model		catholic_priest						; default model
+strat_model		catholic_bishop						; medium level priest
+strat_model		catholic_cardinal					; advanced priest
+
 faction			hre
+dictionary		2
+strat_model		catholic_priest						; default model
+strat_model		catholic_bishop						; medium level priest
+strat_model		catholic_cardinal					; advanced priest
+
+faction			teutonic_order
+dictionary		2
+strat_model		catholic_priest						; default model
+strat_model		catholic_bishop						; medium level priest
+strat_model		catholic_cardinal					; advanced priest
+
+faction			bohemia
 dictionary		2
 strat_model		catholic_priest						; default model
 strat_model		catholic_bishop						; medium level priest
@@ -1476,6 +1944,12 @@ strat_model		catholic_priest						; default model
 strat_model		catholic_bishop						; medium level priest
 strat_model		catholic_cardinal					; advanced priest
 
+faction			lithuania
+dictionary		2
+strat_model		catholic_priest						; default model
+strat_model		catholic_bishop						; medium level priest
+strat_model		catholic_cardinal					; advanced priest
+
 faction			byzantium
 dictionary		2
 strat_model		orthodox_priest						; default model
@@ -1494,6 +1968,18 @@ strat_model		orthodox_priest						; default model
 strat_model		orthodox_bishop						; medium level priest
 strat_model		orthodox_patriarch					; advanced priest
 
+faction			georgia
+dictionary		2
+strat_model		orthodox_priest						; default model
+strat_model		orthodox_bishop						; medium level priest
+strat_model		orthodox_patriarch					; advanced priest
+
+faction			armenia
+dictionary		2
+strat_model		orthodox_priest						; default model
+strat_model		orthodox_bishop						; medium level priest
+strat_model		orthodox_patriarch					; advanced priest
+
 faction			moors
 dictionary		2
 strat_model		muslim_iman						; default model
@@ -1506,7 +1992,25 @@ strat_model		orthodox_priest						; default model
 strat_model		orthodox_bishop						; medium level priest
 strat_model		orthodox_patriarch					; advanced priest
 
+faction			novgorod
+dictionary		2
+strat_model		orthodox_priest						; default model
+strat_model		orthodox_bishop						; medium level priest
+strat_model		orthodox_patriarch					; advanced priest
+
+faction			kievan_rus
+dictionary		2
+strat_model		orthodox_priest						; default model
+strat_model		orthodox_bishop						; medium level priest
+strat_model		orthodox_patriarch					; advanced priest
+
 faction			spain
+dictionary		2
+strat_model		catholic_priest						; default model
+strat_model		catholic_bishop						; medium level priest
+strat_model		catholic_cardinal					; advanced priest
+
+faction			aragon
 dictionary		2
 strat_model		catholic_priest						; default model
 strat_model		catholic_bishop						; medium level priest

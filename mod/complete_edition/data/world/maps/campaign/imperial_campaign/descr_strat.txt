@@ -2,6 +2,18 @@
 
 campaign		imperial_campaign
 playable
+	kievan_rus
+	armenia
+	georgia
+	pisa
+	genoa
+	aragon
+	bohemia
+	sweden
+	antioch
+	novgorod
+	lithuania
+	teutonic_order
 	england
 	france
 	hre
@@ -1317,28 +1329,6 @@ settlement
 	}
 }
 
-settlement
-{
-	level city
-	region Genoa_Province
-
-	year_founded 0
-	population 3000
-	plan_set default_set
-	faction_creator milan
-	building
-	{
-		type core_building stone_wall
-	}
-	building
-	{
-		type barracks town_watch
-	}
-	building
-	{
-		type port port
-	}
-}
 
 character	Giorgio Rossi, named character, male, leader, age 54, x 136, y 111 
 traits Factionleader 1 , GoodCommander 2 , PoliticsSkill 2 , GoodAdministrator 2 , Austere 1 , GoodInfantryGeneral 1 , ReligionStarter 1 
@@ -1350,7 +1340,7 @@ unit		Italian Spear Militia				exp 1 armour 0 weapon_lvl 0
 unit		Italian Spear Militia				exp 1 armour 0 weapon_lvl 0
 unit		Peasant Archers				exp 1 armour 0 weapon_lvl 0
 
-character	Bernardo Rossi, named character, male, heir, age 36, x 133, y 104 
+character	Bernardo Rossi, named character, male, heir, age 36, x 136, y 110 
 traits Factionheir 1 , LoyaltyStarter 1 , GoodCommander 1 , NaturalMilitarySkill 3 , PoliticsSkill 1 , GoodRiskyAttacker 1 , ReligionStarter 1 
 ancillaries drillmaster
 army
@@ -1701,34 +1691,19 @@ faction	russia, balanced smith
 ai_label	default 
 denari	11000
 denari_kings_purse	2500
+
 settlement
 {
-	level city
-	region Novgorod_Province
+	level town
+	region Moscow_Province
 
 	year_founded 0
-	population 4000
+	population 2500
 	plan_set default_set
 	faction_creator russia
 	building
 	{
-		type core_building stone_wall
-	}
-	building
-	{
-		type barracks town_guard
-	}
-	building
-	{
-		type market corn_exchange
-	}
-	building
-	{
-		type temple_orthodox small_church_o
-	}
-	building
-	{
-		type hinterland_roads roads
+		type core_building wooden_pallisade
 	}
 }
 
@@ -1742,7 +1717,7 @@ unit		Woodsmen				exp 0 armour 0 weapon_lvl 0
 unit		Woodsmen				exp 0 armour 0 weapon_lvl 0
 unit		Kazaks				exp 0 armour 0 weapon_lvl 0
 
-character	Vladimir, named character, male, heir, age 28, x 202, y 179 
+character	Vladimir, named character, male, heir, age 28, x 235, y 168 
 traits Factionheir 1 , LoyaltyStarter 1 , GoodCommander 1 , Energetic 1 , Intelligent 1 , Drink 1 ,  ReligionStarter 1 
 army
 unit		EE Bodyguard				exp 1 armour 0 weapon_lvl 0
@@ -3374,6 +3349,604 @@ unit		SE Bodyguard			exp 1 armour 0 weapon_lvl 0
 unit		Italian Spear Militia		exp 0 armour 0 weapon_lvl 0
 unit		Peasant Archers			exp 0 armour 0 weapon_lvl 0
 
+faction	teutonic_order, balanced smith
+ai_label	 catholic
+denari	6000
+denari_kings_purse	2500
+settlement castle
+{
+	level town
+	region Thorn_Province
+
+	year_founded 0
+	population 2800
+	plan_set default_set
+	faction_creator teutonic_order
+	building
+	{
+		type core_castle_building wooden_castle
+	}
+}
+
+character	Heinrich Walpot, named character, male, leader, age 42, x 169, y 151
+traits Factionleader 1 , GoodCommander 1 , ReligionStarter 1
+army
+unit		NE Bodyguard				exp 1 armour 0 weapon_lvl 0
+unit		Spear Militia				exp 0 armour 0 weapon_lvl 0
+unit		Spear Militia				exp 0 armour 0 weapon_lvl 0
+unit		Spear Militia				exp 0 armour 0 weapon_lvl 0
+unit		Peasants				exp 0 armour 0 weapon_lvl 0
+unit		Peasant Archers				exp 0 armour 0 weapon_lvl 0
+unit		Peasant Archers				exp 0 armour 0 weapon_lvl 0
+
+character	Hermann, named character, male, heir, age 20, x 169, y 150
+traits Factionheir 1 , LoyaltyStarter 1
+army
+unit		NE Bodyguard				exp 1 armour 0 weapon_lvl 0
+unit		Spear Militia				exp 0 armour 0 weapon_lvl 0
+unit		Spear Militia				exp 0 armour 0 weapon_lvl 0
+unit		Spear Militia				exp 0 armour 0 weapon_lvl 0
+unit		Peasant Archers				exp 0 armour 0 weapon_lvl 0
+unit		Peasant Archers				exp 0 armour 0 weapon_lvl 0
+unit		Peasants				exp 0 armour 0 weapon_lvl 0
+
+character	Otto, diplomat, male, age 30, x 168, y 151
+traits GoodDiplomat 1
+
+character	Konrad, spy, male, age 25, x 170, y 151
+traits GoodSpy 1
+
+character_record		Adelheid, 	female, age 38, alive, never_a_leader
+
+relative 	Heinrich Walpot, 	Adelheid,		Hermann,	end
+
+faction	lithuania, balanced smith
+ai_label	 default
+denari	5000
+denari_kings_purse	2000
+settlement castle
+{
+	level village
+	region Vilnius_Province
+
+	year_founded 0
+	population 700
+	plan_set default_set
+	faction_creator lithuania
+	building
+	{
+		type core_castle_building motte_and_bailey
+	}
+}
+
+character	Skirmantas, named character, male, leader, age 42, x 189, y 158
+traits Factionleader 1 , GoodCommander 1 , ReligionStarter 1
+army
+unit		NE Bodyguard				exp 1 armour 0 weapon_lvl 0
+unit		EE Peasants				exp 0 armour 0 weapon_lvl 0
+unit		EE Peasants				exp 0 armour 0 weapon_lvl 0
+unit		Polish Nobles				exp 0 armour 0 weapon_lvl 0
+unit		EE Peasant Archers				exp 0 armour 0 weapon_lvl 0
+
+character	Vykintas, named character, male, heir, age 20, x 189, y 157
+traits Factionheir 1 , LoyaltyStarter 1
+army
+unit		NE Bodyguard				exp 1 armour 0 weapon_lvl 0
+unit		EE Peasants				exp 0 armour 0 weapon_lvl 0
+unit		EE Peasants				exp 0 armour 0 weapon_lvl 0
+unit		EE Peasant Archers				exp 0 armour 0 weapon_lvl 0
+
+character	Daumantas, diplomat, male, age 30, x 188, y 158
+traits GoodDiplomat 1
+
+character	Treniota, spy, male, age 25, x 190, y 158
+traits GoodSpy 1
+
+character_record		Birute, 	female, age 38, alive, never_a_leader
+
+relative 	Skirmantas, 	Birute,		Vykintas,	end
+
+faction	novgorod, balanced smith
+ai_label	 orthodox
+denari	5000
+denari_kings_purse	2000
+settlement
+{
+	level city
+	region Novgorod_Province
+
+	year_founded 0
+	population 4000
+	plan_set default_set
+	faction_creator novgorod
+	building
+	{
+		type core_building stone_wall
+	}
+	building
+	{
+		type barracks town_guard
+	}
+	building
+	{
+		type market corn_exchange
+	}
+	building
+	{
+		type temple_orthodox small_church_o
+	}
+	building
+	{
+		type hinterland_roads roads
+	}
+}
+
+character	Mstislav, named character, male, leader, age 42, x 202, y 179
+traits Factionleader 1 , GoodCommander 1 , ReligionStarter 1
+army
+unit		EE Bodyguard				exp 1 armour 0 weapon_lvl 0
+unit		EE Archer Militia				exp 0 armour 0 weapon_lvl 0
+unit		EE Archer Militia				exp 0 armour 0 weapon_lvl 0
+unit		Woodsmen				exp 0 armour 0 weapon_lvl 0
+unit		Woodsmen				exp 0 armour 0 weapon_lvl 0
+unit		Kazaks				exp 0 armour 0 weapon_lvl 0
+
+character	Dobrynya, named character, male, heir, age 20, x 202, y 178
+traits Factionheir 1 , LoyaltyStarter 1
+army
+unit		EE Bodyguard				exp 1 armour 0 weapon_lvl 0
+unit		EE Spear Militia				exp 0 armour 0 weapon_lvl 0
+unit		EE Spear Militia				exp 0 armour 0 weapon_lvl 0
+unit		EE Archer Militia				exp 0 armour 0 weapon_lvl 0
+unit		EE Archer Militia				exp 0 armour 0 weapon_lvl 0
+
+character	Sadko, diplomat, male, age 30, x 201, y 179
+traits GoodDiplomat 1
+
+character	Gavrilo, spy, male, age 25, x 203, y 179
+traits GoodSpy 1
+
+character_record		Efrosinia, 	female, age 38, alive, never_a_leader
+
+relative 	Mstislav, 	Efrosinia,		Dobrynya,	end
+
+faction	antioch, balanced smith
+ai_label	 catholic
+denari	7000
+denari_kings_purse	3000
+settlement
+{
+	level city
+	region Antioch_Province
+
+	year_founded 0
+	population 5000
+	plan_set default_set
+	faction_creator antioch
+	building
+	{
+		type core_building stone_wall
+	}
+	building
+	{
+		type barracks town_guard
+	}
+}
+
+character	Bohemond, named character, male, leader, age 42, x 251, y 73
+traits Factionleader 1 , GoodCommander 1 , ReligionStarter 1
+army
+unit		NE Bodyguard				exp 1 armour 0 weapon_lvl 0
+unit		Crossbow Militia			exp 1 armour 0 weapon_lvl 0
+unit		Peasant Archers				exp 0 armour 0 weapon_lvl 0
+unit		Spear Militia				exp 0 armour 0 weapon_lvl 0
+unit		Spear Militia				exp 0 armour 0 weapon_lvl 0
+
+character	Tancred, named character, male, heir, age 20, x 251, y 72
+traits Factionheir 1 , LoyaltyStarter 1
+army
+unit		NE Bodyguard				exp 1 armour 0 weapon_lvl 0
+unit		Sergeant Spearmen			exp 0 armour 0 weapon_lvl 0
+unit		Sergeant Spearmen			exp 0 armour 0 weapon_lvl 0
+unit		Peasant Archers				exp 0 armour 0 weapon_lvl 0
+
+character	Raymond, diplomat, male, age 30, x 250, y 73
+traits GoodDiplomat 1
+
+character	Guy, spy, male, age 25, x 252, y 73
+traits GoodSpy 1
+
+character_record		Alberada, 	female, age 38, alive, never_a_leader
+
+relative 	Bohemond, 	Alberada,		Tancred,	end
+
+faction	sweden, balanced smith
+ai_label	 catholic
+denari	5000
+denari_kings_purse	2000
+settlement
+{
+	level village
+	region Stockholm_Province
+
+	year_founded 0
+	population 700
+	plan_set default_set
+	faction_creator sweden
+}
+
+character	Inge, named character, male, leader, age 42, x 167, y 183
+traits Factionleader 1 , GoodCommander 1 , ReligionStarter 1
+army
+unit		NE Bodyguard				exp 1 armour 0 weapon_lvl 0
+unit		Spear Militia				exp 0 armour 0 weapon_lvl 0
+unit		Spear Militia				exp 0 armour 0 weapon_lvl 0
+unit		Peasants				exp 1 armour 0 weapon_lvl 0
+unit		Norse Archers				exp 1 armour 0 weapon_lvl 0
+unit		Peasant Archers				exp 0 armour 0 weapon_lvl 0
+
+character	Filip, named character, male, heir, age 20, x 167, y 182
+traits Factionheir 1 , LoyaltyStarter 1
+army
+unit		NE Bodyguard				exp 1 armour 0 weapon_lvl 0
+unit		Spear Militia				exp 0 armour 0 weapon_lvl 0
+unit		Spear Militia				exp 0 armour 0 weapon_lvl 0
+unit		Norse Archers				exp 1 armour 0 weapon_lvl 0
+unit		Peasant Archers				exp 0 armour 0 weapon_lvl 0
+
+character	Ragnvald, diplomat, male, age 30, x 166, y 183
+traits GoodDiplomat 1
+
+character	Sverker, spy, male, age 25, x 167, y 184
+traits GoodSpy 1
+
+character_record		Helena, 	female, age 38, alive, never_a_leader
+
+relative 	Inge, 	Helena,		Filip,	end
+
+faction	bohemia, balanced smith
+ai_label	 catholic
+denari	5000
+denari_kings_purse	2000
+settlement
+{
+	level large_town
+	region Prague_Province
+
+	year_founded 0
+	population 2500
+	plan_set default_set
+	faction_creator bohemia
+	building
+	{
+		type core_building wooden_wall
+	}
+}
+
+character	Vratislav, named character, male, leader, age 42, x 157, y 136
+traits Factionleader 1 , GoodCommander 1 , ReligionStarter 1
+army
+unit		NE Bodyguard				exp 1 armour 0 weapon_lvl 0
+unit		Spear Militia				exp 0 armour 0 weapon_lvl 0
+unit		Spear Militia				exp 0 armour 0 weapon_lvl 0
+unit		Spear Militia				exp 0 armour 0 weapon_lvl 0
+unit		Peasants				exp 0 armour 0 weapon_lvl 0
+unit		Peasant Archers				exp 0 armour 0 weapon_lvl 0
+unit		Peasant Archers				exp 0 armour 0 weapon_lvl 0
+
+character	Bretislav, named character, male, heir, age 20, x 157, y 135
+traits Factionheir 1 , LoyaltyStarter 1
+army
+unit		NE Bodyguard				exp 1 armour 0 weapon_lvl 0
+unit		Spear Militia				exp 0 armour 0 weapon_lvl 0
+unit		Spear Militia				exp 0 armour 0 weapon_lvl 0
+unit		Spear Militia				exp 0 armour 0 weapon_lvl 0
+unit		Peasant Archers				exp 0 armour 0 weapon_lvl 0
+unit		Peasant Archers				exp 0 armour 0 weapon_lvl 0
+unit		Peasants				exp 0 armour 0 weapon_lvl 0
+
+character	Sobeslav, diplomat, male, age 30, x 156, y 136
+traits GoodDiplomat 1
+
+character	Jaromir, spy, male, age 25, x 158, y 136
+traits GoodSpy 1
+
+character_record		Svatava, 	female, age 38, alive, never_a_leader
+
+relative 	Vratislav, 	Svatava,		Bretislav,	end
+
+faction	aragon, balanced smith
+ai_label	 catholic
+denari	5000
+denari_kings_purse	2000
+settlement
+{
+	level town
+	region Zaragoza_Province
+
+	year_founded 0
+	population 2500
+	plan_set default_set
+	faction_creator aragon
+	building
+	{
+		type core_building wooden_pallisade
+	}
+}
+
+character	Sancho Ramirez, named character, male, leader, age 42, x 93, y 95
+traits Factionleader 1 , GoodCommander 1 , ReligionStarter 1
+army
+unit		SE Bodyguard				exp 1 armour 0 weapon_lvl 0
+unit		Town Militia				exp 0 armour 0 weapon_lvl 0
+unit		Town Militia				exp 0 armour 0 weapon_lvl 0
+unit		Mailed Knights				exp 0 armour 0 weapon_lvl 0
+unit		Town Militia				exp 0 armour 0 weapon_lvl 0
+unit		Peasant Archers				exp 0 armour 0 weapon_lvl 0
+
+character	Pedro, named character, male, heir, age 20, x 93, y 94
+traits Factionheir 1 , LoyaltyStarter 1
+army
+unit		SE Bodyguard				exp 1 armour 0 weapon_lvl 0
+unit		Peasant Archers				exp 0 armour 0 weapon_lvl 0
+unit		Spear Militia				exp 0 armour 0 weapon_lvl 0
+unit		Peasant Archers				exp 0 armour 0 weapon_lvl 0
+unit		Spear Militia				exp 0 armour 0 weapon_lvl 0
+
+character	Alfonso, diplomat, male, age 30, x 92, y 95
+traits GoodDiplomat 1
+
+character	Ramiro, spy, male, age 25, x 94, y 95
+traits GoodSpy 1
+
+character_record		Felicia, 	female, age 38, alive, never_a_leader
+
+relative 	Sancho Ramirez, 	Felicia,		Pedro,	end
+
+faction	genoa, balanced smith
+ai_label	 catholic
+denari	6000
+denari_kings_purse	2500
+settlement
+{
+	level city
+	region Genoa_Province
+
+	year_founded 0
+	population 3000
+	plan_set default_set
+	faction_creator genoa
+	building
+	{
+		type core_building stone_wall
+	}
+	building
+	{
+		type barracks town_watch
+	}
+	building
+	{
+		type port port
+	}
+}
+
+character	Guglielmo Embriaco, named character, male, leader, age 42, x 133, y 104
+traits Factionleader 1 , GoodCommander 1 , ReligionStarter 1
+army
+unit		SE Bodyguard				exp 0 armour 0 weapon_lvl 0
+unit		Mailed Knights				exp 0 armour 0 weapon_lvl 0
+unit		Italian Spear Militia				exp 1 armour 0 weapon_lvl 0
+unit		Italian Spear Militia				exp 1 armour 0 weapon_lvl 0
+unit		Peasant Archers				exp 1 armour 0 weapon_lvl 0
+
+character	Ansaldo, named character, male, heir, age 20, x 132, y 104
+traits Factionheir 1 , LoyaltyStarter 1
+army
+unit		SE Bodyguard				exp 0 armour 0 weapon_lvl 0
+unit		Italian Spear Militia				exp 1 armour 0 weapon_lvl 0
+unit		Peasant Archers				exp 1 armour 0 weapon_lvl 0
+
+character	Caffaro, diplomat, male, age 30, x 134, y 104
+traits GoodDiplomat 1
+
+character	Oberto, spy, male, age 25, x 133, y 105
+traits GoodSpy 1
+
+character_record		Alda, 	female, age 38, alive, never_a_leader
+
+relative 	Guglielmo Embriaco, 	Alda,		Ansaldo,	end
+
+faction	pisa, balanced smith
+ai_label	 catholic
+denari	6000
+denari_kings_purse	2500
+settlement
+{
+	level town
+	region Florence_Province
+
+	year_founded 0
+	population 2200
+	plan_set default_set
+	faction_creator pisa
+	building
+	{
+		type core_building wooden_pallisade
+	}
+}
+
+character	Gerardo, named character, male, leader, age 42, x 142, y 100
+traits Factionleader 1 , GoodCommander 1 , ReligionStarter 1
+army
+unit		SE Bodyguard				exp 0 armour 0 weapon_lvl 0
+unit		Mailed Knights				exp 0 armour 0 weapon_lvl 0
+unit		Italian Spear Militia				exp 1 armour 0 weapon_lvl 0
+unit		Italian Spear Militia				exp 1 armour 0 weapon_lvl 0
+unit		Peasant Archers				exp 1 armour 0 weapon_lvl 0
+
+character	Ugo, named character, male, heir, age 20, x 142, y 99
+traits Factionheir 1 , LoyaltyStarter 1
+army
+unit		SE Bodyguard				exp 0 armour 0 weapon_lvl 0
+unit		Italian Spear Militia				exp 1 armour 0 weapon_lvl 0
+unit		Peasant Archers				exp 1 armour 0 weapon_lvl 0
+
+character	Lamberto, diplomat, male, age 30, x 141, y 100
+traits GoodDiplomat 1
+
+character	Ildebrando, spy, male, age 25, x 143, y 100
+traits GoodSpy 1
+
+character_record		Matilde, 	female, age 38, alive, never_a_leader
+
+relative 	Gerardo, 	Matilde,		Ugo,	end
+
+faction	georgia, balanced smith
+ai_label	 orthodox
+denari	5000
+denari_kings_purse	2000
+settlement castle
+{
+	level town
+	region Tbilisi_Province
+
+	year_founded 0
+	population 2500
+	plan_set default_set
+	faction_creator georgia
+	building
+	{
+		type core_castle_building wooden_castle
+	}
+}
+
+character	Giorgi, named character, male, leader, age 42, x 278, y 109
+traits Factionleader 1 , GoodCommander 1 , ReligionStarter 1
+army
+unit		Greek Bodyguard				exp 1 armour 0 weapon_lvl 0
+unit		SE Spear Militia				exp 1 armour 0 weapon_lvl 0
+unit		SE Spear Militia				exp 1 armour 0 weapon_lvl 0
+unit		SE Town Militia				exp 1 armour 0 weapon_lvl 0
+unit		Southern Peasants				exp 1 armour 0 weapon_lvl 0
+unit		Trebizond Archers				exp 1 armour 0 weapon_lvl 0
+
+character	Davit, named character, male, heir, age 20, x 278, y 108
+traits Factionheir 1 , LoyaltyStarter 1
+army
+unit		Greek Bodyguard				exp 1 armour 0 weapon_lvl 0
+unit		Byzantine Spearmen				exp 0 armour 0 weapon_lvl 0
+unit		Byzantine Spearmen				exp 0 armour 0 weapon_lvl 0
+unit		Byzantine Spearmen				exp 0 armour 0 weapon_lvl 0
+unit		Trebizond Archers				exp 1 armour 0 weapon_lvl 0
+unit		Trebizond Archers				exp 1 armour 0 weapon_lvl 0
+
+character	Ivane, diplomat, male, age 30, x 277, y 109
+traits GoodDiplomat 1
+
+character	Zakaria, spy, male, age 25, x 279, y 109
+traits GoodSpy 1
+
+character_record		Tamar, 	female, age 38, alive, never_a_leader
+
+relative 	Giorgi, 	Tamar,		Davit,	end
+
+faction	armenia, balanced smith
+ai_label	 orthodox
+denari	5000
+denari_kings_purse	2000
+settlement castle
+{
+	level village
+	region Adana_Province
+
+	year_founded 0
+	population 800
+	plan_set default_set
+	faction_creator armenia
+	building
+	{
+		type core_castle_building motte_and_bailey
+	}
+}
+
+character	Ruben, named character, male, leader, age 42, x 246, y 76
+traits Factionleader 1 , GoodCommander 1 , ReligionStarter 1
+army
+unit		Greek Bodyguard				exp 1 armour 0 weapon_lvl 0
+unit		SE Spear Militia				exp 1 armour 0 weapon_lvl 0
+unit		SE Spear Militia				exp 1 armour 0 weapon_lvl 0
+unit		SE Town Militia				exp 1 armour 0 weapon_lvl 0
+unit		Southern Peasants				exp 1 armour 0 weapon_lvl 0
+unit		Trebizond Archers				exp 1 armour 0 weapon_lvl 0
+
+character	Kostandin, named character, male, heir, age 20, x 246, y 75
+traits Factionheir 1 , LoyaltyStarter 1
+army
+unit		Greek Bodyguard				exp 1 armour 0 weapon_lvl 0
+unit		Byzantine Spearmen				exp 0 armour 0 weapon_lvl 0
+unit		Byzantine Spearmen				exp 0 armour 0 weapon_lvl 0
+unit		Byzantine Spearmen				exp 0 armour 0 weapon_lvl 0
+unit		Trebizond Archers				exp 1 armour 0 weapon_lvl 0
+unit		Trebizond Archers				exp 1 armour 0 weapon_lvl 0
+
+character	Toros, diplomat, male, age 30, x 245, y 76
+traits GoodDiplomat 1
+
+character	Levon, spy, male, age 25, x 247, y 76
+traits GoodSpy 1
+
+character_record		Zabel, 	female, age 38, alive, never_a_leader
+
+relative 	Ruben, 	Zabel,		Kostandin,	end
+
+faction	kievan_rus, balanced smith
+ai_label	 orthodox
+denari	5000
+denari_kings_purse	2000
+settlement
+{
+	level large_town
+	region Kiev_Province
+
+	year_founded 0
+	population 3000
+	plan_set default_set
+	faction_creator kievan_rus
+	building
+	{
+		type core_building wooden_wall
+	}
+}
+
+character	Vsevolod, named character, male, leader, age 42, x 217, y 139
+traits Factionleader 1 , GoodCommander 1 , ReligionStarter 1
+army
+unit		EE Bodyguard				exp 1 armour 0 weapon_lvl 0
+unit		EE Archer Militia				exp 0 armour 0 weapon_lvl 0
+unit		EE Archer Militia				exp 0 armour 0 weapon_lvl 0
+unit		Woodsmen				exp 0 armour 0 weapon_lvl 0
+unit		Woodsmen				exp 0 armour 0 weapon_lvl 0
+unit		Kazaks				exp 0 armour 0 weapon_lvl 0
+
+character	Vladimir Monomakh, named character, male, heir, age 20, x 217, y 138
+traits Factionheir 1 , LoyaltyStarter 1
+army
+unit		EE Bodyguard				exp 1 armour 0 weapon_lvl 0
+unit		EE Spear Militia				exp 0 armour 0 weapon_lvl 0
+unit		EE Spear Militia				exp 0 armour 0 weapon_lvl 0
+unit		EE Archer Militia				exp 0 armour 0 weapon_lvl 0
+unit		EE Archer Militia				exp 0 armour 0 weapon_lvl 0
+
+character	Sviatopolk, diplomat, male, age 30, x 216, y 139
+traits GoodDiplomat 1
+
+character	Oleg, spy, male, age 25, x 218, y 139
+traits GoodSpy 1
+
+character_record		Gytha, 	female, age 38, alive, never_a_leader
+
+relative 	Vsevolod, 	Gytha,		Vladimir Monomakh,	end
+
 faction	slave, balanced smith
 ai_label	slave_faction 
 denari	5000
@@ -3453,20 +4026,6 @@ settlement castle
 	}
 }
 
-settlement
-{
-	level large_town
-	region Prague_Province
-
-	year_founded 0
-	population 2500
-	plan_set default_set
-	faction_creator england
-	building
-	{
-		type core_building wooden_wall
-	}
-}
 
 settlement castle
 {
@@ -3498,24 +4057,6 @@ settlement castle
 	}
 }
 
-settlement
-{
-	level city
-	region Antioch_Province
-
-	year_founded 0
-	population 5000
-	plan_set default_set
-	faction_creator moors
-	building
-	{
-		type core_building stone_wall
-	}
-	building
-	{
-		type barracks town_guard
-	}
-}
 
 settlement
 {
@@ -3766,50 +4307,8 @@ settlement castle
 	}
 }
 
-settlement castle
-{
-	level village
-	region Vilnius_Province
 
-	year_founded 0
-	population 700
-	plan_set default_set
-	faction_creator russia
-	building
-	{
-		type core_castle_building motte_and_bailey
-	}
-}
 
-settlement castle
-{
-	level town
-	region Thorn_Province
-
-	year_founded 0
-	population 2800
-	plan_set default_set
-	faction_creator russia
-	building
-	{
-		type core_castle_building wooden_castle
-	}
-}
-
-settlement
-{
-	level large_town
-	region Kiev_Province
-
-	year_founded 0
-	population 3000
-	plan_set default_set
-	faction_creator russia
-	building
-	{
-		type core_building wooden_wall
-	}
-}
 
 settlement
 {
@@ -3837,46 +4336,8 @@ settlement castle
 	}
 }
 
-settlement castle
-{
-	level town
-	region Tbilisi_Province
 
-	year_founded 0
-	population 2500
-	plan_set default_set
-	faction_creator moors
-	building
-	{
-		type core_castle_building wooden_castle
-	}
-}
 
-settlement castle
-{
-	level village
-	region Adana_Province
-
-	year_founded 0
-	population 800
-	plan_set default_set
-	faction_creator moors
-	building
-	{
-		type core_castle_building motte_and_bailey
-	}
-}
-
-settlement
-{
-	level village
-	region Stockholm_Province
-
-	year_founded 0
-	population 700
-	plan_set default_set
-	faction_creator england
-}
 
 settlement castle
 {
@@ -3938,20 +4399,6 @@ settlement castle
 	}
 }
 
-settlement
-{
-	level town
-	region Zaragoza_Province
-
-	year_founded 0
-	population 2500
-	plan_set default_set
-	faction_creator spain
-	building
-	{
-		type core_building wooden_pallisade
-	}
-}
 
 settlement castle
 {
@@ -3983,20 +4430,6 @@ settlement castle
 	}
 }
 
-settlement
-{
-	level town
-	region Florence_Province
-
-	year_founded 0
-	population 2200
-	plan_set default_set
-	faction_creator spain
-	building
-	{
-		type core_building wooden_pallisade
-	}
-}
 
 settlement castle
 {
@@ -4088,20 +4521,6 @@ settlement castle
 	}
 }
 
-settlement
-{
-	level town
-	region Moscow_Province
-
-	year_founded 0
-	population 2500
-	plan_set default_set
-	faction_creator russia
-	building
-	{
-		type core_building wooden_pallisade
-	}
-}
 
 settlement
 {
@@ -4206,7 +4625,7 @@ unit		Town Militia				exp 1 armour 0 weapon_lvl 0
 unit		Town Militia				exp 0 armour 0 weapon_lvl 0
 unit		Peasant Archers				exp 0 armour 0 weapon_lvl 0
 
-character	sub_faction poland, Zygmunt Majtyka, general, male, age 28, x 189, y 158 
+character	sub_faction poland, Zygmunt Majtyka, general, male, age 28, x 121, y 121 
 army
 unit		Lithuanian Cavalry				exp 1 armour 0 weapon_lvl 0
 unit		Lithuanian Cavalry				exp 1 armour 0 weapon_lvl 0
@@ -4250,7 +4669,7 @@ unit		S Peasant Archers				exp 0 armour 0 weapon_lvl 0
 unit		SE Town Militia				exp 1 armour 0 weapon_lvl 0
 unit		SE Town Militia				exp 1 armour 0 weapon_lvl 0
 
-character	sub_faction turks, Khushqadam, general, male, age 21, x 246, y 76 
+character	sub_faction turks, Khushqadam, general, male, age 21, x 120, y 122 
 army
 unit		Armenian Cavalry				exp 1 armour 0 weapon_lvl 0
 unit		Armenian Cavalry				exp 0 armour 0 weapon_lvl 0
@@ -4292,7 +4711,7 @@ unit		ME Spear Militia				exp 0 armour 0 weapon_lvl 0
 unit		Desert Archers				exp 0 armour 0 weapon_lvl 0
 unit		Desert Archers				exp 0 armour 0 weapon_lvl 0
 
-character	sub_faction turks, Suleymish Ilahi, general, male, age 34, x 251, y 73 
+character	sub_faction turks, Suleymish Ilahi, general, male, age 34, x 122, y 122 
 army
 unit		Turkish Archers				exp 1 armour 0 weapon_lvl 0
 unit		Turkish Archers				exp 0 armour 0 weapon_lvl 0
@@ -4317,7 +4736,7 @@ unit		Woodsmen				exp 1 armour 0 weapon_lvl 0
 unit		EE Peasant Archers				exp 0 armour 0 weapon_lvl 0
 unit		EE Spear Militia				exp 1 armour 0 weapon_lvl 0
 
-character	sub_faction russia, Grechin, general, male, age 27, x 217, y 139 
+character	sub_faction russia, Grechin, general, male, age 27, x 121, y 123 
 army
 unit		Kazaks				exp 0 armour 0 weapon_lvl 0
 unit		Kazaks				exp 0 armour 0 weapon_lvl 0
@@ -4328,7 +4747,7 @@ unit		EE Spear Militia				exp 0 armour 0 weapon_lvl 0
 unit		EE Spear Militia				exp 0 armour 0 weapon_lvl 0
 unit		EE Spear Militia				exp 1 armour 0 weapon_lvl 0
 
-character	sub_faction hre, Wilhelm von Bohmen, general, male, age 23, x 157, y 136 
+character	sub_faction hre, Wilhelm von Bohmen, general, male, age 23, x 121, y 120 
 army
 unit		Slav Levies				exp 1 armour 0 weapon_lvl 0
 unit		Slav Mercenaries				exp 1 armour 0 weapon_lvl 0
@@ -4409,7 +4828,7 @@ unit		EE Spear Militia				exp 1 armour 0 weapon_lvl 0
 unit		Kazaks				exp 0 armour 0 weapon_lvl 0
 unit		Kazaks				exp 0 armour 0 weapon_lvl 0
 
-character	sub_faction turks, Kuchuk Ilker, general, male, age 23, x 278, y 109 
+character	sub_faction turks, Kuchuk Ilker, general, male, age 23, x 120, y 121 
 army
 unit		Turkish Archers				exp 0 armour 0 weapon_lvl 0
 unit		Turkish Archers				exp 0 armour 0 weapon_lvl 0
@@ -4517,7 +4936,7 @@ unit		Crossbow Militia				exp 0 armour 0 weapon_lvl 0
 unit		Crossbow Militia				exp 0 armour 0 weapon_lvl 0
 unit		Crossbow Militia				exp 0 armour 0 weapon_lvl 0
 
-character	sub_faction denmark, Sighvat Bolverksson, general, male, age 25, x 167, y 183 
+character	sub_faction denmark, Sighvat Bolverksson, general, male, age 25, x 122, y 121 
 army
 unit		Viking Raiders				exp 1 armour 0 weapon_lvl 0
 unit		Viking Raiders				exp 1 armour 0 weapon_lvl 0
@@ -4538,7 +4957,7 @@ unit		Woodsmen				exp 1 armour 0 weapon_lvl 0
 unit		EE Peasants				exp 0 armour 0 weapon_lvl 0
 unit		EE Crossbow Militia				exp 0 armour 0 weapon_lvl 0
 
-character	sub_faction poland, Sobislaw Wallach, general, male, age 25, x 169, y 151 
+character	sub_faction poland, Sobislaw Wallach, general, male, age 25, x 119, y 122 
 army
 unit		EE Spear Militia				exp 1 armour 0 weapon_lvl 0
 unit		Woodsmen				exp 1 armour 0 weapon_lvl 0
@@ -4557,7 +4976,7 @@ unit		Spear Militia				exp 1 armour 0 weapon_lvl 0
 unit		Javelinmen				exp 1 armour 0 weapon_lvl 0
 unit		Javelinmen				exp 1 armour 0 weapon_lvl 0
 
-character	sub_faction spain, Saluador Caruallo, general, male, age 31, x 93, y 95 
+character	sub_faction spain, Saluador Caruallo, general, male, age 31, x 123, y 122 
 army
 unit		Town Militia				exp 1 armour 0 weapon_lvl 0
 unit		Crossbow Militia				exp 1 armour 0 weapon_lvl 0
@@ -4619,7 +5038,7 @@ unit		Archer Militia				exp 0 armour 0 weapon_lvl 0
 unit		Peasants				exp 1 armour 0 weapon_lvl 0
 unit		Peasant Archers				exp 0 armour 0 weapon_lvl 0
 
-character	sub_faction venice, Blasio Tasso, general, male, age 28, x 142, y 100 
+character	sub_faction venice, Blasio Tasso, general, male, age 28, x 120, y 123 
 army
 unit		Italian Militia				exp 0 armour 0 weapon_lvl 0
 unit		Italian Militia				exp 0 armour 0 weapon_lvl 0

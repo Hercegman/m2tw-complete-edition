@@ -32,6 +32,18 @@ DONORS = {
     "ireland": ["scotland", "england", "slave"],
     "norway": ["denmark", "england", "slave"],
     "jerusalem": ["france", "england", "slave"],
+    "teutonic_order": ["hre", "poland", "denmark", "slave"],
+    "lithuania": ["poland", "russia", "hungary", "slave"],
+    "novgorod": ["russia", "denmark", "poland", "slave"],
+    "antioch": ["france", "england", "sicily", "slave"],
+    "sweden": ["denmark", "england", "slave"],
+    "bohemia": ["hre", "poland", "hungary", "slave"],
+    "aragon": ["spain", "portugal", "sicily", "slave"],
+    "genoa": ["milan", "venice", "sicily", "slave"],
+    "pisa": ["milan", "venice", "sicily", "slave"],
+    "georgia": ["byzantium", "russia", "hungary", "slave"],
+    "armenia": ["byzantium", "turks", "hungary", "slave"],
+    "kievan_rus": ["russia", "poland", "hungary", "slave"],
 }
 
 

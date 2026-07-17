@@ -50,6 +50,19 @@ FACTIONS = {
     "ireland":   ("scotland",  ("dlc", "british_isles")),
     "norway":    ("denmark",   ("dlc", "british_isles")),
     "jerusalem": ("france",    ("dlc", "crusades")),
+    # batch M3+M4
+    "teutonic_order": ("hre",     ("dlc", "teutonic")),
+    "lithuania":      ("poland",  ("dlc", "teutonic")),
+    "novgorod":       ("russia",  ("dlc", "teutonic")),
+    "antioch":        ("france",  ("dlc", "crusades")),
+    "sweden":     ("denmark",   ("template", "Sweden", "Swedish", "Kingdom of Sweden")),
+    "bohemia":    ("hre",       ("template", "Bohemia", "Bohemian", "Kingdom of Bohemia")),
+    "aragon":     ("spain",     ("template", "Aragon", "Aragonese", "Kingdom of Aragon")),
+    "genoa":      ("milan",     ("template", "Genoa", "Genoese", "Republic of Genoa")),
+    "pisa":       ("milan",     ("template", "Pisa", "Pisan", "Republic of Pisa")),
+    "georgia":    ("byzantium", ("template", "Georgia", "Georgian", "Kingdom of Georgia")),
+    "armenia":    ("byzantium", ("template", "Armenia", "Armenian", "Kingdom of Cilician Armenia")),
+    "kievan_rus": ("russia",    ("template", "Kievan Rus", "Kievan", "Principality of Kievan Rus")),
 }
 
 EXTRA_ROSTER = {
@@ -57,6 +70,16 @@ EXTRA_ROSTER = {
     "serbia": ["hungary", "russia"],
     "bulgaria": ["hungary", "russia"],
     "wallachia": ["russia"],
+    "teutonic_order": ["poland"],
+    "lithuania": ["russia"],
+    "novgorod": ["denmark"],
+    "antioch": ["england"],
+    "aragon": ["portugal"],
+    "genoa": ["venice"],
+    "pisa": ["venice"],
+    "georgia": ["russia"],
+    "armenia": ["turks"],
+    "kievan_rus": ["poland"],
 }
 
 STRENGTHS = {
@@ -65,6 +88,14 @@ STRENGTHS = {
     "serbia":    ("Excellent heavy cavalry in the Byzantine tradition.", "Lacks strong missile infantry.", "Serbian Knights"),
     "bulgaria":  ("Versatile army mixing steppe horsemen and solid infantry.", "Few elite late-period units.", "Bulgarian Brigands"),
     "wallachia": ("Fast light cavalry and deadly ambush tactics.", "Weak heavy infantry.", "Voivode Riders"),
+    "sweden":    ("Sturdy northern infantry and strong crossbowmen.", "Limited heavy cavalry.", "Svenner"),
+    "bohemia":   ("Well-armoured imperial-style infantry and knights.", "Few missile troops.", "Bohemian Knights"),
+    "aragon":    ("Fine jinete-style cavalry and hardy spearmen.", "Weak archery.", "Almogavars"),
+    "genoa":     ("The finest crossbowmen in Europe and a mighty navy.", "Small feudal cavalry arm.", "Genoese Crossbowmen"),
+    "pisa":      ("Strong navy and disciplined communal militia.", "Little heavy cavalry.", "Pisan Militia"),
+    "georgia":   ("Superb heavy cavalry in the Byzantine tradition.", "Sparse infantry roster.", "Georgian Cavalry"),
+    "armenia":   ("Tough mountain infantry and versatile horse archers.", "Lacks late heavy knights.", "Armenian Archers"),
+    "kievan_rus": ("Druzhina heavy cavalry and masses of spear levies.", "Slow to modernise.", "Druzhina"),
 }
 
 # descr_names pools for the generated factions; strat names MUST appear here.
@@ -105,6 +136,54 @@ NAMES = {
         ["Basarab", "Danesti", "Draculesti", "Craiovescu", "Musat"],
         ["Ana", "Ilinca", "Ruxandra", "Stanca", "Voica"],
     ),
+    "sweden": (
+        ["Inge", "Filip", "Ragnvald", "Sverker", "Erik", "Knut", "Karl",
+         "Magnus", "Birger", "Jedvard", "Halsten", "Blot-Sven"],
+        ["Stenkil", "Sverkersson", "Eriksson", "Jedvardsson"],
+        ["Helena", "Kristina", "Ingegerd", "Ulvhild"],
+    ),
+    "bohemia": (
+        ["Vratislav", "Bretislav", "Sobeslav", "Jaromir", "Spytihnev",
+         "Borivoj", "Oldrich", "Vaclav", "Ottokar", "Conrad", "Svatopluk"],
+        ["Premyslid", "Vrsovec", "Slavnik"],
+        ["Svatava", "Ludmila", "Bozena", "Judita"],
+    ),
+    "aragon": (
+        ["Sancho Ramirez", "Pedro", "Alfonso", "Ramiro", "Garcia", "Fortun",
+         "Jaime", "Fernando", "Berenguer", "Galindo"],
+        ["Ramirez", "Aznarez", "Galindez", "Jimenez"],
+        ["Felicia", "Urraca", "Sancha", "Petronila"],
+    ),
+    "genoa": (
+        ["Guglielmo Embriaco", "Ansaldo", "Caffaro", "Oberto", "Lanfranco",
+         "Simone", "Ottone", "Enrico", "Ugo", "Ingo", "Ido"],
+        ["Embriaco", "Doria", "Spinola", "Grimaldi", "Fieschi"],
+        ["Alda", "Giulietta", "Sibilla", "Adelasia"],
+    ),
+    "pisa": (
+        ["Gerardo", "Ugo", "Lamberto", "Ildebrando", "Pietro", "Ranieri",
+         "Daiberto", "Maruccio", "Sigerio", "Bulgarino"],
+        ["Visconti", "Gherardesca", "Orlandi", "Sismondi"],
+        ["Matilde", "Berta", "Gisla", "Contessa"],
+    ),
+    "georgia": (
+        ["Giorgi", "Davit", "Ivane", "Zakaria", "Bagrat", "Demetre",
+         "Vakhtang", "Levan", "Archil", "Sumbat"],
+        ["Bagrationi", "Mkhargrdzeli", "Orbeliani"],
+        ["Tamar", "Rusudan", "Mariam", "Ketevan"],
+    ),
+    "armenia": (
+        ["Ruben", "Kostandin", "Toros", "Levon", "Mleh", "Hetum", "Oshin",
+         "Smbat", "Vahram", "Gagik"],
+        ["Rubenian", "Hetumian", "Pahlavuni"],
+        ["Zabel", "Alits", "Rita", "Keran"],
+    ),
+    "kievan_rus": (
+        ["Vsevolod", "Vladimir Monomakh", "Sviatopolk", "Oleg", "Iziaslav",
+         "Yaroslav", "Mstislav", "Igor", "Sviatoslav", "Rostislav", "Yuri"],
+        ["Monomakh", "Rurikovich", "Olgovich"],
+        ["Gytha", "Anna", "Predslava", "Evpraksia"],
+    ),
 }
 
 # DLC-sourced factions: which DLC's descr_names block to copy
@@ -113,6 +192,10 @@ DLC_NAME_BLOCKS = {
     "ireland": "british_isles",
     "norway": "british_isles",
     "jerusalem": "crusades",
+    "teutonic_order": "teutonic",
+    "lithuania": "teutonic",
+    "novgorod": "teutonic",
+    "antioch": "crusades",
 }
 
 # names our descr_strat uses that the DLC pools don't contain
@@ -121,6 +204,10 @@ EXTRA_NAMES = {
     "ireland": (["Muirchertach"], ["O Brien"]),
     "norway": ([], ["Kyrre"]),
     "jerusalem": (["Godefroy"], []),
+    "teutonic_order": (["Heinrich", "Hermann", "Otto", "Konrad"], ["Walpot"]),
+    "lithuania": (["Skirmantas", "Vykintas", "Daumantas", "Treniota"], []),
+    "novgorod": (["Mstislav", "Dobrynya", "Sadko", "Gavrilo"], []),
+    "antioch": (["Bohemond", "Tancred", "Raymond", "Guy"], []),
 }
 
 STRAT = os.path.join(DATA, "world", "maps", "campaign", "imperial_campaign", "descr_strat.txt")
@@ -548,7 +635,9 @@ def step9_strat_symbols():
         if fac in DLC_NAME_BLOCKS:
             src = os.path.join(DLC[DLC_NAME_BLOCKS[fac]], "models_strat", f"symbol_{fac}.cas")
         else:
-            src = os.path.join(base_ms, f"symbol_{mate}.cas")
+            # template factions get their .cas from gen_heraldry (CAS_DONOR
+            # with a patched texture path); nothing to copy here
+            continue
         assert os.path.exists(src), f"missing symbol source {src}"
         shutil.copyfile(src, out)
         copied.append(fac)

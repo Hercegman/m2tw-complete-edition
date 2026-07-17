@@ -676,6 +676,231 @@ has_family_tree					yes
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+faction						teutonic_order
+culture						northern_european
+religion					catholic
+symbol						models_strat/symbol_teutonic_order.cas
+rebel_symbol				models_strat/symbol_rebels.CAS
+primary_colour				red 255, green 255, blue 255
+secondary_colour			red 0, green 0, blue 0
+loading_logo			loading_screen/symbols/symbol128_teutonic_order.tga
+standard_index				33
+logo_index					FACTION_LOGO_TEUTONIC_ORDER
+small_logo_index			SMALL_FACTION_LOGO_TEUTONIC_ORDER
+triumph_value				5
+custom_battle_availability	yes
+can_sap						no
+prefers_naval_invasions		no
+can_have_princess			no
+has_family_tree					teutonic
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+faction						lithuania
+culture						eastern_european
+religion					pagan
+symbol						models_strat/symbol_lithuania.cas
+rebel_symbol				models_strat/symbol_rebels.CAS
+primary_colour				red 12, green 30, blue 200
+secondary_colour			red 215, green 0, blue 0
+loading_logo			loading_screen/symbols/symbol128_lithuania.tga
+standard_index				34
+logo_index					FACTION_LOGO_LITHUANIA
+small_logo_index			SMALL_FACTION_LOGO_LITHUANIA
+triumph_value				5
+custom_battle_availability	yes
+can_sap						no
+prefers_naval_invasions		no
+can_have_princess			yes
+has_family_tree					yes
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+faction						novgorod
+culture						eastern_european
+religion					orthodox
+symbol						models_strat/symbol_novgorod.cas
+rebel_symbol				models_strat/symbol_rebels.CAS
+primary_colour				red 205, green 165, blue 26
+secondary_colour			red 0, green 28, blue 107
+loading_logo			loading_screen/symbols/symbol128_novgorod.tga
+standard_index				35
+logo_index					FACTION_LOGO_NOVGOROD
+small_logo_index			SMALL_FACTION_LOGO_NOVGOROD
+triumph_value				5
+custom_battle_availability	yes
+can_sap						no
+prefers_naval_invasions		no
+can_have_princess				yes
+has_family_tree					yes
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+faction						antioch
+culture						northern_european
+religion					catholic
+symbol						models_strat/symbol_antioch.cas
+rebel_symbol				models_strat/symbol_rebels.CAS
+primary_colour				red 95, green 138, blue 185
+secondary_colour			red 145, green 47, blue 47
+loading_logo			loading_screen/symbols/symbol128_antioch.tga
+standard_index				36
+logo_index					FACTION_LOGO_ANTIOCH
+small_logo_index			SMALL_FACTION_LOGO_ANTIOCH
+triumph_value				5
+custom_battle_availability	yes
+can_sap						no
+prefers_naval_invasions		no
+can_have_princess			no
+has_family_tree					yes
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+faction						sweden
+culture						northern_european
+religion					catholic
+symbol						models_strat/symbol_sweden.cas
+rebel_symbol				models_strat/symbol_rebels.CAS
+primary_colour				red 15, green 90, blue 190
+secondary_colour			red 240, green 200, blue 40
+loading_logo				loading_screen/symbols/symbol128_sweden.tga
+standard_index				37
+logo_index					FACTION_LOGO_SWEDEN
+small_logo_index			SMALL_FACTION_LOGO_SWEDEN
+triumph_value				5
+custom_battle_availability	yes
+can_sap						yes
+prefers_naval_invasions		no
+can_have_princess				yes
+has_family_tree					yes
+
+faction						bohemia
+culture						northern_european
+religion					catholic
+symbol						models_strat/symbol_bohemia.cas
+rebel_symbol				models_strat/symbol_rebels.CAS
+primary_colour				red 205, green 30, blue 40
+secondary_colour			red 240, green 240, blue 240
+loading_logo				loading_screen/symbols/symbol128_bohemia.tga
+standard_index				38
+logo_index					FACTION_LOGO_BOHEMIA
+small_logo_index			SMALL_FACTION_LOGO_BOHEMIA
+triumph_value				5
+custom_battle_availability	yes
+can_sap						yes
+prefers_naval_invasions		no
+can_have_princess				yes
+has_family_tree					yes
+
+faction						aragon
+culture						southern_european
+religion					catholic
+symbol						models_strat/symbol_aragon.cas
+rebel_symbol				models_strat/symbol_rebels.CAS
+primary_colour				red 235, green 185, blue 25
+secondary_colour			red 180, green 20, blue 25
+loading_logo				loading_screen/symbols/symbol128_aragon.tga
+standard_index				39
+logo_index					FACTION_LOGO_ARAGON
+small_logo_index			SMALL_FACTION_LOGO_ARAGON
+triumph_value				5
+custom_battle_availability	yes
+can_sap						yes
+prefers_naval_invasions		no
+can_have_princess				yes
+has_family_tree					yes
+
+faction						genoa
+culture						southern_european
+religion					catholic
+symbol						models_strat/symbol_genoa.cas
+rebel_symbol				models_strat/symbol_rebels.CAS
+primary_colour				red 205, green 25, blue 30
+secondary_colour			red 245, green 245, blue 245
+loading_logo				loading_screen/symbols/symbol128_genoa.tga
+standard_index				40
+logo_index					FACTION_LOGO_GENOA
+small_logo_index			SMALL_FACTION_LOGO_GENOA
+triumph_value				5
+custom_battle_availability	yes
+can_sap						yes
+prefers_naval_invasions		no
+can_have_princess				yes
+has_family_tree					yes
+
+faction						pisa
+culture						southern_european
+religion					catholic
+symbol						models_strat/symbol_pisa.cas
+rebel_symbol				models_strat/symbol_rebels.CAS
+primary_colour				red 150, green 20, blue 30
+secondary_colour			red 240, green 240, blue 240
+loading_logo				loading_screen/symbols/symbol128_pisa.tga
+standard_index				41
+logo_index					FACTION_LOGO_PISA
+small_logo_index			SMALL_FACTION_LOGO_PISA
+triumph_value				5
+custom_battle_availability	yes
+can_sap						yes
+prefers_naval_invasions		no
+can_have_princess				yes
+has_family_tree					yes
+
+faction						georgia
+culture						greek
+religion					orthodox
+symbol						models_strat/symbol_georgia.cas
+rebel_symbol				models_strat/symbol_rebels.CAS
+primary_colour				red 225, green 225, blue 225
+secondary_colour			red 190, green 25, blue 25
+loading_logo				loading_screen/symbols/symbol128_georgia.tga
+standard_index				42
+logo_index					FACTION_LOGO_GEORGIA
+small_logo_index			SMALL_FACTION_LOGO_GEORGIA
+triumph_value				5
+custom_battle_availability	yes
+can_sap						yes
+prefers_naval_invasions		no
+can_have_princess				yes
+has_family_tree					yes
+
+faction						armenia
+culture						greek
+religion					orthodox
+symbol						models_strat/symbol_armenia.cas
+rebel_symbol				models_strat/symbol_rebels.CAS
+primary_colour				red 215, green 95, blue 30
+secondary_colour			red 30, green 60, blue 140
+loading_logo				loading_screen/symbols/symbol128_armenia.tga
+standard_index				43
+logo_index					FACTION_LOGO_ARMENIA
+small_logo_index			SMALL_FACTION_LOGO_ARMENIA
+triumph_value				5
+custom_battle_availability	yes
+can_sap						yes
+prefers_naval_invasions		no
+can_have_princess				yes
+has_family_tree					yes
+
+faction						kievan_rus
+culture						eastern_european
+religion					orthodox
+symbol						models_strat/symbol_kievan_rus.cas
+rebel_symbol				models_strat/symbol_rebels.CAS
+primary_colour				red 35, green 115, blue 205
+secondary_colour			red 230, green 180, blue 45
+loading_logo				loading_screen/symbols/symbol128_kievan_rus.tga
+standard_index				44
+logo_index					FACTION_LOGO_KIEVAN_RUS
+small_logo_index			SMALL_FACTION_LOGO_KIEVAN_RUS
+triumph_value				5
+custom_battle_availability	yes
+can_sap						yes
+prefers_naval_invasions		no
+can_have_princess				yes
+has_family_tree					yes
+
 faction						slave
 culture						southern_european
 religion					heretic

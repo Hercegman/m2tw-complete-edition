@@ -82,6 +82,18 @@
             <Texture Faction="Ireland" DiffuseMap="banners\textures\faction_banner_ireland.texture" TranslucencyMap="banners\textures\faction_banner_ireland_trans.texture"/>
             <Texture Faction="Norway" DiffuseMap="banners\textures\faction_banner_norway.texture" TranslucencyMap="banners\textures\faction_banner_norway_trans.texture"/>
             <Texture Faction="Jerusalem" DiffuseMap="banners\textures\faction_banner_jerusalem.texture" TranslucencyMap="banners\textures\faction_banner_jerusalem_trans.texture"/>
+            <Texture Faction="Teutonic_order" DiffuseMap="banners\textures\faction_banner_teutonic_order.texture" TranslucencyMap="banners\textures\faction_banner_teutonic_order_trans.texture"/>
+            <Texture Faction="Lithuania" DiffuseMap="banners\textures\faction_banner_lithuania.texture" TranslucencyMap="banners\textures\faction_banner_lithuania_trans.texture"/>
+            <Texture Faction="Novgorod" DiffuseMap="banners\textures\faction_banner_novgorod.texture" TranslucencyMap="banners\textures\faction_banner_novgorod_trans.texture"/>
+            <Texture Faction="Antioch" DiffuseMap="banners\textures\faction_banner_antioch.texture" TranslucencyMap="banners\textures\faction_banner_antioch_trans.texture"/>
+            <Texture Faction="Sweden" DiffuseMap="banners\textures\faction_banner_sweden.texture" TranslucencyMap="banners\textures\faction_banner_sweden_trans.texture"/>
+            <Texture Faction="Bohemia" DiffuseMap="banners\textures\faction_banner_bohemia.texture" TranslucencyMap="banners\textures\faction_banner_bohemia_trans.texture"/>
+            <Texture Faction="Aragon" DiffuseMap="banners\textures\faction_banner_aragon.texture" TranslucencyMap="banners\textures\faction_banner_aragon_trans.texture"/>
+            <Texture Faction="Genoa" DiffuseMap="banners\textures\faction_banner_genoa.texture" TranslucencyMap="banners\textures\faction_banner_genoa_trans.texture"/>
+            <Texture Faction="Pisa" DiffuseMap="banners\textures\faction_banner_pisa.texture" TranslucencyMap="banners\textures\faction_banner_pisa_trans.texture"/>
+            <Texture Faction="Georgia" DiffuseMap="banners\textures\faction_banner_georgia.texture" TranslucencyMap="banners\textures\faction_banner_georgia_trans.texture"/>
+            <Texture Faction="Armenia" DiffuseMap="banners\textures\faction_banner_armenia.texture" TranslucencyMap="banners\textures\faction_banner_armenia_trans.texture"/>
+            <Texture Faction="Kievan_rus" DiffuseMap="banners\textures\faction_banner_kievan_rus.texture" TranslucencyMap="banners\textures\faction_banner_kievan_rus_trans.texture"/>
          </Textures>
       </Banner>
       <Banner Name="main_infantry" MainMesh="data\banners\main_infantry.mesh" MiniMesh="data\banners\mini_infantry.mesh" GeneralMesh="data\banners\main_general.mesh" BuildingMesh="data\banners\main_spear.mesh" EffectOffsetX="0.0" EffectOffsetY="8.9" EffectOffsetZ="-0.1">
@@ -133,6 +145,18 @@
             <Texture Faction="Ireland" DiffuseMap="banners\textures\faction_banner_ireland.texture" TranslucencyMap="banners\textures\faction_banner_ireland_trans.texture"/>
             <Texture Faction="Norway" DiffuseMap="banners\textures\faction_banner_norway.texture" TranslucencyMap="banners\textures\faction_banner_norway_trans.texture"/>
             <Texture Faction="Jerusalem" DiffuseMap="banners\textures\faction_banner_jerusalem.texture" TranslucencyMap="banners\textures\faction_banner_jerusalem_trans.texture"/>
+            <Texture Faction="Teutonic_order" DiffuseMap="banners\textures\faction_banner_teutonic_order.texture" TranslucencyMap="banners\textures\faction_banner_teutonic_order_trans.texture"/>
+            <Texture Faction="Lithuania" DiffuseMap="banners\textures\faction_banner_lithuania.texture" TranslucencyMap="banners\textures\faction_banner_lithuania_trans.texture"/>
+            <Texture Faction="Novgorod" DiffuseMap="banners\textures\faction_banner_novgorod.texture" TranslucencyMap="banners\textures\faction_banner_novgorod_trans.texture"/>
+            <Texture Faction="Antioch" DiffuseMap="banners\textures\faction_banner_antioch.texture" TranslucencyMap="banners\textures\faction_banner_antioch_trans.texture"/>
+            <Texture Faction="Sweden" DiffuseMap="banners\textures\faction_banner_sweden.texture" TranslucencyMap="banners\textures\faction_banner_sweden_trans.texture"/>
+            <Texture Faction="Bohemia" DiffuseMap="banners\textures\faction_banner_bohemia.texture" TranslucencyMap="banners\textures\faction_banner_bohemia_trans.texture"/>
+            <Texture Faction="Aragon" DiffuseMap="banners\textures\faction_banner_aragon.texture" TranslucencyMap="banners\textures\faction_banner_aragon_trans.texture"/>
+            <Texture Faction="Genoa" DiffuseMap="banners\textures\faction_banner_genoa.texture" TranslucencyMap="banners\textures\faction_banner_genoa_trans.texture"/>
+            <Texture Faction="Pisa" DiffuseMap="banners\textures\faction_banner_pisa.texture" TranslucencyMap="banners\textures\faction_banner_pisa_trans.texture"/>
+            <Texture Faction="Georgia" DiffuseMap="banners\textures\faction_banner_georgia.texture" TranslucencyMap="banners\textures\faction_banner_georgia_trans.texture"/>
+            <Texture Faction="Armenia" DiffuseMap="banners\textures\faction_banner_armenia.texture" TranslucencyMap="banners\textures\faction_banner_armenia_trans.texture"/>
+            <Texture Faction="Kievan_rus" DiffuseMap="banners\textures\faction_banner_kievan_rus.texture" TranslucencyMap="banners\textures\faction_banner_kievan_rus_trans.texture"/>
          </Textures>
       </Banner>
       <Banner Name="main_cavalry" MainMesh="data\banners\main_cavalry.mesh" MiniMesh="data\banners\mini_cavalry.mesh" GeneralMesh="data\banners\main_general.mesh" BuildingMesh="data\banners\main_spear.mesh" EffectOffsetX="0.0" EffectOffsetY="8.1" EffectOffsetZ="0.0">
@@ -184,6 +208,18 @@
             <Texture Faction="Ireland" DiffuseMap="banners\textures\faction_banner_ireland.texture" TranslucencyMap="banners\textures\faction_banner_ireland_trans.texture"/>
             <Texture Faction="Norway" DiffuseMap="banners\textures\faction_banner_norway.texture" TranslucencyMap="banners\textures\faction_banner_norway_trans.texture"/>
             <Texture Faction="Jerusalem" DiffuseMap="banners\textures\faction_banner_jerusalem.texture" TranslucencyMap="banners\textures\faction_banner_jerusalem_trans.texture"/>
+            <Texture Faction="Teutonic_order" DiffuseMap="banners\textures\faction_banner_teutonic_order.texture" TranslucencyMap="banners\textures\faction_banner_teutonic_order_trans.texture"/>
+            <Texture Faction="Lithuania" DiffuseMap="banners\textures\faction_banner_lithuania.texture" TranslucencyMap="banners\textures\faction_banner_lithuania_trans.texture"/>
+            <Texture Faction="Novgorod" DiffuseMap="banners\textures\faction_banner_novgorod.texture" TranslucencyMap="banners\textures\faction_banner_novgorod_trans.texture"/>
+            <Texture Faction="Antioch" DiffuseMap="banners\textures\faction_banner_antioch.texture" TranslucencyMap="banners\textures\faction_banner_antioch_trans.texture"/>
+            <Texture Faction="Sweden" DiffuseMap="banners\textures\faction_banner_sweden.texture" TranslucencyMap="banners\textures\faction_banner_sweden_trans.texture"/>
+            <Texture Faction="Bohemia" DiffuseMap="banners\textures\faction_banner_bohemia.texture" TranslucencyMap="banners\textures\faction_banner_bohemia_trans.texture"/>
+            <Texture Faction="Aragon" DiffuseMap="banners\textures\faction_banner_aragon.texture" TranslucencyMap="banners\textures\faction_banner_aragon_trans.texture"/>
+            <Texture Faction="Genoa" DiffuseMap="banners\textures\faction_banner_genoa.texture" TranslucencyMap="banners\textures\faction_banner_genoa_trans.texture"/>
+            <Texture Faction="Pisa" DiffuseMap="banners\textures\faction_banner_pisa.texture" TranslucencyMap="banners\textures\faction_banner_pisa_trans.texture"/>
+            <Texture Faction="Georgia" DiffuseMap="banners\textures\faction_banner_georgia.texture" TranslucencyMap="banners\textures\faction_banner_georgia_trans.texture"/>
+            <Texture Faction="Armenia" DiffuseMap="banners\textures\faction_banner_armenia.texture" TranslucencyMap="banners\textures\faction_banner_armenia_trans.texture"/>
+            <Texture Faction="Kievan_rus" DiffuseMap="banners\textures\faction_banner_kievan_rus.texture" TranslucencyMap="banners\textures\faction_banner_kievan_rus_trans.texture"/>
          </Textures>
       </Banner>
       <Banner Name="main_missile" MainMesh="data\banners\main_missile.mesh" MiniMesh="data\banners\mini_missile.mesh" GeneralMesh="data\banners\main_general.mesh" BuildingMesh="data\banners\main_spear.mesh" EffectOffsetX="0.0" EffectOffsetY="8.1" EffectOffsetZ="0.0">
@@ -235,6 +271,18 @@
             <Texture Faction="Ireland" DiffuseMap="banners\textures\faction_banner_ireland.texture" TranslucencyMap="banners\textures\faction_banner_ireland_trans.texture"/>
             <Texture Faction="Norway" DiffuseMap="banners\textures\faction_banner_norway.texture" TranslucencyMap="banners\textures\faction_banner_norway_trans.texture"/>
             <Texture Faction="Jerusalem" DiffuseMap="banners\textures\faction_banner_jerusalem.texture" TranslucencyMap="banners\textures\faction_banner_jerusalem_trans.texture"/>
+            <Texture Faction="Teutonic_order" DiffuseMap="banners\textures\faction_banner_teutonic_order.texture" TranslucencyMap="banners\textures\faction_banner_teutonic_order_trans.texture"/>
+            <Texture Faction="Lithuania" DiffuseMap="banners\textures\faction_banner_lithuania.texture" TranslucencyMap="banners\textures\faction_banner_lithuania_trans.texture"/>
+            <Texture Faction="Novgorod" DiffuseMap="banners\textures\faction_banner_novgorod.texture" TranslucencyMap="banners\textures\faction_banner_novgorod_trans.texture"/>
+            <Texture Faction="Antioch" DiffuseMap="banners\textures\faction_banner_antioch.texture" TranslucencyMap="banners\textures\faction_banner_antioch_trans.texture"/>
+            <Texture Faction="Sweden" DiffuseMap="banners\textures\faction_banner_sweden.texture" TranslucencyMap="banners\textures\faction_banner_sweden_trans.texture"/>
+            <Texture Faction="Bohemia" DiffuseMap="banners\textures\faction_banner_bohemia.texture" TranslucencyMap="banners\textures\faction_banner_bohemia_trans.texture"/>
+            <Texture Faction="Aragon" DiffuseMap="banners\textures\faction_banner_aragon.texture" TranslucencyMap="banners\textures\faction_banner_aragon_trans.texture"/>
+            <Texture Faction="Genoa" DiffuseMap="banners\textures\faction_banner_genoa.texture" TranslucencyMap="banners\textures\faction_banner_genoa_trans.texture"/>
+            <Texture Faction="Pisa" DiffuseMap="banners\textures\faction_banner_pisa.texture" TranslucencyMap="banners\textures\faction_banner_pisa_trans.texture"/>
+            <Texture Faction="Georgia" DiffuseMap="banners\textures\faction_banner_georgia.texture" TranslucencyMap="banners\textures\faction_banner_georgia_trans.texture"/>
+            <Texture Faction="Armenia" DiffuseMap="banners\textures\faction_banner_armenia.texture" TranslucencyMap="banners\textures\faction_banner_armenia_trans.texture"/>
+            <Texture Faction="Kievan_rus" DiffuseMap="banners\textures\faction_banner_kievan_rus.texture" TranslucencyMap="banners\textures\faction_banner_kievan_rus_trans.texture"/>
          </Textures>
       </Banner>
    </FactionBanners>

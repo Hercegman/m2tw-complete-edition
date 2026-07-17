@@ -24,6 +24,9 @@ symbols				banners/symbols6.tga
 symbols				banners/symbols9.tga
 symbols				banners/symbols10.tga
 symbols				banners/symbols11.tga
+symbols				banners/symbols12.tga
+symbols				banners/symbols13.tga
+symbols				banners/symbols14.tga
 rebels_factions
 symbols				banners/symbols7.tga
 symbols				banners/symbols8.tga

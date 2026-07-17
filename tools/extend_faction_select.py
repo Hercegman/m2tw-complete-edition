@@ -18,7 +18,10 @@ ROOT = os.path.dirname(HERE)
 SRC = os.path.join(ROOT, "research", "base-extract", "data", "menu", "mtw2.lnt")
 DST = os.path.join(ROOT, "mod", "complete_edition", "data", "menu", "mtw2.lnt")
 
-NEW_SLOTS = [(x, 50) for x in range(153, 813 + 1, 60)]  # 12 slots
+# 12 slots fill the empty top-row span; 7 more go in a third row below the
+# main one (y=170) to cover 38+ selectable factions
+NEW_SLOTS = ([(x, 50) for x in range(153, 813 + 1, 60)]
+             + [(x, 170) for x in range(302, 662 + 1, 60)])
 
 TEMPLATE = """    <UI piece>CFP_symbol48_{n}
       <identifier>UIP_CAMPAIGN_FACTION_SELECT</identifier>

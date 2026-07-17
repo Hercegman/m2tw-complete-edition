@@ -8896,6 +8896,104 @@
       <object_id>empty_art</object_id>
       <edit_group_id>symbols</edit_group_id>
     </UI piece>
+    <UI piece>CFP_symbol48_34
+      <identifier>UIP_CAMPAIGN_FACTION_SELECT</identifier>
+      <Parameters>
+        <x>302</x>
+        <y>170</y>
+        <width>59</width>
+        <height>59</height>
+        <tool_tip_id>UI_FACTIONS_SELECT_FACTION_INFO</tool_tip_id>
+        <locked>false</locked>
+      </Parameters>
+      <object_data></object_data>
+      <object_id>empty_art</object_id>
+      <edit_group_id>symbols</edit_group_id>
+    </UI piece>
+    <UI piece>CFP_symbol48_35
+      <identifier>UIP_CAMPAIGN_FACTION_SELECT</identifier>
+      <Parameters>
+        <x>362</x>
+        <y>170</y>
+        <width>59</width>
+        <height>59</height>
+        <tool_tip_id>UI_FACTIONS_SELECT_FACTION_INFO</tool_tip_id>
+        <locked>false</locked>
+      </Parameters>
+      <object_data></object_data>
+      <object_id>empty_art</object_id>
+      <edit_group_id>symbols</edit_group_id>
+    </UI piece>
+    <UI piece>CFP_symbol48_36
+      <identifier>UIP_CAMPAIGN_FACTION_SELECT</identifier>
+      <Parameters>
+        <x>422</x>
+        <y>170</y>
+        <width>59</width>
+        <height>59</height>
+        <tool_tip_id>UI_FACTIONS_SELECT_FACTION_INFO</tool_tip_id>
+        <locked>false</locked>
+      </Parameters>
+      <object_data></object_data>
+      <object_id>empty_art</object_id>
+      <edit_group_id>symbols</edit_group_id>
+    </UI piece>
+    <UI piece>CFP_symbol48_37
+      <identifier>UIP_CAMPAIGN_FACTION_SELECT</identifier>
+      <Parameters>
+        <x>482</x>
+        <y>170</y>
+        <width>59</width>
+        <height>59</height>
+        <tool_tip_id>UI_FACTIONS_SELECT_FACTION_INFO</tool_tip_id>
+        <locked>false</locked>
+      </Parameters>
+      <object_data></object_data>
+      <object_id>empty_art</object_id>
+      <edit_group_id>symbols</edit_group_id>
+    </UI piece>
+    <UI piece>CFP_symbol48_38
+      <identifier>UIP_CAMPAIGN_FACTION_SELECT</identifier>
+      <Parameters>
+        <x>542</x>
+        <y>170</y>
+        <width>59</width>
+        <height>59</height>
+        <tool_tip_id>UI_FACTIONS_SELECT_FACTION_INFO</tool_tip_id>
+        <locked>false</locked>
+      </Parameters>
+      <object_data></object_data>
+      <object_id>empty_art</object_id>
+      <edit_group_id>symbols</edit_group_id>
+    </UI piece>
+    <UI piece>CFP_symbol48_39
+      <identifier>UIP_CAMPAIGN_FACTION_SELECT</identifier>
+      <Parameters>
+        <x>602</x>
+        <y>170</y>
+        <width>59</width>
+        <height>59</height>
+        <tool_tip_id>UI_FACTIONS_SELECT_FACTION_INFO</tool_tip_id>
+        <locked>false</locked>
+      </Parameters>
+      <object_data></object_data>
+      <object_id>empty_art</object_id>
+      <edit_group_id>symbols</edit_group_id>
+    </UI piece>
+    <UI piece>CFP_symbol48_40
+      <identifier>UIP_CAMPAIGN_FACTION_SELECT</identifier>
+      <Parameters>
+        <x>662</x>
+        <y>170</y>
+        <width>59</width>
+        <height>59</height>
+        <tool_tip_id>UI_FACTIONS_SELECT_FACTION_INFO</tool_tip_id>
+        <locked>false</locked>
+      </Parameters>
+      <object_data></object_data>
+      <object_id>empty_art</object_id>
+      <edit_group_id>symbols</edit_group_id>
+    </UI piece>
     <UI piece>faction_name_title
       <identifier>UIP_SELECT_FACTION_NAME</identifier>
       <Parameters>

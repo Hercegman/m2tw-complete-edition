@@ -39,12 +39,15 @@ BIG_W, BIG_H = 68, 76
 SM_W, SM_H = 32, 32
 
 ORDER = ["croatia", "ragusa", "serbia", "bulgaria", "wallachia",
-         "wales", "ireland", "norway", "jerusalem"]
-BALKAN = ORDER[:5]
+         "wales", "ireland", "norway", "jerusalem",
+         "teutonic_order", "lithuania", "novgorod", "antioch", "sweden",
+         "bohemia", "aragon", "genoa", "pisa", "georgia", "armenia", "kievan_rus"]
 # DLC faction -> (dlc mod name, page tga prefix dir in our dlc-extract)
 DLC = {
     "wales": "british_isles", "ireland": "british_isles",
     "norway": "british_isles", "jerusalem": "crusades",
+    "teutonic_order": "teutonic", "lithuania": "teutonic",
+    "novgorod": "teutonic", "antioch": "crusades",
 }
 FRAME_DONORS = ["hungary", "venice", "byzantium"]
 

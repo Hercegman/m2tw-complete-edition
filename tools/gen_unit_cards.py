@@ -23,6 +23,9 @@ CARDS = os.path.join(ROOT, "research", "base-extract", "data_cards")
 BI = os.path.join(ROOT, "research", "dlc-extract", "british_isles", "mods", "british_isles", "data")
 
 # donors in priority order (first = primary; later only fill missing files)
+TEU = os.path.join(ROOT, "research", "dlc-extract", "teutonic", "mods", "teutonic", "data")
+CRU = os.path.join(ROOT, "research", "dlc-extract", "crusades", "mods", "crusades", "data")
+
 DONORS = {
     "croatia": ["hungary", "russia"],
     "wallachia": ["hungary", "russia"],
@@ -33,13 +36,38 @@ DONORS = {
     "ireland": ["scotland"],
     "norway": ["denmark"],
     "jerusalem": ["france"],
+    "teutonic_order": ["hre", "poland"],
+    "lithuania": ["poland", "russia"],
+    "novgorod": ["russia", "denmark"],
+    "antioch": ["france", "england"],
+    "sweden": ["denmark"],
+    "bohemia": ["hre", "poland"],
+    "aragon": ["spain", "portugal"],
+    "genoa": ["milan", "venice"],
+    "pisa": ["milan", "venice"],
+    "georgia": ["byzantium", "russia"],
+    "armenia": ["byzantium", "turks"],
+    "kievan_rus": ["russia", "poland"],
 }
+
+
+def _dlc_pair(root, fac):
+    return (os.path.join(root, "ui", "units", fac),
+            os.path.join(root, "ui", "unit_info", fac))
+
+
 # authentic DLC art layered on top (overwrites donor files of the same name)
-DLC_OVERLAY = {"norway": (os.path.join(BI, "ui", "units", "norway"),
-                          os.path.join(BI, "ui", "unit_info", "norway"))}
+DLC_OVERLAY = {
+    "norway": _dlc_pair(BI, "norway"),
+    "teutonic_order": _dlc_pair(TEU, "teutonic_order"),
+    "lithuania": _dlc_pair(TEU, "lithuania"),
+    "novgorod": _dlc_pair(TEU, "novgorod"),
+    "antioch": _dlc_pair(CRU, "antioch"),
+}
 # single-file extras outside the donor folders
 EXTRA_INFO = {f: [("poland", "ce_wagon_fort_info.tga")]
-              for f in ("croatia", "wallachia", "serbia", "bulgaria")}
+              for f in ("croatia", "wallachia", "serbia", "bulgaria",
+                        "lithuania", "novgorod", "kievan_rus", "georgia")}
 
 
 def copy_fill(src, dst, overwrite=False):

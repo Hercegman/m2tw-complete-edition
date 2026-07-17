@@ -46,16 +46,38 @@ CANVAS_DONOR = {
     "serbia": "byzantium",
     "bulgaria": "byzantium",
     "wallachia": "hungary",
+    "sweden": "denmark",
+    "bohemia": "hungary",
+    "aragon": "venice",
+    "genoa": "venice",
+    "pisa": "venice",
+    "georgia": "byzantium",
+    "armenia": "byzantium",
+    "kievan_rus": "hungary",
 }
 
-# .cas donor whose texture-path string has the SAME LENGTH (binary patch)
+# .cas donor for the strat symbol; the texture name inside the .cas is a
+# fixed-length string, so our replacement name is the faction name truncated
+# or underscore-padded to the donor's length (the referenced .dds is ours).
 CAS_DONOR = {
-    "croatia": "hungary",      # 7 = 7
-    "ragusa": "venice",        # 6 = 6
-    "serbia": "france",        # 6 = 6
-    "bulgaria": "scotland",    # 8 = 8
-    "wallachia": "byzantium",  # 9 = 9
+    "croatia": "hungary",
+    "ragusa": "venice",
+    "serbia": "france",
+    "bulgaria": "scotland",
+    "wallachia": "byzantium",
+    "sweden": "france",
+    "bohemia": "hungary",
+    "aragon": "france",
+    "genoa": "milan",
+    "pisa": "milan",
+    "georgia": "hungary",
+    "armenia": "england",
+    "kievan_rus": "byzantium",
 }
+
+
+def cas_texname(fac, donor):
+    return (fac + "_" * len(donor))[:len(donor)]
 
 BANNER_W, BANNER_H = 1024, 512
 
@@ -132,6 +154,49 @@ def draw_design(fac, w, h):
         b = buf(w, h, (25, 55, 135))
         frect(b, 0.40, 0.0, 0.60, 1.0, GOLD)
         circle(b, 0.5, 0.26, 0.11, WHITE)
+    elif fac == "sweden":
+        b = buf(w, h, (20, 90, 185))          # nordic cross, gold on blue
+        frect(b, 0.30, 0.0, 0.46, 1.0, GOLD)
+        frect(b, 0.0, 0.42, 1.0, 0.58, GOLD)
+    elif fac == "bohemia":
+        b = buf(w, h, (200, 30, 40))          # red, white diagonal half
+        for y in range(h):
+            for x in range(w):
+                if x / w + y / h < 1.0:
+                    b[y][x] = WHITE
+        border(b, 0.05, (200, 30, 40))
+    elif fac == "aragon":
+        b = buf(w, h, (235, 185, 25))         # gold with four red pales
+        for i in range(4):
+            frect(b, 0.14 + i * 0.22, 0.0, 0.24 + i * 0.22, 1.0, (185, 25, 30))
+    elif fac == "genoa":
+        b = buf(w, h, WHITE)                  # cross of St George
+        frect(b, 0.40, 0.0, 0.60, 1.0, (205, 25, 30))
+        frect(b, 0.0, 0.40, 1.0, 0.60, (205, 25, 30))
+    elif fac == "pisa":
+        b = buf(w, h, (150, 20, 30))          # pisan white cross on dark red
+        frect(b, 0.40, 0.08, 0.60, 0.92, WHITE)
+        frect(b, 0.08, 0.40, 0.92, 0.60, WHITE)
+        for fx, fy in ((0.40, 0.08), (0.40, 0.84), (0.08, 0.40), (0.84, 0.40)):
+            frect(b, fx, fy, fx + 0.20, fy + 0.08, WHITE)
+    elif fac == "georgia":
+        b = buf(w, h, (235, 235, 235))        # five-cross flag
+        frect(b, 0.42, 0.0, 0.58, 1.0, (190, 25, 25))
+        frect(b, 0.0, 0.42, 1.0, 0.58, (190, 25, 25))
+        for fx, fy in ((0.13, 0.13), (0.71, 0.13), (0.13, 0.71), (0.71, 0.71)):
+            frect(b, fx, fy + 0.045, fx + 0.16, fy + 0.115, (190, 25, 25))
+            frect(b, fx + 0.045, fy, fx + 0.115, fy + 0.16, (190, 25, 25))
+    elif fac == "armenia":
+        b = buf(w, h, (200, 35, 40))          # cilician red/blue with gold fess
+        frect(b, 0.0, 0.55, 1.0, 1.0, (30, 60, 140))
+        frect(b, 0.0, 0.44, 1.0, 0.56, GOLD)
+    elif fac == "kievan_rus":
+        b = buf(w, h, (35, 115, 205))         # blue with gold bend
+        for y in range(h):
+            for x in range(w):
+                d = x / w - y / h
+                if -0.14 < d < 0.14:
+                    b[y][x] = GOLD
     else:
         raise ValueError(fac)
     return b
@@ -306,20 +371,23 @@ def main():
                         os.path.join(tex_dir, f"faction_banner_{fac}_trans.texture"))
 
         cas_donor = CAS_DONOR[fac]
+        texname = cas_texname(fac, cas_donor)
         cas = open(os.path.join(BASE_MS, f"symbol_{cas_donor}.cas"), "rb").read()
         old = f"#banner_symbol_{cas_donor}.tga".encode()
-        new = f"#banner_symbol_{fac}.tga".encode()
-        assert len(old) == len(new) and old in cas
+        new = f"#banner_symbol_{texname}.tga".encode()
+        assert len(old) == len(new) and old in cas, (fac, cas_donor)
         ms_dir = os.path.join(DATA, "models_strat")
         os.makedirs(os.path.join(ms_dir, "textures"), exist_ok=True)
         open(os.path.join(ms_dir, f"symbol_{fac}.cas"), "wb").write(cas.replace(old, new))
-        open(os.path.join(ms_dir, "textures", f"#banner_symbol_{fac}.tga.dds"), "wb").write(
+        open(os.path.join(ms_dir, "textures", f"#banner_symbol_{texname}.tga.dds"), "wb").write(
             dds_bytes(draw_design(fac, 128, 128)))
 
     # DLC factions: genuine loading-screen emblems to the CORRECT path
     DLC_LOAD = {
         "wales": "british_isles", "ireland": "british_isles",
         "norway": "british_isles", "jerusalem": "crusades",
+        "teutonic_order": "teutonic", "lithuania": "teutonic",
+        "novgorod": "teutonic", "antioch": "crusades",
     }
     for fac, dlc in DLC_LOAD.items():
         dst = os.path.join(DATA, "loading_screen", "symbols", f"symbol128_{fac}.tga")

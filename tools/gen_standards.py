@@ -25,14 +25,19 @@ VAN_STD = os.path.join(ROOT, "research", "vanilla-extract", "data", "descr_stand
 DLC = {
     "british_isles": os.path.join(ROOT, "research", "dlc-extract", "british_isles", "mods", "british_isles", "data"),
     "crusades": os.path.join(ROOT, "research", "dlc-extract", "crusades", "mods", "crusades", "data"),
+    "teutonic": os.path.join(ROOT, "research", "dlc-extract", "teutonic", "mods", "teutonic", "data"),
 }
 
 # fixed assignment, appended after vanilla's 0-23
 ORDER = ["croatia", "ragusa", "serbia", "bulgaria", "wallachia",
-         "wales", "ireland", "norway", "jerusalem"]
+         "wales", "ireland", "norway", "jerusalem",
+         "teutonic_order", "lithuania", "novgorod", "antioch", "sweden",
+         "bohemia", "aragon", "genoa", "pisa", "georgia", "armenia", "kievan_rus"]
 BASE_INDEX = 24
 DLC_SOURCE = {"wales": "british_isles", "ireland": "british_isles",
-              "norway": "british_isles", "jerusalem": "crusades"}
+              "norway": "british_isles", "jerusalem": "crusades",
+              "teutonic_order": "teutonic", "lithuania": "teutonic",
+              "novgorod": "teutonic", "antioch": "crusades"}
 
 CELL = 64
 

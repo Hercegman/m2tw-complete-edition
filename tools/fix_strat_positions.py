@@ -29,7 +29,10 @@ REGIONS_TXT = os.path.join(DATA, "world", "maps", "base", "descr_regions.txt")
 MAP_TGA = os.path.join(ROOT, "research", "base-extract", "data_map", "map_regions.tga")
 
 NEW_FACTIONS = ["croatia", "ragusa", "serbia", "bulgaria", "wallachia",
-                "wales", "ireland", "norway", "jerusalem"]
+                "wales", "ireland", "norway", "jerusalem",
+                "teutonic_order", "lithuania", "novgorod", "antioch", "sweden",
+                "bohemia", "aragon", "genoa", "pisa", "georgia", "armenia",
+                "kievan_rus"]
 
 
 def read_regions_colors():
