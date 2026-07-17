@@ -33,7 +33,10 @@ SRC_ROOTS += [os.path.join(ROOT, "research", "dlc-extract", d, "mods", d, "data"
               for d in ("british_isles", "crusades", "teutonic")]
 
 NEW_FACTIONS = ["croatia", "ragusa", "serbia", "bulgaria", "wallachia",
-                "wales", "ireland", "norway", "jerusalem"]
+                "wales", "ireland", "norway", "jerusalem",
+                "teutonic_order", "lithuania", "novgorod", "antioch", "sweden",
+                "bohemia", "aragon", "genoa", "pisa", "georgia", "armenia",
+                "kievan_rus"]
 DONOR_TOKENS = ["hungary", "russia", "byzantium", "venice", "england", "scotland",
                 "denmark", "france", "poland", "sicily", "milan", "spain",
                 "portugal", "hre", "papal_states", "moors", "turks", "egypt",

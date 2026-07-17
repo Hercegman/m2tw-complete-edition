@@ -100,6 +100,9 @@ def frame_mask(crests):
 
 
 def composite_crest(canvas, mask, fac):
+    """Write the heraldry into the donor crest, MODULATED by the donor's
+    luminance so the CA embossing/shading survives — the design looks
+    painted onto the sculpted shield instead of a flat sticker."""
     h, w = len(canvas), len(canvas[0])
     design = gen_heraldry.draw_design(fac, w, h)
     out = []
@@ -110,8 +113,11 @@ def composite_crest(canvas, mask, fac):
             if a == 0 or mask[y][x]:
                 row.append((r, g, b, a))
             else:
+                lum = (r * 30 + g * 55 + b * 15) // 100
+                f = 0.45 + (lum / 255.0) * 0.85       # 0.45 .. 1.30
                 dr, dg, db = design[y][x]
-                row.append((dr, dg, db, a))
+                row.append((min(255, int(dr * f)), min(255, int(dg * f)),
+                            min(255, int(db * f)), a))
         out.append(row)
     return out
 

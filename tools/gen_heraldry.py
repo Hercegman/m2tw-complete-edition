@@ -331,7 +331,8 @@ def main():
         composite(canvas, mask, fac, "base",
                   os.path.join(DATA, "loading_screen", "symbols", f"symbol128_{fac}.tga"))
 
-        # --- ui/faction_symbols (54x54): donor alpha, heraldry fills shape ---
+        # --- ui/faction_symbols (54x54): donor alpha + donor shading,
+        # heraldry fills the shape (luminance-modulated, not flat) ---
         donor_fs = tga.read(os.path.join(D_UI, f"{donor}.tga"))
         h, w = len(donor_fs), len(donor_fs[0])
         design = draw_design(fac, w, h)
@@ -339,18 +340,20 @@ def main():
         for y in range(h):
             row = []
             for x in range(w):
-                a = donor_fs[y][x][3]
+                dr_, dg_, db_, a = donor_fs[y][x]
                 near_edge = a > 0 and any(
                     not (0 <= y + dy < h and 0 <= x + dx < w) or donor_fs[y + dy][x + dx][3] == 0
                     for dy in (-2, -1, 0, 1, 2) for dx in (-2, -1, 0, 1, 2))
                 if a == 0:
                     row.append((0, 0, 0, 0))
-                elif near_edge:
-                    r, g, b = design[y][x]
-                    row.append((r * 11 // 20, g * 11 // 20, b * 11 // 20, a))
-                else:
-                    r, g, b = design[y][x]
-                    row.append((r, g, b, a))
+                    continue
+                lum = (dr_ * 30 + dg_ * 55 + db_ * 15) // 100
+                f = 0.45 + (lum / 255.0) * 0.85
+                if near_edge:
+                    f *= 0.55
+                r, g, b = design[y][x]
+                row.append((min(255, int(r * f)), min(255, int(g * f)),
+                            min(255, int(b * f)), a))
             out.append(row)
         fs_path = os.path.join(DATA, "ui", "faction_symbols", f"{fac}.tga")
         os.makedirs(os.path.dirname(fs_path), exist_ok=True)
