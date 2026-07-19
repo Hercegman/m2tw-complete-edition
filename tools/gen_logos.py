@@ -86,19 +86,6 @@ def load_crest(sd_xml_path, page_dir, token, want_w, want_h):
     return [row[:want_w] for row in c[:want_h]]
 
 
-def frame_mask(crests):
-    h, w = len(crests[0]), len(crests[0][0])
-    mask = [[False] * w for _ in range(h)]
-    for y in range(h):
-        for x in range(w):
-            p0 = crests[0][y][x]
-            if p0[3] == 0:
-                continue
-            if all(c[y][x] == p0 for c in crests[1:]):
-                mask[y][x] = True
-    return mask
-
-
 def composite_crest(canvas, mask, fac):
     """Write the heraldry into the donor crest, MODULATED by the donor's
     luminance so the CA embossing/shading survives — the design looks
@@ -196,8 +183,13 @@ def main():
     small_donors = [load_crest(os.path.join(game_ui, "shared.sd.xml"), vanilla_pages,
                                f"SMALL_FACTION_LOGO_{d.upper()}", SM_W, SM_H)
                     for d in FRAME_DONORS]
-    big_mask = frame_mask(big_donors)
-    small_mask = frame_mask(small_donors)
+    # robust masks (see gen_heraldry.frame_mask_v2): the old byte-identity
+    # mask left the crest tops unmasked (68x76) and was fully degenerate on
+    # the 32x32 small crests — heraldry painted over the silver rim
+    big_mask = gen_heraldry.frame_mask_v2(big_donors, big_donors[0],
+                                          band=5, dmax=12)
+    small_mask = gen_heraldry.frame_mask_v2(small_donors, small_donors[0],
+                                            band=2, dmax=7)
 
     big, small = [], []
     for fac in ORDER:

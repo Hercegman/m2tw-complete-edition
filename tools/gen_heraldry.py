@@ -234,9 +234,34 @@ def tint(px, variant):
 
 # ---------------- compositing ----------------
 
-def frame_mask(paths):
-    """pixels identical across all given canvases (and opaque) = frame."""
-    imgs = [tga.read(p) for p in paths]
+def edge_distance(canvas):
+    """8-connected BFS distance of every pixel to the nearest transparent
+    pixel / image border (transparent = 0)."""
+    from collections import deque
+    h, w = len(canvas), len(canvas[0])
+    dist = [[None] * w for _ in range(h)]
+    q = deque()
+    for y in range(h):
+        for x in range(w):
+            if canvas[y][x][3] == 0:
+                dist[y][x] = 0
+                q.append((y, x))
+            elif y in (0, h - 1) or x in (0, w - 1):
+                dist[y][x] = 1
+                q.append((y, x))
+    while q:
+        y, x = q.popleft()
+        for dy in (-1, 0, 1):
+            for dx in (-1, 0, 1):
+                ny, nx = y + dy, x + dx
+                if 0 <= ny < h and 0 <= nx < w and dist[ny][nx] is None:
+                    dist[ny][nx] = dist[y][x] + 1
+                    q.append((ny, nx))
+    return dist
+
+
+def identity_mask(imgs, tol):
+    """opaque pixels agreeing across all donors within tol per channel."""
     h, w = len(imgs[0]), len(imgs[0][0])
     mask = [[False] * w for _ in range(h)]
     for y in range(h):
@@ -244,9 +269,84 @@ def frame_mask(paths):
             p0 = imgs[0][y][x]
             if p0[3] == 0:
                 continue
-            if all(im[y][x] == p0 for im in imgs[1:]):
+            if all(im[y][x][3] > 0
+                   and abs(im[y][x][0] - p0[0]) <= tol
+                   and abs(im[y][x][1] - p0[1]) <= tol
+                   and abs(im[y][x][2] - p0[2]) <= tol
+                   for im in imgs[1:]):
                 mask[y][x] = True
     return mask
+
+
+def frame_mask_v2(donor_paths, canvas_path, tol=8, band=4, dmax=10, sat_thr=40):
+    """Robust metal-frame mask.
+
+    Byte-identity across donors misses per-faction-tinted bevels (top of
+    symbol48) and is fully degenerate on individually rendered icon types
+    (symbol24, symbol128, 32x32 crests) — the old mask let the heraldry
+    flood the rim. New approach:
+      candidates = geometric edge band (dist<=band)
+                 ∪ identity-with-tolerance (only if it covers >=10% opaque)
+                 ∪ "metal" pixels: low saturation in EVERY donor, dist<=dmax
+      frame = candidates connected to the edge band (prunes coincidental
+              identity specks inside the heraldry area), then 2 passes of
+              pin-hole closing so no design pixel is stranded in the rim.
+    Everything NOT in the mask gets painted, so no donor heraldry ring can
+    appear; the mask itself keeps canvas pixels (generic metal).
+    """
+    from collections import deque
+    donors = [tga.read(p) if isinstance(p, str) else p for p in donor_paths]
+    canvas = tga.read(canvas_path) if isinstance(canvas_path, str) else canvas_path
+    h, w = len(canvas), len(canvas[0])
+    dist = edge_distance(canvas)
+    opaque = [[canvas[y][x][3] > 0 for x in range(w)] for y in range(h)]
+    n_opaque = sum(row.count(True) for row in opaque) or 1
+
+    ident = identity_mask(donors, tol)
+    use_ident = sum(row.count(True) for row in ident) >= 0.10 * n_opaque
+
+    def metal(y, x):
+        for im in donors:
+            r, g, b, a = im[y][x]
+            if a == 0 or max(r, g, b) - min(r, g, b) >= sat_thr:
+                return False
+        return True
+
+    cand = [[opaque[y][x] and (dist[y][x] <= band
+                               or (use_ident and ident[y][x])
+                               or (dist[y][x] <= dmax and metal(y, x)))
+             for x in range(w)] for y in range(h)]
+
+    frame = [[False] * w for _ in range(h)]
+    q = deque()
+    for y in range(h):
+        for x in range(w):
+            if opaque[y][x] and dist[y][x] <= band:
+                frame[y][x] = True
+                q.append((y, x))
+    while q:
+        y, x = q.popleft()
+        for dy in (-1, 0, 1):
+            for dx in (-1, 0, 1):
+                ny, nx = y + dy, x + dx
+                if (0 <= ny < h and 0 <= nx < w and cand[ny][nx]
+                        and not frame[ny][nx]):
+                    frame[ny][nx] = True
+                    q.append((ny, nx))
+
+    for _ in range(2):
+        add = []
+        for y in range(h):
+            for x in range(w):
+                if opaque[y][x] and not frame[y][x] and dist[y][x] <= dmax:
+                    n = sum(1 for dy in (-1, 0, 1) for dx in (-1, 0, 1)
+                            if (dy or dx) and 0 <= y + dy < h and 0 <= x + dx < w
+                            and frame[y + dy][x + dx])
+                    if n >= 5:
+                        add.append((y, x))
+        for y, x in add:
+            frame[y][x] = True
+    return frame
 
 
 def composite(canvas_path, mask, fac, variant, out_path):
@@ -262,6 +362,12 @@ def composite(canvas_path, mask, fac, variant, out_path):
                 row.append((r, g, b, a))          # outside or frame: keep CA art
             else:
                 dr, dg, db = tint(design[y][x], variant)
+                # darken the seam pixel touching the frame — reads as the
+                # thin dark outline vanilla crests have against the rim
+                if any((dy or dx) and 0 <= y + dy < h and 0 <= x + dx < w
+                       and mask[y + dy][x + dx]
+                       for dy in (-1, 0, 1) for dx in (-1, 0, 1)):
+                    dr, dg, db = dr * 3 // 4, dg * 3 // 4, db * 3 // 4
                 row.append((dr, dg, db, a))       # interior: our heraldry
         out.append(row)
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
@@ -288,33 +394,33 @@ def main():
     menu_out = os.path.join(DATA, "menu", "symbols")
     variants = [("", "base"), ("_roll", "roll"), ("_select", "select"), ("_grey", "grey")]
 
-    # precompute frame masks per (dir, pattern, variant)
-    button_sets = [("fe_buttons_48", "symbol48_{f}{v}.tga"),
-                   ("fe_buttons_24", "symbol24_{f}{v}.tga")]
-    single_sets = [("fe_symbols_80", "{f}.tga")]
+    # per icon type: (band, dmax) tuned to that type's rim thickness
+    button_sets = [("fe_buttons_48", "symbol48_{f}{v}.tga", 4, 10),
+                   ("fe_buttons_24", "symbol24_{f}{v}.tga", 2, 7)]
+    single_sets = [("fe_symbols_80", "{f}.tga", 5, 12)]
 
     for fac in CANVAS_DONOR:
         donor = CANVAS_DONOR[fac]
 
         # --- menu buttons with 4 variants ---
-        for d, pat in button_sets:
+        for d, pat, band, dmax in button_sets:
             for suffix, variant in variants:
                 paths = [os.path.join(D_MENU, d, pat.format(f=df, v=suffix))
                          for df in FRAME_DONORS]
-                mask = frame_mask(paths)
                 canvas = os.path.join(D_MENU, d, pat.format(f=donor, v=suffix))
                 if not os.path.exists(canvas):
                     canvas = paths[0]
+                mask = frame_mask_v2(paths, canvas, band=band, dmax=dmax)
                 composite(canvas, mask, fac, variant,
                           os.path.join(menu_out, d, pat.format(f=fac, v=suffix)))
 
         # --- single-file menu emblems ---
-        for d, pat in single_sets:
+        for d, pat, band, dmax in single_sets:
             paths = [os.path.join(D_MENU, d, pat.format(f=df)) for df in FRAME_DONORS]
-            mask = frame_mask(paths)
             canvas = os.path.join(D_MENU, d, pat.format(f=donor))
             if not os.path.exists(canvas):
                 canvas = paths[0]
+            mask = frame_mask_v2(paths, canvas, band=band, dmax=dmax)
             composite(canvas, mask, fac, "base",
                       os.path.join(menu_out, d, pat.format(f=fac)))
 
@@ -326,8 +432,8 @@ def main():
 
         # --- loading screen emblem (correct path: data/loading_screen/...) ---
         paths = [os.path.join(D_MENU, f"symbol128_{df}.tga") for df in FRAME_DONORS]
-        mask = frame_mask(paths)
         canvas = os.path.join(D_MENU, f"symbol128_{donor}.tga")
+        mask = frame_mask_v2(paths, canvas, band=6, dmax=16)
         composite(canvas, mask, fac, "base",
                   os.path.join(DATA, "loading_screen", "symbols", f"symbol128_{fac}.tga"))
 
